@@ -1,0 +1,28 @@
+#EXTM3U
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-language="Arabic" tvg-logo="https://i.imgur.com/lZ2HDx1.png" group-title="", [color yellow]👇Download AA MOBILE TV👇[/color]
+https://raw.githubusercontent.com/dodoniyi/AAA/main/AA%20MOBILE%20TV%20-%20INTRO%20VIDEO.mp4
+
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-language="Arabic" tvg-logo="https://i.imgur.com/lZ2HDx1.png" group-title="", [color yellow]Copy Link: https://aamobiletv.blogspot.com[/color]
+https://raw.githubusercontent.com/dodoniyi/AAA/main/AA%20MOBILE%20TV%20-%20INTRO%20VIDEO.mp4
+
+
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-language="Arabic" tvg-logo="https://i.imgur.com/lZ2HDx1.png" group-title="", [color yellow]DIGI CHANNELS[/color]
+https://
+
+
+#EXTINF:0 tvg-id="DigiSport1.ro" group-title="Romania",RO: DIGI SPORT 1
+http://iptvtree.net:8080/GenIptvLast/FaP6YswK77NaOPOF/71457
+#EXTINF:0 tvg-id="DigiSport2.ro" group-title="Romania",RO: DIGI SPORT 2
+http://iptvtree.net:8080/GenIptvLast/FaP6YswK77NaOPOF/71459
+#EXTINF:0 tvg-id="DigiSport3.ro" group-title="Romania",RO: DIGI SPORT 3
+http://iptvtree.net:8080/GenIptvLast/FaP6YswK77NaOPOF/2243
+#EXTINF:0 tvg-id="ext" group-title="Romania",RO: DIGI SPORT 4
+http://iptvtree.net:8080/GenIptvLast/FaP6YswK77NaOPOF/4219
+
+#EXTINF:0 tvg-id="DigiSport2.hu" group-title="Hungary ➾ Sports",HU: Digi Sport 2
+http://iptvtree.net:8080/GenIptvLast/FaP6YswK77NaOPOF/2242
+#EXTINF:0 tvg-id="DigiSport3.hu" group-title="Hungary ➾ Sports",HU: Digi Sport 3
+http://iptvtree.net:8080/GenIptvLast/FaP6YswK77NaOPOF/10972
+
+#EXTINF:0 tvg-id="ext" group-title="Albania",AL: Digi Gold 1
+http://iptvtree.net:8080/GenIptvLast/FaP6YswK77NaOPOF/281904
