@@ -1,0 +1,4 @@
+#EXTM3U
+#EXT-X-VERSION:3
+#EXT-X-STREAM-INF:BANDWIDTH=1000000,CODECS="avc1.64001e,mp4a.40.2"
+http://free.fullspeed.tv/iptv-query?streaming-ip=https://m.youtube.com/channel/UCKS1HX4moHCcDBZnM9k4giw/live
