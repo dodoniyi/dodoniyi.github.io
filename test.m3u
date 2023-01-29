@@ -1,2 +1,10 @@
-#EXTINF:0,Channel
+#EXTINF:0,Channel 1
 https://v3.playerlatino.live:443/stream/m3u8/406|User-Agent=Lavf/57.71.001
+#EXTINF:0,Channel 1
+https://v3.playerlatino.live:443/stream/m3u8/407|User-Agent=Lavf/57.71.001
+#EXTINF:0,Channel 1
+https://v3.playerlatino.live:443/stream/m3u8/408|User-Agent=Lavf/57.71.001
+#EXTINF:0,Channel 1
+https://v3.playerlatino.live:443/stream/m3u8/409|User-Agent=Lavf/57.71.001
+#EXTINF:0,Channel 1
+https://v3.playerlatino.live:443/stream/m3u8/444|User-Agent=Lavf/57.71.001
