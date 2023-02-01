@@ -2,7 +2,7 @@
 #EXT-X-VERSION:3
 #EXT-X-MEDIA-SEQUENCE:1701
 #EXT-X-TARGETDURATION:4
-#EXT-X-KEY:METHOD=AES-128,URI="/apps.js",IV=0Xnull
+#EXT-X-KEY:METHOD=AES-128,URI="http://api.footballtvhd.net/apps.js",IV=0Xnull
 #EXT-X-START:TIME-OFFSET=-30
 #EXTINF:4.000,
 https://cdn.freefile.com/757c867e16e222aa0a4ee5edd7197818
