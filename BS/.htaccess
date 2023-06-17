@@ -1,4 +1,0 @@
-AuthType Basic
-AuthName "Protected Site"
-AuthUserFile https://www.aamobiletv.ml/max/.htpasswd
-require valid-user
