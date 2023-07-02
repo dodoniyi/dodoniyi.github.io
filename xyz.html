@@ -1,507 +1,73 @@
 <html>
 <head>
-                                <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-                                <meta name="robots" content="noindex,nofollow">
-                                <meta http-equiv="expires" content="0">
-                                <meta http-equiv="pragma" content="no-cache">
-                                <link rel="shortcut icon" href="https://i.imgur.com/zXznFUY.png?2">
-                                <meta http-equiv="cache-control" content="no-cache, must-revalidate">
-                                <meta name="viewport" content="width=device-width, initial-scale=1">
-    <script language="javascript">if (top != self) {top.location = self.location;};</script>
-    <title>Live</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Work+Sans:100,200,300,400,500,600,700,800,900" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Comfortaa:300,400,700" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Gabriela" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css?family=Baumans" rel="stylesheet">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
-<style type="text/css">
-body {background: url(https://i.imgur.com/XdajA3X.jpg) #242433;font-size: 15px;font-family: 'Baumans',"Helvetica Neue",Helvetica, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";}
-a {color: #ffffff;text-decoration: none;}
-b,strong {font-weight: bolder;font-family: 'Baumans', F1;color: #04294e;}
-a:hover, a:focus {color: #ffffff;text-decoration: none;}
-.bg-dark {background-color: #235384cf !important;}
-#accordion .panel-heading { padding: 0;}
-#accordion .panel-title > a {
-display: block;
-padding: 10px;
-outline: none;
-text-decoration: none;
-text-shadow: none;
-font-size: 22px;
-text-align: center;
-color: #000000;
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+* {
+box-sizing: border-box;
 }
-.table-striped>tbody>tr:nth-child(odd) {background-color: #f3f7fa;}
-.table-striped>tbody>tr:nth-child(even) {background-color: rgb(200 243 252);}
-.panel-title {
-background-repeat: no-repeat;
-background-size: 30px;
-background-position: center left 10px;
+body {
+	margin-top: 19px;
+	margin-bottom: 0px;
+	background: #30363b top center repeat;
+			}
+.options {
+float:left;
+width:20%;
+text-align:center;
 }
-.match {height: 420px;width: 100%;margin-bottom: 15px}
-.eng {background-image: url(https://i.imgur.com/Li7ABfG.png);background-repeat: no-repeat;background-size: 20px;background-position: center left 5px;}
-.usa {background-image: url(https://i.imgur.com/HcefHjn.png);background-repeat: no-repeat;background-size: 20px;background-position: center left 5px;}
-.ita {background-image: url(https://i.imgur.com/9DW1tPi.png);background-repeat: no-repeat;background-size: 20px;background-position: center left 5px;}
-.esp {background-image: url(https://i.imgur.com/I8HWBoz.png);background-repeat: no-repeat;background-size: 20px;background-position: center left 5px;}
-.ara {background-image: url(https://i.imgur.com/y00IJk7.png);background-repeat: no-repeat;background-size: 20px;background-position: center left 5px;}
-.alb {background-image: url(https://i.imgur.com/LehDwdf.png);background-repeat: no-repeat;background-size: 20px;background-position: center left 5px;}
-.pol {background-image: url(https://i.imgur.com/oAljLyX.png);background-repeat: no-repeat;background-size: 20px;background-position: center left 5px;}
-.fra {background-image: url(https://i.imgur.com/HnfmBmQ.png);background-repeat: no-repeat;background-size: 20px;background-position: center left 5px;}
-.por {background-image: url(https://i.imgur.com/8IjKTuZ.png);background-repeat: no-repeat;background-size: 20px;background-position: center left 5px;}
-.ger {background-image: url(https://imgur.com/HXot60S.png);background-repeat: no-repeat;background-size: 20px;background-position: center left 5px;}
-.ned {background-image: url(https://i.imgur.com/nX3M8wl.png);background-repeat: no-repeat;background-size: 20px;background-position: center left 5px;}
-.tur {background-image: url(https://i.imgur.com/Epdg8Pz.png);background-repeat: no-repeat;background-size: 20px;background-position: center left 5px;}
-.gre {background-image: url(https://i.imgur.com/cALat5k.png);background-repeat: no-repeat;background-size: 20px;background-position: center left 5px;}
-.arg {background-image: url(https://i.imgur.com/0cfabJT.png);background-repeat: no-repeat;background-size: 20px;background-position: center left 5px;}
-.uru {background-image: url(https://i.imgur.com/7CsYGlF.png);background-repeat: no-repeat;background-size: 20px;background-position: center left 5px;}
-.rom {background-image: url(https://i.imgur.com/GEheFmT.png);background-repeat: no-repeat;background-size: 20px;background-position: center left 5px;}
-.aus {background-image: url(https://i.imgur.com/goCqoKi.png);background-repeat: no-repeat;background-size: 20px;background-position: center left 5px;}
-.swe {background-image: url(https://i.imgur.com/3k28dcQ.png);background-repeat: no-repeat;background-size: 20px;background-position: center left 5px;}
-.bul {background-image: url(https://i.imgur.com/PEOsTOB.png);background-repeat: no-repeat;background-size: 20px;background-position: center left 5px;}
-.can {background-image: url(https://i.imgur.com/Sra3fH4.png);background-repeat: no-repeat;background-size: 20px;background-position: center left 5px;}
-.bra {background-image: url(https://i.imgur.com/TaC6N8O.png);background-repeat: no-repeat;background-size: 20px;background-position: center left 5px;}
-small, .small {padding-left: 23px;}
-.on {background: #15bd12;color: #ffffff;padding-right: 5px;padding-left: 5px;}
-.off {background: #e10600;color: #ffffff;padding-right: 5px;padding-left: 5px;}
-.emd {background: #ffffff;color: #2c294e;padding-right: 5px;padding-left: 5px;line-height: 1.7;}
-.tit {background: #235384cf;padding: 8px;color: #ffffff;border-radius: 4px;box-shadow: 2px 2px #ffffff;font-family: "F1";}
-#logo {background-color: #235384cf !important;font-family: F1;font-size: 30px;color: #ffffff;font-weight: 700;text-align: center !important;padding: 20px 0;}
-hr {margin-top: 5px;margin-bottom: 5px;}
-.data {font-weight: bolder;line-height: 4em;color: #134b7c;text-align: center;font-family: 'F1wide', sans-serif;}
-.ranking {border-bottom: solid 2px #e10600;border-right: solid 1px #e10600;border-bottom-right-radius: 20px;padding-right: 15px;padding-bottom: 3;font-family: F1;text-decoration: none;font-size: 14px;font-weight: bolder;}
-.panel-group .panel {margin-bottom: 0;border-radius: 0px;border-top: solid 4px #235384cf;border-right: solid 4px #235384cf;border-top-right-radius: 20px;}
-.panel-default>.panel-heading {color: #333;background-color: transparent;border-color: #ddd;}
-.panel-heading {background-repeat: no-repeat;background-size: 40px;background-position: center right 10px;}
-.navbar-brand {line-height: 2;height: auto;}
-@media (min-width: 768px) {.navbar {border-radius: 0px;}}
-@media (max-width: 623px) {h1 {font-size: 13px;}}
-@media (max-width: 623px) {#accordion .panel-title > a {font-size: 12px;}}
-@media (max-width: 623px) {a {font-size: 12px;}}
-@media (max-width: 623px) {body {font-size: 12px;}}
-@media (max-width: 623px) {table {font-size: 10px;}}
-@media (max-width: 623px) {.match {height: 210px;width: 100%;margin-bottom: 15px}}
-@media (max-width: 623px) {.eng {background-image: url(https://i.imgur.com/Li7ABfG.png);background-repeat: no-repeat;background-size: 12px;background-position: center left 5px;}}
-@media (max-width: 623px) {.usa {background-image: url(https://i.imgur.com/HcefHjn.png);background-repeat: no-repeat;background-size: 12px;background-position: center left 5px;}}
-@media (max-width: 623px) {.ita {background-image: url(https://i.imgur.com/9DW1tPi.png);background-repeat: no-repeat;background-size: 12px;background-position: center left 5px;}}
-@media (max-width: 623px) {.esp {background-image: url(https://i.imgur.com/I8HWBoz.png);background-repeat: no-repeat;background-size: 12px;background-position: center left 5px;}}
-@media (max-width: 623px) {.ara {background-image: url(https://i.imgur.com/y00IJk7.png);background-repeat: no-repeat;background-size: 12px;background-position: center left 5px;}}
-@media (max-width: 623px) {.alb {background-image: url(https://i.imgur.com/LehDwdf.png);background-repeat: no-repeat;background-size: 12px;background-position: center left 5px;}}
-@media (max-width: 623px) {.pol {background-image: url(https://i.imgur.com/oAljLyX.png);background-repeat: no-repeat;background-size: 12px;background-position: center left 5px;}}
-@media (max-width: 623px) {.fra {background-image: url(https://i.imgur.com/HnfmBmQ.png);background-repeat: no-repeat;background-size: 12px;background-position: center left 5px;}}
-@media (max-width: 623px) {.por {background-image: url(https://i.imgur.com/8IjKTuZ.png);background-repeat: no-repeat;background-size: 12px;background-position: center left 5px;}}
-@media (max-width: 623px) {.ger {background-image: url(https://imgur.com/HXot60S.png);background-repeat: no-repeat;background-size: 12px;background-position: center left 5px;}}
-@media (max-width: 623px) {.ned {background-image: url(https://i.imgur.com/nX3M8wl.png);background-repeat: no-repeat;background-size: 12px;background-position: center left 5px;}}
-@media (max-width: 623px) {.tur {background-image: url(https://i.imgur.com/Epdg8Pz.png);background-repeat: no-repeat;background-size: 12px;background-position: center left 5px;}}
-@media (max-width: 623px) {.gre {background-image: url(https://i.imgur.com/cALat5k.png);background-repeat: no-repeat;background-size: 12px;background-position: center left 5px;}}
-@media (max-width: 623px) {.arg {background-image: url(https://i.imgur.com/0cfabJT.png);background-repeat: no-repeat;background-size: 12px;background-position: center left 5px;}}
-@media (max-width: 623px) {.uru {background-image: url(https://i.imgur.com/7CsYGlF.png);background-repeat: no-repeat;background-size: 12px;background-position: center left 5px;}}
-@media (max-width: 623px) {.rom {background-image: url(https://i.imgur.com/GEheFmT.png);background-repeat: no-repeat;background-size: 12px;background-position: center left 5px;}}
-@media (max-width: 623px) {.aus {background-image: url(https://i.imgur.com/goCqoKi.png);background-repeat: no-repeat;background-size: 12px;background-position: center left 5px;}}
-@media (max-width: 623px) {.swe {background-image: url(https://i.imgur.com/3k28dcQ.png);background-repeat: no-repeat;background-size: 12px;background-position: center left 5px;}}
-@media (max-width: 623px) {.bul {background-image: url(https://i.imgur.com/PEOsTOB.png);background-repeat: no-repeat;background-size: 12px;background-position: center left 5px;}}
-@media (max-width: 623px) {.can {background-image: url(https://i.imgur.com/Sra3fH4.png);background-repeat: no-repeat;background-size: 12px;background-position: center left 5px;}}
-@media (max-width: 623px) {.bra {background-image: url(https://i.imgur.com/TaC6N8O.png);background-repeat: no-repeat;background-size: 12px;background-position: center left 5px;}}
-@media (max-width: 623px) {small, .small {padding-left: 13px;}}
-@media (max-width: 623px) {.emd {background: #ffffff;font-size: 10px;color: #2c294e;padding-right: 5px;padding-left: 5px;}}
+.options a {
+background-color:#30363b;
+padding:8px;
+margin-top:7px;
+display:block;
+width:100%;
+color:#30363b;
+}
+.main {
+float:left;
+width:60%;
+padding:0 20px;
+}
+.course {
+background-color:#30363b;
+color:white;
+float:left;
+width:20%;
+padding:10px;
+text-align:center;
+}
+#header
+{
+margin-top: -30px;
+margin-bottom: -4px;
+background-color:#30363b;
+padding:5px;
+text-align:center;
+font-family: sans-serif;-ms-text-size-adjust: 100%;
+color:white;
+}
+#footer{
+background-color:#30363b;
+text-align:center;
+padding:10px;
+font-family: sans-serif;-ms-text-size-adjust: 100%;
+margin-top:7px;
+color:white;
+@media only screen and (max-width:620px) {
+/* For mobile phones: */
+.options, .main, .course {
+width:100%;
+}
 </style>
-
-
 </head>
-
 <body>
-
-<div id="logo"><strong><font size="7" color="yellow">AA M⚽BILE TV </font></strong></div>
-
-
-
-
-
-  <!-- Page Content -->
-  <div class="container">
-
-
-
-
-    <!-- Call to Action Well -->
-    <div class="card text-black bg-secondary my-5 py-4" style="background-color: transparent;border: 0px;">
-   
-
-<div class="row">
-
-
-        <div class="col-md-12" id="main">
-
-
-         
-            <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-
-
-<!-- start edit event -->
-
-<h3 class="text-center tit"><a href="https://aamobiletv.blogspot.com/"><strong><font size="5" color="white">👉DOWNLOAD AA MOBILE TV</font></strong></a></h3>
-
-<h3 class="text-center tit"><strong><font size="6" color="yellow">EXCLUSIVE SP⚽RT 2 </font></strong></a></h3>
-
-<div class="panel panel-default">
-                <div class="panel-heading" role="tab" id="heading" style="background-image: url(https://i.imgur.com/pLccTCf.gif);">
-                  <h4 class="panel-title" style="background-image: url(https://i.imgur.com/pLccTCf.gif);">
-                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse1xT" aria-expanded="false" aria-controls="collapse">
-                       <b><strong><font size="5" color="blue">LIVE CRICKETS</font></strong></b>
-                    </a>
-                  </h4>
-                </div>
-                <div id="collapse1xT" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading">
-                  <div class="panel-body">
-       <table class="table table-light table-striped text-left">
-           <tbody>
-<tr class=""><td><a class="small" href="https://vikistream.com/embed2.php?player=desktop&live=asportshd" target="_blank"><b> <strong><font size="4" color="black">📌A SP⚽RTS</font></strong></b></a><span class="float-right emd"></span></td></tr>
-<tr class=""><td><a class="small" href="https://vikistream.com/embed2.php?player=desktop&live=skyscric" target="_blank"><b> <strong><font size="4" color="black">📌SKY SP⚽RTS CRICKET</font></strong></b></a><span class="float-right emd"></span></td></tr>
-<tr class=""><td><a class="small" href="https://vikistream.com/embed2.php?player=desktop&live=supercricket" target="_blank"><b> <strong><font size="4" color="black">📌SUPERSP⚽RT CRICKET</font></strong></b></a><span class="float-right emd"></span></td></tr>
-<tr class=""><td><a class="small" href="https://vikistream.com/embed2.php?player=desktop&live=bbtsp1" target="_blank"><b> <strong><font size="4" color="black">📌BT SP⚽RTS 1</font></strong></b></a><span class="float-right emd"></span></td></tr>
-<tr class=""><td><a class="small" href="https://vikistream.com/embed2.php?player=desktop&live=willowusa" target="_blank"><b> <strong><font size="4" color="black">📌WILLOW USA</font></strong></b></a><span class="float-right emd"></span></td></tr>
-<tr class=""><td><a class="small" href="https://vikistream.com/embed2.php?player=desktop&live=willowextra" target="_blank"><b> <strong><font size="4" color="black">📌WILLOW EXTRA</font></strong></b></a><span class="float-right emd"></span></td></tr>
-<tr class=""><td><a class="small" href="https://vikistream.com/embed2.php?player=desktop&live=starhindi" target="_blank"><b> <strong><font size="4" color="black">📌STAR SP⚽RTS HINDI</font></strong></b></a><span class="float-right emd"></span></td></tr>
-<tr class=""><td><a class="small" href="https://vikistream.com/embed2.php?player=desktop&live=star1in" target="_blank"><b> <strong><font size="4" color="black">📌STAR SP⚽RTS 1</font></strong></b></a><span class="float-right emd"></span></td></tr>
-          </tbody>
-     </table>
-                  </div>
-       </div>
+<div id="header">
+<h2>Welcome AA M⚽BILE TV</h2>
+<h3>24/7 Live Sports & Entertainment Channels<h3>
 </div>
-
-
-<div class="panel panel-default">
-                <div class="panel-heading" role="tab" id="heading" style="background-image: url(https://i.imgur.com/pLccTCf.gif);">
-                  <h4 class="panel-title" style="background-image: url(https://i.imgur.com/pLccTCf.gif);">
-                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse2xT" aria-expanded="false" aria-controls="collapse">
-                       <b><strong><font size="5" color="red">BEIN SP⚽RTS</font></strong></b>
-                    </a>
-                  </h4>
-                </div>
-                <div id="collapse2xT" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading">
-                  <div class="panel-body">
-       <table class="table table-light table-striped text-left">
-           <tbody>
-<tr class=""><td><a class="small" href="https://vikistream.com/embed2.php?player=desktop&live=bein1en" target="_blank"><b> <strong><font size="4" color="black">📌BEIN SP⚽RTS 1 EN</font></strong></b></a><span class="float-right emd"></span></td></tr>
-<tr class=""><td><a class="small" href="https://vikistream.com/embed2.php?player=desktop&live=bein2en" target="_blank"><b> <strong><font size="4" color="black">📌BEIN SP⚽RTS 2 EN</font></strong></b></a><span class="float-right emd"></span></td></tr>
-<tr class=""><td><a class="small" href="https://vikistream.com/embed2.php?player=desktop&live=bein3en" target="_blank"><b> <strong><font size="4" color="black">📌BEIN SP⚽RTS 3 EN</font></strong></b></a><span class="float-right emd"></span></td></tr>
-<tr class=""><td><a class="small" href="https://vikistream.com/embed2.php?player=desktop&live=bein1prem" target="_blank"><b> <strong><font size="4" color="black">📌BEIN SP⚽RTS 1 PREM</font></strong></b></a><span class="float-right emd"></span></td></tr>
-<tr class=""><td><a class="small" href="https://vikistream.com/embed2.php?player=desktop&live=bein2prem" target="_blank"><b> <strong><font size="4" color="black">📌BEIN SP⚽RTS 2 PREM</font></strong></b></a><span class="float-right emd"></span></td></tr>
-<tr class=""><td><a class="small" href="https://vikistream.com/embed2.php?player=desktop&live=bein3prem" target="_blank"><b> <strong><font size="4" color="black">📌BEIN SP⚽RTS 3 PREM</font></strong></b></a><span class="float-right emd"></span></td></tr>
-<tr class=""><td><a class="small" href="https://vikistream.com/embed2.php?player=desktop&live=bein1arab" target="_blank"><b> <strong><font size="4" color="black">📌BEIN SP⚽RTS 1</font></strong></b></a><span class="float-right emd"></span></td></tr>
-<tr class=""><td><a class="small" href="https://vikistream.com/embed2.php?player=desktop&live=bein2arab" target="_blank"><b> <strong><font size="4" color="black">📌BEIN SP⚽RTS 2</font></strong></b></a><span class="float-right emd"></span></td></tr>
-<tr class=""><td><a class="small" href="https://vikistream.com/embed2.php?player=desktop&live=bein3arab" target="_blank"><b> <strong><font size="4" color="black">📌BEIN SP⚽RTS 3</font></strong></b></a><span class="float-right emd"></span></td></tr>
-<tr class=""><td><a class="small" href="https://vikistream.com/embed2.php?player=desktop&live=bein4arab" target="_blank"><b> <strong><font size="4" color="black">📌BEIN SP⚽RTS 4</font></strong></b></a><span class="float-right emd"></span></td></tr>
-<tr class=""><td><a class="small" href="https://vikistream.com/embed2.php?player=desktop&live=bein5arab" target="_blank"><b> <strong><font size="4" color="black">📌BEIN SP⚽RTS 5</font></strong></b></a><span class="float-right emd"></span></td></tr>
-<tr class=""><td><a class="small" href="https://vikistream.com/embed2.php?player=desktop&live=bein6arab" target="_blank"><b> <strong><font size="4" color="black">📌BEIN SP⚽RTS 6</font></strong></b></a><span class="float-right emd"></span></td></tr>
-<tr class=""><td><a class="small" href="https://vikistream.com/embed2.php?player=desktop&live=bein7arab" target="_blank"><b> <strong><font size="4" color="black">📌BEIN SP⚽RTS 7</font></strong></b></a><span class="float-right emd"></span></td></tr>
-<tr class=""><td><a class="small" href="https://vikistream.com/embed2.php?player=desktop&live=bein1fr" target="_blank"><b> <strong><font size="4" color="black">📌BEIN SP⚽RTS 1 FR</font></strong></b></a><span class="float-right emd"></span></td></tr>
-<tr class=""><td><a class="small" href="https://vikistream.com/embed2.php?player=desktop&live=bein2fr" target="_blank"><b> <strong><font size="4" color="black">📌BEIN SP⚽RTS 2 FR</font></strong></b></a><span class="float-right emd"></span></td></tr>
-<tr class=""><td><a class="small" href="https://vikistream.com/embed2.php?player=desktop&live=bein3fr" target="_blank"><b> <strong><font size="4" color="black">📌BEIN SP⚽RTS 3 FR</font></strong></b></a><span class="float-right emd"></span></td></tr>
-<tr class=""><td><a class="small" href="https://vikistream.com/embed2.php?player=desktop&live=bein1extra" target="_blank"><b> <strong><font size="4" color="black">📌BEIN SP⚽RTS 1 XTRA</font></strong></b></a><span class="float-right emd"></span></td></tr>
-<tr class=""><td><a class="small" href="https://vikistream.com/embed2.php?player=desktop&live=bein2extra" target="_blank"><b> <strong><font size="4" color="black">📌BEIN SP⚽RTS 2 XTRA</font></strong></b></a><span class="float-right emd"></span></td></tr>
-<tr class=""><td><a class="small" href="https://vikistream.com/embed2.php?player=desktop&live=beinca" target="_blank"><b> <strong><font size="4" color="black">📌BEIN SP⚽RTS Canada</font></strong></b></a><span class="float-right emd"></span></td></tr>
-<tr class=""><td><a class="small" href="https://vikistream.com/embed2.php?player=desktop&live=bein1france" target="_blank"><b> <strong><font size="4" color="black">📌BEIN SP⚽RTS 1 France</font></strong></b></a><span class="float-right emd"></span></td></tr>
-<tr class=""><td><a class="small" href="https://vikistream.com/embed2.php?player=desktop&live=bein2france" target="_blank"><b> <strong><font size="4" color="black">📌BEIN SP⚽RTS 2 France</font></strong></b></a><span class="float-right emd"></span></td></tr>
-          </tbody>
-     </table>
-                  </div>
-       </div>
+<div style="overflow:auto">
+<iframe allowFullScreen="true" scrolling=yes frameborder="0 "width="100%" height="100%" src="https://stream.crichd.vip/update/bein1en.php'" allow="clipboard-read; clipboard-write"></iframe></div>
 </div>
-
-
-<div class="panel panel-default">
-                <div class="panel-heading" role="tab" id="heading" style="background-image: url(https://i.imgur.com/pLccTCf.gif);">
-                  <h4 class="panel-title" style="background-image: url(https://i.imgur.com/pLccTCf.gif);">
-                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse3xT" aria-expanded="false" aria-controls="collapse">
-                       <b><strong><font size="5" color="green">BT SP⚽RTS</font></strong></b>
-                    </a>
-                  </h4>
-                </div>
-                <div id="collapse3xT" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading">
-                  <div class="panel-body">
-       <table class="table table-light table-striped text-left">
-           <tbody>
-<tr class=""><td><a class="small" href="https://vikistream.com/embed2.php?player=desktop&live=bbtsp1" target="_blank"><b> <strong><font size="4" color="black">📌BT SP⚽RTS 1</font></strong></b></a><span class="float-right emd"></span></td></tr>
-<tr class=""><td><a class="small" href="https://vikistream.com/embed2.php?player=desktop&live=bbtsp2" target="_blank"><b> <strong><font size="4" color="black">📌BT SP⚽RTS 2</font></strong></b></a><span class="float-right emd"></span></td></tr>
-<tr class=""><td><a class="small" href="https://vikistream.com/embed2.php?player=desktop&live=bbtsp3" target="_blank"><b> <strong><font size="4" color="black">📌BT SP⚽RTS 3</font></strong></b></a><span class="float-right emd"></span></td></tr>
-<tr class=""><td><a class="small" href="https://vikistream.com/embed2.php?player=desktop&live=bbtsp4" target="_blank"><b> <strong><font size="4" color="black">📌BT SP⚽RTS 4</font></strong></b></a><span class="float-right emd"></span></td></tr>
-<tr class=""><td><a class="small" href="https://vikistream.com/embed2.php?player=desktop&live=hdchnl10" target="_blank"><b> <strong><font size="4" color="black">📌BT SP⚽RTS 5</font></strong></b></a><span class="float-right emd"></span></td></tr>
-<tr class=""><td><a class="small" href="https://vikistream.com/embed2.php?player=desktop&live=hdchnl11" target="_blank"><b> <strong><font size="4" color="black">📌BT SP⚽RTS 6</font></strong></b></a><span class="float-right emd"></span></td></tr>
-<tr class=""><td><a class="small" href="https://vikistream.com/embed2.php?player=desktop&live=hdchnl12" target="_blank"><b> <strong><font size="4" color="black">📌BT SP⚽RTS 7</font></strong></b></a><span class="float-right emd"></span></td></tr>
-<tr class=""><td><a class="small" href="https://vikistream.com/embed2.php?player=desktop&live=hdchnl13" target="_blank"><b> <strong><font size="4" color="black">📌BT SP⚽RTS 8</font></strong></b></a><span class="float-right emd"></span></td></tr>
-<tr class=""><td><a class="small" href="https://vikistream.com/embed2.php?player=desktop&live=hdchnl14" target="_blank"><b> <strong><font size="4" color="black">📌BT SP⚽RTS 9</font></strong></b></a><span class="float-right emd"></span></td></tr>
-<tr class=""><td><a class="small" href="https://vikistream.com/embed2.php?player=desktop&live=hdchnl15" target="_blank"><b> <strong><font size="4" color="black">📌BT SP⚽RTS 10</font></strong></b></a><span class="float-right emd"></span></td></tr>
-          </tbody>
-     </table>
-                  </div>
-       </div>
-</div>
-
-
-
-<div class="panel panel-default">
-                <div class="panel-heading" role="tab" id="heading" style="background-image: url(https://i.imgur.com/pLccTCf.gif);">
-                  <h4 class="panel-title" style="background-image: url(https://i.imgur.com/pLccTCf.gif);">
-                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse4xT" aria-expanded="false" aria-controls="collapse">
-                       <b><strong><font size="5" color="purple">SKY SP⚽RTS</font></strong></b>
-                    </a>
-                  </h4>
-                </div>
-                <div id="collapse4xT" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading">
-                  <div class="panel-body">
-       <table class="table table-light table-striped text-left">
-           <tbody>
-<tr class=""><td><a class="small" href="https://vikistream.com/embed2.php?player=desktop&live=skysact" target="_blank"><b> <strong><font size="4" color="black">📌SKY SP⚽RTS ACTION</font></strong></b></a><span class="float-right emd"></span></td></tr>
-<tr class=""><td><a class="small" href="https://vikistream.com/embed2.php?player=desktop&live=skysare" target="_blank"><b> <strong><font size="4" color="black">📌SKY SP⚽RTS ARENA</font></strong></b></a><span class="float-right emd"></span></td></tr>
-<tr class=""><td><a class="small" href="https://vikistream.com/embed2.php?player=desktop&live=skyscric" target="_blank"><b> <strong><font size="4" color="black">📌SKY SP⚽RTS CRICKET</font></strong></b></a><span class="float-right emd"></span></td></tr>
-<tr class=""><td><a class="small" href="https://vikistream.com/embed2.php?player=desktop&live=skysfor1" target="_blank"><b> <strong><font size="4" color="black">📌SKY SP⚽RTS F1</font></strong></b></a><span class="float-right emd"></span></td></tr>
-<tr class=""><td><a class="small" href="https://vikistream.com/embed2.php?player=desktop&live=skysfott" target="_blank"><b> <strong><font size="4" color="black">📌SKY SP⚽RTS FOOTBALL</font></strong></b></a><span class="float-right emd"></span></td></tr>
-<tr class=""><td><a class="small" href="https://vikistream.com/embed2.php?player=desktop&live=skysgol" target="_blank"><b> <strong><font size="4" color="black">📌SKY SP⚽RTS GOLF</font></strong></b></a><span class="float-right emd"></span></td></tr>
-<tr class=""><td><a class="small" href="https://vikistream.com/embed2.php?player=desktop&live=skysme" target="_blank"><b> <strong><font size="4" color="black">📌SKY SP⚽RTS MAIN EVENT</font></strong></b></a><span class="float-right emd"></span></td></tr>
-<tr class=""><td><a class="small" href="https://vikistream.com/embed2.php?player=desktop&live=skysmixx" target="_blank"><b> <strong><font size="4" color="black">📌SKY SP⚽RTS MIX</font></strong></b></a><span class="float-right emd"></span></td></tr>
-<tr class=""><td><a class="small" href="https://vikistream.com/embed2.php?player=desktop&live=skyspnews" target="_blank"><b> <strong><font size="4" color="black">📌SKY SP⚽RTS NEWS</font></strong></b></a><span class="float-right emd"></span></td></tr>
-<tr class=""><td><a class="small" href="https://vikistream.com/embed2.php?player=desktop&live=skysprem" target="_blank"><b> <strong><font size="4" color="black">📌SKY SP⚽RTS PREMIER L</font></strong></b></a><span class="float-right emd"></span></td></tr>
-          </tbody>
-     </table>
-                  </div>
-       </div>
-</div>
-
-
-<div class="panel panel-default">
-                <div class="panel-heading" role="tab" id="heading" style="background-image: url(https://i.imgur.com/pLccTCf.gif);">
-                  <h4 class="panel-title" style="background-image: url(https://i.imgur.com/pLccTCf.gif);">
-                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse5xT" aria-expanded="false" aria-controls="collapse">
-                       <b><strong><font size="4" color="brown">SKYSP⚽RTS New Zealand</font></strong></b>
-                    </a>
-                  </h4>
-                </div>
-                <div id="collapse5xT" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading">
-                  <div class="panel-body">
-       <table class="table table-light table-striped text-left">
-           <tbody>
-<tr class=""><td><a class="small" href="https://vikistream.com/embed2.php?player=desktop&live=sky1nz" target="_blank"><b> <strong><font size="4" color="black">📌SKY SP⚽RTS 1</font></strong></b></a><span class="float-right emd"></span></td></tr>
-<tr class=""><td><a class="small" href="https://vikistream.com/embed2.php?player=desktop&live=sky2nz" target="_blank"><b> <strong><font size="4" color="black">📌SKY SP⚽RTS 2</font></strong></b></a><span class="float-right emd"></span></td></tr>
-<tr class=""><td><a class="small" href="https://vikistream.com/embed2.php?player=desktop&live=sky3nz" target="_blank"><b> <strong><font size="4" color="black">📌SKY SP⚽RTS 3</font></strong></b></a><span class="float-right emd"></span></td></tr>
-<tr class=""><td><a class="small" href="https://vikistream.com/embed2.php?player=desktop&live=sky4nz" target="_blank"><b> <strong><font size="4" color="black">📌SKY SP⚽RTS 4</font></strong></b></a><span class="float-right emd"></span></td></tr>
-<tr class=""><td><a class="small" href="https://vikistream.com/embed2.php?player=desktop&live=sky5nz" target="_blank"><b> <strong><font size="4" color="black">📌SKY SP⚽RTS 5</font></strong></b></a><span class="float-right emd"></span></td></tr>
-<tr class=""><td><a class="small" href="https://vikistream.com/embed2.php?player=desktop&live=sky6nz" target="_blank"><b> <strong><font size="4" color="black">📌SKY SP⚽RTS 6</font></strong></b></a><span class="float-right emd"></span></td></tr>
-<tr class=""><td><a class="small" href="https://vikistream.com/embed2.php?player=desktop&live=sky7nz" target="_blank"><b> <strong><font size="4" color="black">📌SKY SP⚽RTS 7</font></strong></b></a><span class="float-right emd"></span></td></tr>
-<tr class=""><td><a class="small" href="https://vikistream.com/embed2.php?player=desktop&live=sky8nz" target="_blank"><b> <strong><font size="4" color="black">📌SKY SP⚽RTS 8</font></strong></b></a><span class="float-right emd"></span></td></tr>
-<tr class=""><td><a class="small" href="https://vikistream.com/embed2.php?player=desktop&live=sky9nz" target="_blank"><b> <strong><font size="4" color="black">📌SKY SP⚽RTS 9</font></strong></b></a><span class="float-right emd"></span></td></tr>
-          </tbody>
-     </table>
-                  </div>
-       </div>
-</div>
-
-
-
-<div class="panel panel-default">
-                <div class="panel-heading" role="tab" id="heading" style="background-image: url(https://i.imgur.com/pLccTCf.gif);">
-                  <h4 class="panel-title" style="background-image: url(https://i.imgur.com/pLccTCf.gif);">
-                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse6xT" aria-expanded="false" aria-controls="collapse">
-                       <b><strong><font size="5" color="blue">EURO SP⚽RTS</font></strong></b>
-                    </a>
-                  </h4>
-                </div>
-                <div id="collapse6xT" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading">
-                  <div class="panel-body">
-       <table class="table table-light table-striped text-left">
-           <tbody>
-<tr class=""><td><a class="small" href="https://vikistream.com/embed2.php?player=desktop&live=eurosp1" target="_blank"><b> <strong><font size="4" color="black">📌EURO SP⚽RTS 1</font></strong></b></a><span class="float-right emd"></span></td></tr>
-<tr class=""><td><a class="small" href="https://vikistream.com/embed2.php?player=desktop&live=eurosp2" target="_blank"><b> <strong><font size="4" color="black">📌EURO SP⚽RTS 2</font></strong></b></a><span class="float-right emd"></span></td></tr>
-          </tbody>
-     </table>
-                  </div>
-       </div>
-</div>
-
-
-
-<div class="panel panel-default">
-                <div class="panel-heading" role="tab" id="heading" style="background-image: url(https://i.imgur.com/pLccTCf.gif);">
-                  <h4 class="panel-title" style="background-image: url(https://i.imgur.com/pLccTCf.gif);">
-                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse7xT" aria-expanded="false" aria-controls="collapse">
-                       <b><strong><font size="5" color="red">SUPERSP⚽RTS</font></strong></b>
-                    </a>
-                  </h4>
-                </div>
-                <div id="collapse7xT" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading">
-                  <div class="panel-body">
-       <table class="table table-light table-striped text-left">
-           <tbody>
-<tr class=""><td><a class="small" href="https://vikistream.com/embed2.php?player=desktop&live=superfotball" target="_blank"><b> <strong><font size="4" color="black">📌SUPERSP⚽RT FOOTBALL</font></strong></b></a><span class="float-right emd"></span></td></tr>
-<tr class=""><td><a class="small" href="https://vikistream.com/embed2.php?player=desktop&live=superpremier" target="_blank"><b> <strong><font size="4" color="black">📌SUPERSP⚽RT PREMIER L</font></strong></b></a><span class="float-right emd"></span></td></tr>
-<tr class=""><td><a class="small" href="https://vikistream.com/embed2.php?player=desktop&live=superlaliga" target="_blank"><b> <strong><font size="4" color="black">📌SUPERSP⚽RT LALIGA</font></strong></b></a><span class="float-right emd"></span></td></tr>
-<tr class=""><td><a class="small" href="https://vikistream.com/embed2.php?player=desktop&live=supersrugby" target="_blank"><b> <strong><font size="4" color="black">📌SUPERSP⚽RT RUGBY</font></strong></b></a><span class="float-right emd"></span></td></tr>
-<tr class=""><td><a class="small" href="https://vikistream.com/embed2.php?player=desktop&live=supergrandstand" target="_blank"><b> <strong><font size="4" color="black">📌SUPERSP⚽RT GRANDSTAND</font></strong></b></a><span class="float-right emd"></span></td></tr>
-<tr class=""><td><a class="small" href="https://vikistream.com/embed2.php?player=desktop&live=supertennis" target="_blank"><b> <strong><font size="4" color="black">📌SUPERSP⚽RT TENNIS</font></strong></b></a><span class="float-right emd"></span></td></tr>
-<tr class=""><td><a class="small" href="https://vikistream.com/embed2.php?player=desktop&live=superactions" target="_blank"><b> <strong><font size="4" color="black">📌SUPERSP⚽RT ACTION </font></strong></b></a><span class="float-right emd"></span></td></tr>
-<tr class=""><td><a class="small" href="https://vikistream.com/embed2.php?player=desktop&live=supergolf" target="_blank"><b> <strong><font size="4" color="black">📌SUPERSP⚽RT GOLF</font></strong></b></a><span class="float-right emd"></span></td></tr>
-<tr class=""><td><a class="small" href="https://vikistream.com/embed2.php?player=desktop&live=supermeximo" target="_blank"><b> <strong><font size="4" color="black">📌SUPERSP⚽RT MAXIMO</font></strong></b></a><span class="float-right emd"></span></td></tr>
-<tr class=""><td><a class="small" href="https://vikistream.com/embed2.php?player=desktop&live=superpsl" target="_blank"><b> <strong><font size="4" color="black">📌SUPERSP⚽RT PSL</font></strong></b></a><span class="float-right emd"></span></td></tr>
-<tr class=""><td><a class="small" href="https://vikistream.com/embed2.php?player=desktop&live=hdchnl6" target="_blank"><b> <strong><font size="4" color="black">📌SUPERSP⚽RT VARIETY 1</font></strong></b></a><span class="float-right emd"></span></td></tr>
-<tr class=""><td><a class="small" href="https://vikistream.com/embed2.php?player=desktop&live=hdchnl7" target="_blank"><b> <strong><font size="4" color="black">📌SUPERSP⚽RT VARIETY 2</font></strong></b></a><span class="float-right emd"></span></td></tr>
-<tr class=""><td><a class="small" href="https://vikistream.com/embed2.php?player=desktop&live=hdchnl8" target="_blank"><b> <strong><font size="4" color="black">📌SUPERSP⚽RT VARIETY 3</font></strong></b></a><span class="float-right emd"></span></td></tr>
-<tr class=""><td><a class="small" href="https://vikistream.com/embed2.php?player=desktop&live=hdchnl9" target="_blank"><b> <strong><font size="4" color="black">📌SUPERSP⚽RT VARIETY 4</font></strong></b></a><span class="float-right emd"></span></td></tr>
-          </tbody>
-     </table>
-                  </div>
-       </div>
-</div>
-
-
-
-<div class="panel panel-default">
-                <div class="panel-heading" role="tab" id="heading" style="background-image: url(https://i.imgur.com/pLccTCf.gif);">
-                  <h4 class="panel-title" style="background-image: url(https://i.imgur.com/pLccTCf.gif);">
-                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse8xT" aria-expanded="false" aria-controls="collapse">
-                       <b><strong><font size="5" color="green">VIAPLAY SP⚽RTS</font></strong></b>
-                    </a>
-                  </h4>
-                </div>
-                <div id="collapse8xT" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading">
-                  <div class="panel-body">
-       <table class="table table-light table-striped text-left">
-           <tbody>
-<tr class=""><td><a class="small" href="https://vikistream.com/embed2.php?player=desktop&live=premieruk" target="_blank"><b> <strong><font size="4" color="black">📌VIAPLAY SP⚽RT 1</font></strong></b></a><span class="float-right emd"></span></td></tr>
-<tr class=""><td><a class="small" href="https://vikistream.com/embed2.php?player=desktop&live=hdchnl2" target="_blank"><b> <strong><font size="4" color="black">📌VIAPLAY SP⚽RT 2</font></strong></b></a><span class="float-right emd"></span></td></tr>
-<tr class=""><td><a class="small" href="https://vikistream.com/embed2.php?player=desktop&live=hdchnl3" target="_blank"><b> <strong><font size="4" color="black">📌VIAPLAY SP⚽RT XTRA</font></strong></b></a><span class="float-right emd"></span></td></tr>
-          </tbody>
-     </table>
-                  </div>
-       </div>
-</div>
-
-
-
-<div class="panel panel-default">
-                <div class="panel-heading" role="tab" id="heading" style="background-image: url(https://i.imgur.com/pLccTCf.gif);">
-                  <h4 class="panel-title" style="background-image: url(https://i.imgur.com/pLccTCf.gif);">
-                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse9xT" aria-expanded="false" aria-controls="collapse">
-                       <b><strong><font size="5" color="purple">FOX SP⚽RTS</font></strong></b>
-                    </a>
-                  </h4>
-                </div>
-                <div id="collapse9xT" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading">
-                  <div class="panel-body">
-       <table class="table table-light table-striped text-left">
-           <tbody>
-<tr class=""><td><a class="small" href="https://vikistream.com/embed2.php?player=desktop&live=fox501" target="_blank"><b> <strong><font size="4" color="black">📌F⚽X 501 HD</font></strong></b></a><span class="float-right emd"></span></td></tr>
-<tr class=""><td><a class="small" href="https://vikistream.com/embed2.php?player=desktop&live=fox5022" target="_blank"><b> <strong><font size="4" color="black">📌F⚽X 502 HD</font></strong></b></a><span class="float-right emd"></span></td></tr>
-<tr class=""><td><a class="small" href="https://vikistream.com/embed2.php?player=desktop&live=fox503" target="_blank"><b> <strong><font size="4" color="black">📌F⚽X 503 HD</font></strong></b></a><span class="float-right emd"></span></td></tr>
-<tr class=""><td><a class="small" href="https://vikistream.com/embed2.php?player=desktop&live=fox504" target="_blank"><b> <strong><font size="4" color="black">📌F⚽X 504 HD</font></strong></b></a><span class="float-right emd"></span></td></tr>
-<tr class=""><td><a class="small" href="https://vikistream.com/embed2.php?player=desktop&live=fox505" target="_blank"><b> <strong><font size="4" color="black">📌F⚽X 505 HD</font></strong></b></a><span class="float-right emd"></span></td></tr>
-<tr class=""><td><a class="small" href="https://vikistream.com/embed2.php?player=desktop&live=fox506" target="_blank"><b> <strong><font size="4" color="black">📌F⚽X 506 HD</font></strong></b></a><span class="float-right emd"></span></td></tr>
-<tr class=""><td><a class="small" href="https://vikistream.com/embed2.php?player=desktop&live=usafox1" target="_blank"><b> <strong><font size="4" color="black">📌F⚽X SPORTS 1 USA</font></strong></b></a><span class="float-right emd"></span></td></tr>
-<tr class=""><td><a class="small" href="https://vikistream.com/embed2.php?player=desktop&live=usafox2" target="_blank"><b> <strong><font size="4" color="black">📌F⚽X SPORTS 2 USA</font></strong></b></a><span class="float-right emd"></span></td></tr>
-          </tbody>
-     </table>
-                  </div>
-       </div>
-</div>
-
-
-<div class="panel panel-default">
-                <div class="panel-heading" role="tab" id="heading" style="background-image: url(https://i.imgur.com/pLccTCf.gif);">
-                  <h4 class="panel-title" style="background-image: url(https://i.imgur.com/pLccTCf.gif);">
-                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse10xT" aria-expanded="false" aria-controls="collapse">
-                       <b><strong><font size="4" color="brown">UNCATEGORIZED SP⚽RTS</font></strong></b>
-                    </a>
-                  </h4>
-                </div>
-                <div id="collapse10xT" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading">
-                  <div class="panel-body">
-       <table class="table table-light table-striped text-left">
-           <tbody>
-<tr class=""><td><a class="small" href="https://vikistream.com/embed2.php?player=desktop&live=ptvpk" target="_blank"><b> <strong><font size="4" color="black">📌PTV SP⚽RTS</font></strong></b></a><span class="float-right emd"></span></td></tr>
-<tr class=""><td><a class="small" href="https://vikistream.com/embed2.php?player=desktop&live=tenspk" target="_blank"><b> <strong><font size="4" color="black">📌TEN SP⚽RTS</font></strong></b></a><span class="float-right emd"></span></td></tr>
-<tr class=""><td><a class="small" href="https://vikistream.com/embed2.php?player=desktop&live=laligauk" target="_blank"><b> <strong><font size="4" color="black">📌LALIGA TV ⚽</font></strong></b></a><span class="float-right emd"></span></td></tr>
-<tr class=""><td><a class="small" href="https://vikistream.com/embed2.php?player=desktop&live=wwe" target="_blank"><b> <strong><font size="4" color="black">📌WWE </font></strong></b></a><span class="float-right emd"></span></td></tr>
-<tr class=""><td><a class="small" href="https://vikistream.com/embed2.php?player=desktop&live=star2in" target="_blank"><b> <strong><font size="4" color="black">📌STAR SP⚽RTS 2</font></strong></b></a><span class="float-right emd"></span></td></tr>
-<tr class=""><td><a class="small" href="https://vikistream.com/embed2.php?player=desktop&live=espnusa" target="_blank"><b> <strong><font size="4" color="black">📌ESPN USA ⚽</font></strong></b></a><span class="float-right emd"></span></td></tr>
-<tr class=""><td><a class="small" href="https://vikistream.com/embed2.php?player=desktop&live=espn2" target="_blank"><b> <strong><font size="4" color="black">📌ESPN 2 ⚽</font></strong></b></a><span class="float-right emd"></span></td></tr>
-<tr class=""><td><a class="small" href="https://vikistream.com/embed2.php?player=desktop&live=geosp" target="_blank"><b> <strong><font size="4" color="black">📌GEO SUPER ⚽</font></strong></b></a><span class="float-right emd"></span></td></tr>
-<tr class=""><td><a class="small" href="https://vikistream.com/embed2.php?player=desktop&live=sonyespnind" target="_blank"><b> <strong><font size="4" color="black">📌S⚽NY ESPN</font></strong></b></a><span class="float-right emd"></span></td></tr>
-<tr class=""><td><a class="small" href="https://vikistream.com/embed2.php?player=desktop&live=sonysixind" target="_blank"><b> <strong><font size="4" color="black">📌S⚽NY SIX</font></strong></b></a><span class="float-right emd"></span></td></tr>
-<tr class=""><td><a class="small" href="https://vikistream.com/embed2.php?player=desktop&live=ten1hd" target="_blank"><b> <strong><font size="4" color="black">📌S⚽NY TEN 1</font></strong></b></a><span class="float-right emd"></span></td></tr>
-<tr class=""><td><a class="small" href="https://vikistream.com/embed2.php?player=desktop&live=itv4" target="_blank"><b> <strong><font size="4" color="black">📌ITV 4 UK ⚽</font></strong></b></a><span class="float-right emd"></span></td></tr>
-<tr class=""><td><a class="small" href="https://vikistream.com/embed2.php?player=desktop&live=gazitv" target="_blank"><b> <strong><font size="4" color="black">📌GAZI TV BD ⚽</font></strong></b></a><span class="float-right emd"></span></td></tr>
-<tr class=""><td><a class="small" href="https://vikistream.com/embed2.php?player=desktop&live=dazn1es" target="_blank"><b> <strong><font size="4" color="black">📌DAZN 1 ESPANA ⚽</font></strong></b></a><span class="float-right emd"></span></td></tr>
-<tr class=""><td><a class="small" href="https://vikistream.com/embed2.php?player=desktop&live=mlaliga" target="_blank"><b> <strong><font size="4" color="black">📌M. LALIGA ⚽</font></strong></b></a><span class="float-right emd"></span></td></tr>
-<tr class=""><td><a class="small" href="https://vikistream.com/embed2.php?player=desktop&live=daznlaliga" target="_blank"><b> <strong><font size="4" color="black">📌DAZN LALIGA ⚽</font></strong></b></a><span class="float-right emd"></span></td></tr>
-<tr class=""><td><a class="small" href="https://vikistream.com/embed2.php?player=desktop&live=golmundiales" target="_blank"><b> <strong><font size="4" color="black">📌GOL MUNDIAL ES ⚽</font></strong></b></a><span class="float-right emd"></span></td></tr>
-<tr class=""><td><a class="small" href="https://vikistream.com/embed2.php?player=desktop&live=arena6" target="_blank"><b> <strong><font size="4" color="black">📌ARENA SP⚽RTS 6</font></strong></b></a><span class="float-right emd"></span></td></tr>
-<tr class=""><td><a class="small" href="https://vikistream.com/embed2.php?player=desktop&live=hdchnl" target="_blank"><b> <strong><font size="4" color="black">📌BBC ⚽NE</font></strong></b></a><span class="float-right emd"></span></td></tr>
-<tr class=""><td><a class="small" href="https://vikistream.com/embed2.php?player=desktop&live=hdchn4" target="_blank"><b> <strong><font size="4" color="black">📌ITV UK ⚽</font></strong></b></a><span class="float-right emd"></span></td></tr>
-<tr class=""><td><a class="small" href="https://vikistream.com/embed2.php?player=desktop&live=hdchn5" target="_blank"><b> <strong><font size="4" color="black">📌BBC 2 ⚽</font></strong></b></a><span class="float-right emd"></span></td></tr>
-<tr class=""><td><a class="small" href="https://vikistream.com/embed2.php?player=desktop&live=hdchnl6" target="_blank"><b> <strong><font size="4" color="black">📌CHANNEL 16 ⚽</font></strong></b></a><span class="float-right emd"></span></td></tr>
-<tr class=""><td><a class="small" href="https://vikistream.com/embed2.php?player=desktop&live=hdchnl7" target="_blank"><b> <strong><font size="4" color="black">📌CHANNEL 17 ⚽</font></strong></b></a><span class="float-right emd"></span></td></tr>
-<tr class=""><td><a class="small" href="https://vikistream.com/embed2.php?player=desktop&live=hdchnl8" target="_blank"><b> <strong><font size="4" color="black">📌CHANNEL 18 ⚽</font></strong></b></a><span class="float-right emd"></span></td></tr>
-<tr class=""><td><a class="small" href="https://vikistream.com/embed2.php?player=desktop&live=hdchnl9" target="_blank"><b> <strong><font size="4" color="black">📌CHANNEL 19 ⚽</font></strong></b></a><span class="float-right emd"></span></td></tr>
-<tr class=""><td><a class="small" href="https://vikistream.com/embed2.php?player=desktop&live=hdchn20" target="_blank"><b> <strong><font size="4" color="black">📌CHANNEL 20 ⚽</font></strong></b></a><span class="float-right emd"></span></td></tr>
-<tr class=""><td><a class="small" href="https://vikistream.com/embed2.php?player=desktop&live=do3" target="_blank"><b> <strong><font size="4" color="black">📌do3 ⚽</font></strong></b></a><span class="float-right emd"></span></td></tr>
-          </tbody>
-     </table>
-                  </div>
-       </div>
-</div>
-
-
-
-
-
-
-
-
-
-
-
-      <hr style="margin-top: 20px;">
-
-
-
-<h3 class="text-center tit"><a href="https://aamobiletv.blogspot.com/" target="_blank">DOWNLOAD AA MOBILE TV NOW !!! </a></h3>
-
-
-
-
-
-
-<!-- end edit event -->
-
-
-
-        </div> <!-- panel-group -->
-      <hr /> 
-
- </div><!-- md 12 left side -->
-
-
-    </div><!-- row -->
-
-
-
-
-      </div>  <!-- card text-white -->
-
-  </div>      <!-- /.container -->
-
-
-
-
-  <!-- Footer -->
-  <footer class="py-5 bg-dark">
-    <div class="container">
-      <p class="m-0 text-center text-white">Copyright © 2021 | <a href="https://aamobiletv.blogspot.com/" target="_blank">AA MOBILE TV</a></p>
-    </div>
-    <!-- /.container -->
-  </footer>
-
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<div id="footer">© 2023 - aamobiletv.tk All Rights Reserved</div>
 </body>
 </html>
