@@ -1,0 +1,510 @@
+<head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+<script src="https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous"></script>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@500&family=Roboto:wght@300&display=swap" />
+<title>AA MOBILE TV application design - designed by Taiwo A.O</title>
+<meta content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no" name="viewport" />
+
+
+
+
+
+<!----------  Comprehensive application style codes  ------------>
+<style type="text/css">
+@import url('https://fonts.googleapis.com/css2?family=Readex+Pro&display=swap');
+ body {
+		 margin: auto;
+				padding: 0;
+		        background-image: url(https://i.imgur.com/XdajA3X.jpg);
+		       	background-position: center;
+		         position: relative;
+		  		font-family: sans-serif;
+                padding: 0px;
+  }
+
+
+h3 {
+    text-align: center;
+ /* text-align: right; */
+    /* padding-right: 65px; */
+    /* padding-top: 2px;
+    font-size: medium; */
+    font-weight: 200;
+    font-family: 'Readex Pro', sans-serif;
+
+}
+
+
+header {
+background:#CE0610;
+padding:2px;
+color:#ffffff;
+margin-bottom:10px;
+position:fixed;
+top:0;
+height:60px;
+width:100%;
+box-shadow: 0px 0px 7px black;
+z-index:1;
+
+}
+
+#i1{
+position:fixed;
+top:21px;
+
+right:17px;
+font-size:40px;
+}
+#i2{
+position:fixed;
+top:21px;
+left:14px;
+font-size:40px;
+}
+#i3{
+position:fixed;
+top:21px;
+left:50px;
+font-size:40px;
+}
+
+
+#page:hover {
+background:none;
+}
+#page {
+margin-top:75px;
+width:100%;
+
+}
+#page a:hover {
+background:#111;
+}
+#page a {
+height: 50px;
+padding-top: 2px;
+padding-bottom: 3px;
+margin-bottom: 11px;
+border: 2px solid rgba(255, 255, 255);
+border-radius: 12px;
+width: 91%;
+display: inline-block;
+margin-right: 14px;
+margin-left: 14px;
+background: #CE0610;
+}
+#page a img {
+/*height:50px;
+margin-right:10px;
+width:50px;
+padding-bottom:4px;
+*/
+    height: 50px;
+    margin-right: 10px;
+    width: 50px;
+    padding-bottom: 4px;
+
+
+}
+#page a p {
+
+    text-align: center;
+    font-family: 'Readex Pro', sans-serif;
+    /* position: absolute; */
+    /* margin-right: 20px; */
+    /* margin-top: -40px; */
+    display: inline-block;
+    font-weight: bold;
+    color: #CE0610;
+
+
+}
+</style>
+<style>
+
+.sidenav {
+height: 100%;
+width: 0;
+position: fixed;
+z-index: 1;
+top: 0;
+right: 0;
+/**  تغير  لون القائمة **/
+background-color: #CE0610;
+/**  تغير  لون القائمة **/
+
+overflow-x: hidden;
+transition: 0.5s;
+padding-top: 60px;
+}
+
+.sidenav a {
+padding: 8px 8px 8px 32px;
+text-decoration: none;
+font-size: 15px;
+color: #14141f;
+display: block;
+transition: 0.3s;
+text-align: center;
+font-family: "Readex Pro", sans-serif;
+}
+
+.sidenav a:hover {
+color: #14141f;
+}
+
+.sidenav .closebtn {
+position: absolute;
+top: 5px;
+right: 0;
+font-size: 15px;
+margin-left: 0px;
+}
+
+@media screen and (max-height: 450px) {
+.sidenav {
+padding-top: 15px;
+}
+.sidenav a {
+font-size: 18px;
+}
+}
+
+/* Remove the scroll bar at the bottom of the blog*/
+html {
+overflow-x: hidden;
+}
+
+
+
+
+body {
+margin: auto;
+padding: 0;
+background-color: #14141f;
+background-position: center;
+position: relative;
+font-family: sans-serif;
+padding: 0px; } 
+
+.grid1-container { 
+display: grid;
+background-color: #14141f;
+justify-content: center;
+grid-template-columns: repeat(1, 1fr);
+grid-gap: 0px; color: black;
+padding: 5px; margin-bottom: 3px;
+/* Ø¥Ø¶Ø§ÙØ© Ù‡Ø§Ù…Ø´ Ù„Ù„Ø£Ø²Ø±Ø§Ø± Ù…Ù† Ø§Ù„Ø£Ø³ÙÙ„ */ }
+
+.grid1-container>div {
+background-color: black;
+height: 240px;
+border-radius: 10px;
+border: 1px solid black;
+text-align: center; margin-top: 100px;
+} 
+
+.grid1-container>div {
+background-color: black;
+height: 45px;
+border-radius: 1px 1px 40px 40px;
+border: 1px solid black;
+text-align: center; font-size: 14px;
+margin-top: 1px;
+color: white;
+font-family: 'Cairo', sans-serif;
+font-weight: bold; }
+
+h1 { 
+
+text-align: center;
+margin-top: 1px;
+font-weight: bold; 
+font-size: 23px; }
+
+h2 {
+text-align: center;
+margin-top: 0.5px;
+font-size: 15px;
+color: #CE0610;
+font-family: "Airarabia", Sans-serif;
+font-weight: bold; 
+font-size: 12px; }
+
+
+
+
+
+
+
+button {
+
+border-radius: 8px;
+background-color: #fff;
+border-color: #CE0610;
+padding: 0px;
+margin:8px 3px;
+height: 140px;
+width: 110px;
+} 
+.button {
+
+text-align: center; 
+display: grid; } 
+
+button:active {
+border: 1px solid #CE0610; }
+.back-button
+{
+position: absolute; 
+top: 10px; left: 10px;
+z-index: 9999;
+} 
+.back-button a 
+{
+display: block; 
+background-color: transparent;
+color: #fff;
+padding: 10px;
+border-radius: 50%;
+text-decoration: none;
+} 
+.back-button i {
+font-size: 20px; } 
+
+.report-button 
+{ 
+position: absolute;
+top: 10px;
+right: 10px; z-index: 9999;
+}
+
+.report-button a 
+{ 
+display: block;
+background-color: transparent;
+color: #CE0610;
+padding: 10px;
+border-radius: 50%;
+text-decoration: none;
+}
+.report-button i
+{
+font-size: 20px;
+} 
+.popup 
+{
+display: none;
+position: fixed;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+background-color: #CE0610;
+padding: 10px;
+border-radius: 20px;
+z-index: 9999;
+text-align: center;
+align-items: center; 
+} 
+
+.popup button 
+{ 
+border-radius: 0px;
+background-color: #ffff;
+border-color: #CE0610;
+padding: 10px;
+margin: 6px;
+height: 40px;
+width: 190px;
+color: #CE0610;
+font-weight: bold;
+}
+.popup img
+{
+max-width: 100%;
+height: auto;
+margin-bottom: 10px;
+max-height: 150px; 
+}
+
+.empty-space 
+
+{
+background-color: rgba(0, 0, 0, 0.8);
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+z-index: 9999;
+display: none; }
+
+
+</style>
+
+</head> 
+
+<header>
+
+
+<!--- Search location (link) --->
+
+<a href="go:home"><i id="i2" class="fa fa-arrow-left" style="font-size: 20px; color: #fff; margin-top: 2px; "></i></a>
+
+
+<!---Name of the application--->
+<CENTER><h3><strong><font size="5" color="yellow"> LIVE ⚽ STREAMS</font></strong></h3></CENTER>
+
+
+</div>
+<a span href="go:telegram">
+<i id="i1" class="fa fa-telegram"style="font-size: 20px; color: #fff; margin-top: 2px; "></i></a>
+
+<div id="news-bar">
+  <marquee behavior="scroll" direction="left" style="font-weight : bold"><strong><font size="5" color="white">AA M⚽BILE TV - The Channels only Work when there is a Live Football Match</font></strong></marquee>
+
+
+
+</header>
+<div id="page">
+<div align="center" class="button">
+<div id="buttons-list">
+
+
+ <div align="center" class="button"> <div id="buttons-list"> <div class="button-row"> <br> <br>
+
+<a href="javascript:void(0)" onclick="location.href='https://aamobiletv.blogspot.com/'" ><CENTER><p><strong><font size="3" color="yellow">DOWNLOAD AA MOBILE TV</font></strong></p></CENTER></a>
+<a onclick="showPopup('ADPRE1')"><CENTER><p><strong><font size="5" color="white"> CHANNEL ⚽ 1</font></strong></p></CENTER></a>
+<a onclick="showPopup('ADPRE2')"><CENTER><p><strong><font size="5" color="white"> CHANNEL ⚽ 2</font></strong></p></CENTER></a>
+<a onclick="showPopup('ADPRE3')"><CENTER><p><strong><font size="5" color="white"> CHANNEL ⚽ 3</font></strong></p></CENTER></a>
+<a onclick="showPopup('ADPRE4')"><CENTER><p><strong><font size="5" color="white"> CHANNEL ⚽ 4</font></strong></p></CENTER></a>
+<a onclick="showPopup('ADPRE5')"><CENTER><p><strong><font size="5" color="white"> CHANNEL ⚽ 5</font></strong></p></CENTER></a>
+<a onclick="showPopup('ADPRE6')"><CENTER><p><strong><font size="5" color="white"> CHANNEL ⚽ 6</font></strong></p></CENTER></a>
+<a onclick="showPopup('ADPRE7')"><CENTER><p><strong><font size="5" color="white"> CHANNEL ⚽ 7</font></strong></p></CENTER></a>
+<a onclick="showPopup('ADPRE8')"><CENTER><p><strong><font size="5" color="white"> CHANNEL ⚽ 8</font></strong></p></CENTER></a>
+<a onclick="showPopup('ADPRE9')"><CENTER><p><strong><font size="5" color="white"> CHANNEL ⚽ 9</font></strong></p></CENTER></a>
+<a onclick="showPopup('ADPRE10')"><CENTER><p><strong><font size="5" color="white"> CHANNEL ⚽ 10</font></strong></p></CENTER></a>
+
+
+
+
+
+
+<div class="empty-space" onclick="hidePopup()"></div>
+
+
+
+<div id="popup" class="popup"> <h2><strong><font size="3" color="white">CHANNEL ⚽ 1</font></strong></h2>
+<button onclick="window.open('intent://dx11.plusserial.xyz/c1sd/tracks-v1a1/mono.m3u8|User-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36#Intent;scheme=https;type=video;package=com.genuine.leone;end')">CHANNEL 1 SD</button>
+<button onclick="window.open('intent://dec.plusserial.xyz/c1sd/tracks-v1a1/mono.m3u8|User-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36#Intent;scheme=https;type=video;package=com.genuine.leone;end')">CHANNEL 1 SDD</button>
+<button onclick="window.open('intent://dx11.plusserial.xyz/c1hd/tracks-v1a1/mono.m3u8|User-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36#Intent;scheme=https;type=video;package=com.genuine.leone;end')">CHANNEL 1 HD</button>
+<button onclick="window.open('intent://dec.plusserial.xyz/c1hd/tracks-v1a1/mono.m3u8|User-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36#Intent;scheme=https;type=video;package=com.genuine.leone;end')">CHANNEL 1 HDD</button>
+</div> 
+
+
+<div id="popup2" class="popup"> <h2><strong><font size="3" color="white">CHANNEL ⚽ 2</font></strong></h2>
+<button onclick="window.open('intent://dx11.plusserial.xyz/c2sd/tracks-v1a1/mono.m3u8|User-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36#Intent;scheme=https;type=video;package=com.genuine.leone;end')">CHANNEL 2 SD</button>
+<button onclick="window.open('intent://dec.plusserial.xyz/c2sd/tracks-v1a1/mono.m3u8|User-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36#Intent;scheme=https;type=video;package=com.genuine.leone;end')">CHANNEL 2 SDD</button>
+<button onclick="window.open('intent://dx11.plusserial.xyz/c2hd/tracks-v1a1/mono.m3u8|User-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36#Intent;scheme=https;type=video;package=com.genuine.leone;end')">CHANNEL 2 HD</button>
+<button onclick="window.open('intent://dec.plusserial.xyz/c2hd/tracks-v1a1/mono.m3u8|User-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36#Intent;scheme=https;type=video;package=com.genuine.leone;end')">CHANNEL 2 HDD</button>
+ </div> 
+
+
+<div id="popup3" class="popup"> <h2><strong><font size="3" color="white">CHANNEL ⚽ 3</font></strong></h2>
+<button onclick="window.open('intent://dx11.plusserial.xyz/c3sd/tracks-v1a1/mono.m3u8|User-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36#Intent;scheme=https;type=video;package=com.genuine.leone;end')">CHANNEL 3 SD</button>
+<button onclick="window.open('intent://dec.plusserial.xyz/c3sd/tracks-v1a1/mono.m3u8|User-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36#Intent;scheme=https;type=video;package=com.genuine.leone;end')">CHANNEL 3 SDD</button>
+<button onclick="window.open('intent://dx11.plusserial.xyz/c3hd/tracks-v1a1/mono.m3u8|User-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36#Intent;scheme=https;type=video;package=com.genuine.leone;end')">CHANNEL 3 HD</button>
+<button onclick="window.open('intent://dec.plusserial.xyz/c3hd/tracks-v1a1/mono.m3u8|User-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36#Intent;scheme=https;type=video;package=com.genuine.leone;end')">CHANNEL 3 HDD</button>
+</div>
+</div>
+
+
+<div id="popup4" class="popup"> <h2><strong><font size="3" color="white">CHANNEL ⚽ 4</font></strong></h2>
+<button onclick="window.open('intent://dx11.plusserial.xyz/c4sd/tracks-v1a1/mono.m3u8|User-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36#Intent;scheme=https;type=video;package=com.genuine.leone;end')">CHANNEL 4 SD</button>
+<button onclick="window.open('intent://dec.plusserial.xyz/c4sd/tracks-v1a1/mono.m3u8|User-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36#Intent;scheme=https;type=video;package=com.genuine.leone;end')">CHANNEL 4 SDD</button>
+<button onclick="window.open('intent://dx11.plusserial.xyz/c4hd/tracks-v1a1/mono.m3u8|User-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36#Intent;scheme=https;type=video;package=com.genuine.leone;end')">CHANNEL 4 HD</button>
+<button onclick="window.open('intent://dec.plusserial.xyz/c4hd/tracks-v1a1/mono.m3u8|User-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36#Intent;scheme=https;type=video;package=com.genuine.leone;end')">CHANNEL 4 HDD</button>
+
+</div> </div>
+
+
+<div id="popup5" class="popup"> <h2><strong><font size="3" color="white">CHANNEL ⚽ 5</font></strong></h2>
+<button onclick="window.open('intent://dx11.plusserial.xyz/c5sd/tracks-v1a1/mono.m3u8|User-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36#Intent;scheme=https;type=video;package=com.genuine.leone;end')">CHANNEL 5 SD</button>
+<button onclick="window.open('intent://dec.plusserial.xyz/c5sd/tracks-v1a1/mono.m3u8|User-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36#Intent;scheme=https;type=video;package=com.genuine.leone;end')">CHANNEL 5 SDD</button>
+<button onclick="window.open('intent://dx11.plusserial.xyz/c5hd/tracks-v1a1/mono.m3u8|User-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36#Intent;scheme=https;type=video;package=com.genuine.leone;end')">CHANNEL 5 HD</button>
+<button onclick="window.open('intent://dec.plusserial.xyz/c5hd/tracks-v1a1/mono.m3u8|User-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36#Intent;scheme=https;type=video;package=com.genuine.leone;end')">CHANNEL 5 HDD</button>
+</div> </div>
+
+
+<div id="popup6" class="popup"> <h2><strong><font size="3" color="white">CHANNEL ⚽ 6</font></strong></h2>
+<button onclick="window.open('intent://dx11.plusserial.xyz/c6sd/tracks-v1a1/mono.m3u8|User-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36#Intent;scheme=https;type=video;package=com.genuine.leone;end')">CHANNEL 6 SD</button>
+<button onclick="window.open('intent://dec.plusserial.xyz/c6sd/tracks-v1a1/mono.m3u8|User-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36#Intent;scheme=https;type=video;package=com.genuine.leone;end')">CHANNEL 6 SDD</button>
+<button onclick="window.open('intent://dx11.plusserial.xyz/c6hd/tracks-v1a1/mono.m3u8|User-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36#Intent;scheme=https;type=video;package=com.genuine.leone;end')">CHANNEL 6 HD</button>
+<button onclick="window.open('intent://dec.plusserial.xyz/c6hd/tracks-v1a1/mono.m3u8|User-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36#Intent;scheme=https;type=video;package=com.genuine.leone;end')">CHANNEL 6 HDD</button>
+
+</div> </div>
+
+
+<div id="popup7" class="popup"> <h2><strong><font size="3" color="white">CHANNEL ⚽ 7</font></strong></h2>
+<button onclick="window.open('intent://dx11.plusserial.xyz/c7sd/tracks-v1a1/mono.m3u8|User-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36#Intent;scheme=https;type=video;package=com.genuine.leone;end')">CHANNEL 7 SD</button>
+<button onclick="window.open('intent://dec.plusserial.xyz/c7sd/tracks-v1a1/mono.m3u8|User-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36#Intent;scheme=https;type=video;package=com.genuine.leone;end')">CHANNEL 7 SDD</button>
+<button onclick="window.open('intent://dx11.plusserial.xyz/c7hd/tracks-v1a1/mono.m3u8|User-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36#Intent;scheme=https;type=video;package=com.genuine.leone;end')">CHANNEL 7 HD</button>
+<button onclick="window.open('intent://dec.plusserial.xyz/c7hd/tracks-v1a1/mono.m3u8|User-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36#Intent;scheme=https;type=video;package=com.genuine.leone;end')">CHANNEL 7 HDD</button>
+</div> </div>
+
+
+<div id="popup8" class="popup"> <h2><strong><font size="3" color="white">CHANNEL ⚽ 8</font></strong></h2>
+<button onclick="window.open('intent://dx11.plusserial.xyz/c8sd/tracks-v1a1/mono.m3u8|User-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36#Intent;scheme=https;type=video;package=com.genuine.leone;end')">CHANNEL 8 SD</button>
+<button onclick="window.open('intent://dec.plusserial.xyz/c8sd/tracks-v1a1/mono.m3u8|User-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36#Intent;scheme=https;type=video;package=com.genuine.leone;end')">CHANNEL 8 SDD</button>
+<button onclick="window.open('intent://dx11.plusserial.xyz/c8hd/tracks-v1a1/mono.m3u8|User-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36#Intent;scheme=https;type=video;package=com.genuine.leone;end')">CHANNEL 8 HD</button>
+<button onclick="window.open('intent://dec.plusserial.xyz/c8hd/tracks-v1a1/mono.m3u8|User-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36#Intent;scheme=https;type=video;package=com.genuine.leone;end')">CHANNEL 8 HDD</button>
+
+</div> </div>
+
+
+<div id="popup9" class="popup"> <h2><strong><font size="3" color="white">CHANNEL ⚽ 9</font></strong></h2>
+<button onclick="window.open('intent://dx11.plusserial.xyz/c9sd/tracks-v1a1/mono.m3u8|User-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36#Intent;scheme=https;type=video;package=com.genuine.leone;end')">CHANNEL 9 SD</button>
+<button onclick="window.open('intent://dec.plusserial.xyz/c9sd/tracks-v1a1/mono.m3u8|User-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36#Intent;scheme=https;type=video;package=com.genuine.leone;end')">CHANNEL 9 SDD</button>
+<button onclick="window.open('intent://dx11.plusserial.xyz/c9hd/tracks-v1a1/mono.m3u8|User-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36#Intent;scheme=https;type=video;package=com.genuine.leone;end')">CHANNEL 9 HD</button>
+<button onclick="window.open('intent://dec.plusserial.xyz/c9hd/tracks-v1a1/mono.m3u8|User-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36#Intent;scheme=https;type=video;package=com.genuine.leone;end')">CHANNEL 9 HDD</button>
+
+</div> </div>
+
+
+<div id="popup10" class="popup"> <h2><strong><font size="3" color="white">CHANNEL ⚽ 10</font></strong></h2>
+<button onclick="window.open('intent://dx11.plusserial.xyz/c10sd/tracks-v1a1/mono.m3u8|User-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36#Intent;scheme=https;type=video;package=com.genuine.leone;end')">CHANNEL 10 SD</button>
+<button onclick="window.open('intent://dec.plusserial.xyz/c10sd/tracks-v1a1/mono.m3u8|User-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36#Intent;scheme=https;type=video;package=com.genuine.leone;end')">CHANNEL 10 SDD</button>
+<button onclick="window.open('intent://dx11.plusserial.xyz/c10hd/tracks-v1a1/mono.m3u8|User-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36#Intent;scheme=https;type=video;package=com.genuine.leone;end')">CHANNEL 10 HD</button>
+<button onclick="window.open('intent://dec.plusserial.xyz/c10hd/tracks-v1a1/mono.m3u8|User-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36#Intent;scheme=https;type=video;package=com.genuine.leone;end')">CHANNEL 10 HDD</button>
+
+</div> </div>
+
+
+
+
+<div id="popup10" class="popup"> <h2></h2> 
+ </div> </div>
+<script> function showPopup(adType) { if (adType === 'ADPRE1')
+{ document.getElementById("popup").style.display = "block"; } 
+else if (adType === 'ADPRE2') { document.getElementById("popup2").style.display = "block"; }
+else if (adType === 'ADPRE3') { document.getElementById("popup3").style.display = "block"; } 
+else if (adType === 'ADPRE4') { document.getElementById("popup4").style.display = "block"; } 
+else if (adType === 'ADPRE5') { document.getElementById("popup5").style.display = "block"; } 
+else if (adType === 'ADPRE6') { document.getElementById("popup6").style.display = "block"; } 
+else if (adType === 'ADPRE7') { document.getElementById("popup7").style.display = "block"; } 
+else if (adType === 'ADPRE8') { document.getElementById("popup8").style.display = "block"; }
+else if (adType === 'ADPRE9') { document.getElementById("popup9").style.display = "block"; }
+else if (adType === 'ADPRE10') { document.getElementById("popup10").style.display = "block"; }
+document.querySelector('.empty-space').style.display = 'block'; } function hidePopup() 
+{ document.getElementById("popup").style.display = "none"; 
+document.getElementById("popup2").style.display = "none"; 
+document.getElementById("popup3").style.display = "none"; 
+document.getElementById("popup4").style.display = "none"; 
+document.getElementById("popup5").style.display = "none"; 
+document.getElementById("popup6").style.display = "none"; 
+document.getElementById("popup7").style.display = "none"; 
+document.getElementById("popup8").style.display = "none";
+document.getElementById("popup9").style.display = "none";
+document.getElementById("popup10").style.display = "none";
+document.querySelector('.empty-space').style.display = 'none'; } </script> </body> </html>
