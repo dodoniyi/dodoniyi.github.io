@@ -1,0 +1,1731 @@
+[<style type="text/css">
+.grid-container {
+display: grid;
+justify-content: center;
+grid-template-columns: repeat(3, 1fr);
+grid-gap: 5px 5px;
+padding: 0px;
+}
+.grid1-container {
+display: grid;
+justify-content: center;
+grid-template-columns: repeat(1, 1fr);
+grid-gap: 10px;
+
+color: white;
+padding: px;
+}
+h1 {
+text-align: center;
+margin-top: 1px;
+font-weight: bold;
+font-family: "Readex Pro", sans-serif;
+
+}
+
+h3 {
+text-align: center;
+margin-top: 0.7px;
+font-size: 32px;
+color: #FFFFFF;
+font-weight:990;
+font-style:bold;
+}
+
+
+.button {
+text-align: center;
+}
+ {
+display: block;
+}
+button:active {
+border: 2px solid #f00;
+}
+
+</style>
+
+<!----------  اكواد استايل التطبيق شامل  ------------>
+<style type="text/css">
+@import url("https://fonts.googleapis.com/css2?family=Readex+Pro&display=swap");
+body {
+padding: 0;
+margin: 0;
+user-select: none;
+list-style: none;
+background-size: cover;
+font-weight: 500;
+font-size: 16px;
+text-align: right;
+margin: auto;
+/* position: relative; */
+direction: ltr;
+
+}
+
+
+header {
+background: #410200;
+padding: 3px;
+color: #fff;
+margin-bottom: 10px;
+position: fixed;
+top: 0;
+height: 45px;
+width: 100%;
+box-shadow: 0px 3px 0px #EEEEEE;
+z-index: 1;
+}
+
+#i1 {
+position: fixed;
+top: 9px;
+
+right: 3px;
+font-size: 40px;
+}
+#i2 {
+position: fixed;
+top: 21px;
+left: 14px;
+font-size: 40px;
+}
+#i3 {
+position: fixed;
+top: 16px;
+left: 40px;
+font-size: 40px;
+}
+
+#page:hover {
+background: none;
+}
+#page {
+margin-top: 75px;
+width: 100%;
+}
+
+#page a:hover {
+background: #fff;
+}
+#page a {
+height: 50px;
+padding-top: 2px;
+padding-bottom: 2px;
+margin-bottom: 11px;
+border: 2px solid rgba(188, 17, 21, 255);
+border-radius: 15px;
+width: 91%;
+display: inline-block;
+margin-right: 14px;
+margin-left: 14px;
+background: white;
+}
+#page a img {
+/*height:50px;
+margin-right:10px;
+width:50px;
+padding-bottom:4px;
+*/
+height: 50px;
+margin-right: 10px;
+width: 50px;
+padding-bottom: 4px;
+}
+#page a p {
+text-align: center;
+font-family: "Readex Pro", sans-serif;
+/* position: absolute; */
+/* margin-right: 20px; */
+/* margin-top: -40px; */
+display: inline-block;
+font-weight: 550;
+color: rgba(188, 17, 21, 255);
+}
+</style>
+
+<!----------  اكواد استايل القائمة  ------------>
+<style>
+.sidenav {
+height: 100%;
+width: 0;
+position: fixed;
+z-index: 1;
+top: 0;
+right: 0;
+
+
+overflow-x: hidden;
+transition: 0.5s;
+padding-top: 10px;
+}
+
+.sidenav a {
+padding: 8px 8px 8px 32px;
+text-decoration: none;
+font-size: 19px;
+color: #fff;
+display: block;
+transition: 0.3s;
+text-align: center;
+font-family: "Readex Pro", sans-serif;
+}
+
+.sidenav a:hover {
+color: #cccccc;
+}
+
+.sidenav .closebtn {
+position: absolute;
+top: 5px;
+right: 0;
+font-size: 15px;
+margin-left: 0px;
+}
+
+@media screen and (max-height: 450px) {
+.sidenav {
+padding-top: 15px;
+}
+.sidenav a {
+font-size: 18px;
+}
+}
+
+html {
+overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+width: 7px;
+}
+::-webkit-scrollbar-thumb {
+-webkit-shadow: inset 0 0 0 #000;
+-webkit-border-radius: 0;
+background-image: -webkit-linear-gradient(top, #bc1115 100%, #000 100%);
+}
+::-webkit-scrollbar-track {
+-webkit-shadow: inset 0 0 0 #000;
+-webkit-border-radius: 100px;
+}
+</style>
+</head>
+<body dir="rtl">
+<header>
+
+
+<center><h3> ACTION </h3></center>
+
+
+</header>
+<div id="page">
+<div class="grid1-container">
+<div align="center" class="button">
+<div id="buttons-list">
+  
+  
+  
+  
+  
+  
+</div>
+
+<script>
+function openNav() {
+document.getElementById("mySidenav").style.width = "250px";
+}
+
+function closeNav() {
+document.getElementById("mySidenav").style.width = "0";
+}
+</script>
+</div>
+</div>
+</div>
+</header>
+</body>
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>	
+	<html>
+	
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>MOVIES</title>
+
+
+</nav>
+
+<style type="text/css">
+body {
+ margin: auto;
+ width:auto;
+ height:auto;
+ padding: 0px 0;
+ background-color:#410200;
+}
+
+.container{
+ width:100%;
+ height:100px;
+}
+.nav {
+ position: fixed;
+ bottom: 0;
+ width: 100%;
+ height: 10%;
+ box-shadow: 0 0 2px #000000;
+ background-color:#121212;
+ display: flex;
+ overflow-x: auto;
+}
+
+.nav__link {
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ justify-content: center;
+ flex-grow: 1;
+ min-width: 50px;
+ overflow: hidden;
+ white-space: nowrap;
+ font-family: sans-serif;
+ font-size: 13px;
+ color: #cccccc;
+ text-decoration: none;
+ -webkit-tap-highlight-color: transparent;
+ transition: background-color 0.1s ease-in-out;
+}
+
+.nav__link:hover {
+ background-color: #000000;
+}
+
+.nav__link--active {
+ color: #fff;
+}
+
+.nav__icon {
+ font-size: 32px;
+ 
+}
+
+	#imageID{
+	 max-width:100%;
+	 height: 100%;
+	 z-index: 9999;
+	 position:fixed; 
+	 top:0; 
+	 left:0;
+	}
+
+
+
+
+
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+button{
+    border-radius: 0px;
+    border-color:#410200;
+    padding:4px;
+    margin:0px;
+    height:155px;
+    width: 32%;
+    background-color:#171717;
+    }
+    img {
+    width: 100%;
+    height: 100%;
+    border: 7px solid #555;
+
+}
+       button:hover {
+  background-color:#820a2c;
+}
+
+
+.topnav {
+  overflow: hidden;
+  background-color:#252525;
+  position: ;
+}
+
+.topnav #myLinks {
+  display: none;
+}
+
+.topnav a {
+  float:left;
+  color:#FFFFFF;
+  padding: 0px 6px;
+  text-decoration: none;
+  font-size: 17px;
+  font-weight:990;
+  font-style:bold;
+
+
+}
+.topnav2 a {
+  float:center;
+  color:#FFFFFF;
+  padding: 0px 0px;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight:990;
+  font-style:bold;
+}
+.topnav2 {
+  overflow: hidden;
+  background-color:#121212;
+  border: 5px solid #252525;
+  height:85px;
+  width: 100%;
+  padding: 0px 0px;
+  position: ;
+}
+.topnav3 {
+  overflow: hidden;
+  border: 4px solid #FFFFFF;
+  margin:0px;
+  border-radius:100%;
+  position: fixed;
+  width: 47px;
+  bottom: 76px;
+  right: 7px;
+  background:#2f5aaf;
+
+}
+  .topnav3 a {
+  float: center;
+  color:#FFFFFF;
+  text-decoration: none;
+  font-size: 0px;
+   font-weight:990;
+   font-style:bold;
+  }
+.topnav a.icon {
+  float:right;
+}
+
+.topnav a:hover {
+  background-color:;
+  color:;
+}
+.d {
+  background:linear-gradient(950deg,rgba(0,139,50,0.7),rgba( 0,139,0,0.9)) ;
+  color: #FFF;
+}
+.f {
+  background:#FFFFFF ;
+  color: #101010;
+}
+.c {
+  background:#FFFFFF ;
+  color: #101010;
+}
+
+.e {
+  background:#FFFFFF ;
+  color: #101010;
+}
+.g {
+  background:#FFFFFF ;
+  color: #101010;
+}
+.h {
+  background:#FFFFFF ;
+  color: #101010;
+}
+.t {
+  background:#FFFFFF ;
+  color: #101010;
+}
+.s {
+  background:#FFFFFF ;
+  color: #101010;
+}
+
+.active {
+  background-color: #252525;
+  color: white;
+}
+</style>
+</head>
+<body>
+
+
+
+    
+    
+<style>
+body {
+  font-family: Arial;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.openBtn {
+  background: #f1f1f1;
+  border: none;
+  padding: 10px 15px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.openBtn:hover {
+  background: #bbb;
+}
+
+.overlay {
+  height: 100%;
+  width: 100%;
+  display: none;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0, 0.9);
+}
+
+.overlay-content {
+  position: relative;
+  top: 46%;
+  width: 80%;
+  text-align: center;
+  margin-top: 30px;
+  margin: auto;
+}
+
+.overlay .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+  cursor: pointer;
+  color: white;
+}
+
+.overlay .closebtn:hover {
+  color: #ccc;
+}
+
+.overlay input[type=text@CCORCH@ {
+  padding: 15px;
+  font-size: 17px;
+  border: none;
+  float: left;
+  width: 80%;
+  background: white;
+}
+
+.overlay input[type=text@CCORCH@:hover {
+  background: #f1f1f1;
+}
+
+.overlay button {
+  float: left;
+  width: 20%;
+  padding: 15px;
+  background: #ddd;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+}
+
+.overlay button:hover {
+  background: #bbb;
+}
+</style>
+</head>
+<body>
+
+
+
+<script>
+function openSearch() {
+  document.getElementById("myOverlay").style.display = "block";
+}
+
+function closeSearch() {
+  document.getElementById("myOverlay").style.display = "none";
+}
+</script>
+    
+    
+    
+    
+    
+    
+    <style>/* latin-ext */
+            @font-face {font-family: 'Righteous'; font-style: normal; font-weight: 400; font-display: swap; src: url(https://fonts.gstatic.com/s/righteous/v9/1cXxaUPXBpj2rGoU7C9WhnGFucE.woff2) format('woff2'); unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF; } /* latin */
+            @font-face {font-family: 'Righteous'; font-style: normal; font-weight: 400; font-display: swap; src: url(https://fonts.gstatic.com/s/righteous/v9/1cXxaUPXBpj2rGoU7C9WiHGF.woff2) format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }@font-face {font-family: 'Tajawal'; font-style: normal; font-weight: 500; src: local('Tajawal Medium'), local('Tajawal-Medium'), url(https://fonts.gstatic.com/s/tajawal/v3/Iurf6YBj_oCad4k1l8KiHrRpiYlJ.woff2) format('woff2'); unicode-range: U+0600-06FF, U+200C-200E, U+2010-2011, U+204F, U+2E41, U+FB50-FDFF, U+FE80-FEFC; } @font-face {font-family: 'Tajawal'; font-style: normal; font-weight: 500; src: local('Tajawal Medium'), local('Tajawal-Medium'), url(https://fonts.gstatic.com/s/tajawal/v3/Iurf6YBj_oCad4k1l8KiHrFpiQ.woff2) format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; } @font-face {font-family: 'Tajawal'; font-style: normal; font-weight: 800; src: local('Tajawal ExtraBold'), local('Tajawal-ExtraBold'), url(https://fonts.gstatic.com/s/tajawal/v3/Iurf6YBj_oCad4k1l5anHrRpiYlJ.woff2) format('woff2'); unicode-range: U+0600-06FF, U+200C-200E, U+2010-2011, U+204F, U+2E41, U+FB50-FDFF, U+FE80-FEFC; }@font-face {font-family: 'Tajawal'; font-style: normal; font-weight: 800; src: local('Tajawal ExtraBold'), local('Tajawal-ExtraBold'), url(https://fonts.gstatic.com/s/tajawal/v3/Iurf6YBj_oCad4k1l5anHrFpiQ.woff2) format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }@font-face {font-family: 'Changa'; font-style: normal; font-weight: 800; font-display: swap; src: url(https://fonts.gstatic.com/s/changa/v10/2-c79JNi2YuVOUcOarRPgnNGooxCZy22cjLj9ytf.woff2) format('woff2'); unicode-range: U+0600-06FF, U+200C-200E, U+2010-2011, U+204F, U+2E41, U+FB50-FDFF, U+FE80-FEFC; }@font-face {font-family: 'Changa'; font-style: normal; font-weight: 800; font-display: swap; src: url(https://fonts.gstatic.com/s/changa/v10/2-c79JNi2YuVOUcOarRPgnNGooxCZy22cjnj9ytf.woff2) format('woff2'); unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF; }@font-face {font-family: 'Changa'; font-style: normal; font-weight: 800; font-display: swap; src: url(https://fonts.gstatic.com/s/changa/v10/2-c79JNi2YuVOUcOarRPgnNGooxCZy22cjfj9w.woff2) format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }</style>
+
+
+         
+ 
+ 
+
+
+
+		   <link href='https://fonts.googleapis.com/icon?family=Material+Icons' rel='stylesheet'/>
+			 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
+  <link href="https://cdn.bootcss.com/font-awesome/5.5.0/css/all.css" rel="stylesheet"> 
+  <link href="https://cdn.bootcss.com/font-awesome/5.3.0/css/all.css" rel="stylesheet"> 
+		   <link href="https://fonts.googleapis.com/css?family=Baloo+2|Montserrat&display=swap" rel="stylesheet">
+           <link rel='stylesheet' id='font-awesome-css'  href='https://pro.fontawesome.com/releases/v5.10.0/css/all.css?ver=5.7.2' type='text/css' media='all' />
+
+	</head>
+    
+
+	
+	<div class="container">
+		<div class="header">
+		<div class="hide"></div>
+
+
+
+	<div class="firstfield" >
+	  
+   </div>
+   
+  <!--
+
+  Uses the latest versions of video.js and videojs-contrib-hls.
+
+  To use specific versions, please change the URLs to the form:
+
+  <link href="https://vjs.zencdn2.net/5.16.0/video-js.css" rel="stylesheet">
+  <script src="https://vjs.zencdn2.net/5.16.0/video.js"></script>
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+
+  -->
+</style>
+
+
+  
+  <link href="https://raw.githack.com/saessovic/video/main/video-js.css" rel="stylesheet"></link>
+  <script src="https://raw.githack.com/saessovic/video/main/video2.js"></script>
+  <script src="https://raw.githack.com/saessovic/video/main/jquery-3.1.1.min.js"></script>
+  
+<head>
+
+
+<div style="position: fixed; border: 7px solid #333333;  top: 47px; width: 100%"><center>
+<video id="my-video" class="video-js vjs-default-skin vjs-fluid" controls preload="none"
+   poster="https://i.imgur.com/RdJLhml.jpg" data-setup='{ "aspectRatio":"720:405", "playbackRates": [@CCORCH@ }'>
+    <source src="https://stream.fushaar.link/movie/43459/43459-480p.mp4/chunk.m3u8" type='application/x-mpegURL'>
+    <source src="https://stream.fushaar.link/movie/43459/43459-480p.mp4/chunk.m3u8" type='application/x-mpegURL'>
+    <p class="vjs-no-js">
+      To view this video please enable JavaScript, and consider upgrading to a web browser that
+      <li  data-url=="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+    </p>
+  </video>
+ </div>
+</body>
+</html>
+    <ul id="playlist">
+
+  <script>
+  $(function(){
+$("#playlist button,button2").on("click", function() {
+var player = videojs('my-video');
+player.pause();
+var new_url = $(this).attr("url");
+player.src(new_url);
+// set src track corresponding to new movie //
+player.load();
+player.play();
+});
+});</script>
+	<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+		<body>
+
+
+ 
+ 
+<body>
+ <ul id="playlist">
+<div style="align=center; padding-top: 45%;">
+<p style="font-size:13px">
+
+
+
+
+<ul style="list-style-type:none">
+<style>ul{padding-left:0px; text-align:center;}
+li{ display:inline-block;padding:0px;}
+</style>
+
+  
+
+ 
+
+
+	  
+   </div>
+ 
+
+<div>
+
+
+
+
+	</script>
+	<style type="text/css">
+	 
+		}
+		button{
+			background-color: white;
+			color: black;
+			border: none;
+			border-radius: 5px;
+			size: 20px;
+			width: 70px;
+			padding: 10px;
+		}
+		div .jordan2{
+		  overflow-x: scroll;
+		  overflow-y: hidden;
+		  white-space: nowrap;}
+		}
+  
+	</style>
+</head>
+
+<div>
+	<div class="firstfield" >
+	  
+   </div>
+
+
+<style>
+div.scrollmenu {
+  background: #252525;
+  border: 2px solid #121212;
+  overflow: auto;
+  white-space: nowrap;
+  padding: 2px 2px;
+}
+
+div.scrollmenu a {
+  display: inline-block;
+  text-align: center;
+  padding: 13px;
+  font-weight:990;
+  font-style:bold;
+  text-decoration: none;
+  border: 4px solid #555;
+      margin: 3px 1px;
+         width:145px;
+
+
+}
+
+div.scrollmenu a:hover {
+  background:#820a2c ;
+    color: #FFF;
+  border: 4px solid #FFF;
+  
+}
+</style>
+</head>
+<body>
+
+<div class="scrollmenu">
+  <a href="go:10" class="d">ACTION <i class="fas fa-check-circle fa-lg"></i></a> 
+  <a href="go:11" class="f">ARABE <i class="fas fa-film fa-lg"></i></a> 
+  <a href="go:12" class="c">NEW  <i class="fas fa-film fa-lg"></i></a> 
+  <a href="go:13" class="e">HORROR <i class="fas fa-film fa-lg"></i></a> 
+  <a href="go:14" class="s">CARTOON <i class="fas fa-film fa-lg"></i></a> 
+  <a href="go:15" class="g">DOCUMEN <i class="fas fa-film fa-lg"></i></a> 
+  <a href="go:16" class="h">SCI-FI <i class="fas fa-film fa-lg"></i></a> 
+  <a href="go:17" class="t">WESTERN <i class="fas fa-film fa-lg"></i></a> 
+
+</div>
+
+
+
+<button url="https://stream.fushaar.link/movie/44351/44351-480p.mp4/chunk.m3u8"><img src="https://media.fushaar.com/media/2023/02/m1b9toKYyCujHuLoXB5GSDunO9e-329x495.jpg"  style="border-radius:0px;" height="150"  width="100"></button>
+
+
+
+
+<button url="https://stream.fushaar.link/movie/44977/44977-480p.mp4/chunk.m3u8"><img src="https://media.fushaar.com/media/2023/04/aWLR3s0EpqZYXNXXHVH0GCu6Gru-329x495.jpg"  style="border-radius:0px;" height="150"  width="100"></button>
+
+
+
+
+<button url="https://stream.fushaar.link/movie/44982/44982-480p.mp4/chunk.m3u8"><img src="https://media.fushaar.com/media/2023/04/A7vFFZHbDyxfjuYKzJwruTnwwjT-329x495.jpg"  style="border-radius:0px;" height="150"  width="100"></button>
+
+
+
+
+ 
+<button url="https://stream.fushaar.link/movie/44871/44871-480p.mp4/chunk.m3u8"><img src="https://media.fushaar.com/media/2023/03/image-17-329x495.jpeg"  style="border-radius:0px;" height="150"  width="100"></button>
+
+
+
+
+<button url="https://stream.fushaar.link/movie/45114/45114-480p.mp4/chunk.m3u8"><img src="https://media.fushaar.com/media/2023/04/xUvSeFhdsJbKFOaHnB9TeTZpJKs-329x495.jpg"  style="border-radius:0px;" height="150"  width="100"></button>
+
+
+
+
+<button url="https://stream.fushaar.link/movie/44891/44891-480p.mp4/chunk.m3u8"><img src="https://media.fushaar.com/media/2023/03/image-21-329x495.jpeg"  style="border-radius:0px;" height="150"  width="100"></button>
+
+
+
+
+<button url="https://stream.fushaar.link/movie/19791/19791-480p.mp4/chunk.m3u8"><img src="https://media.fushaar.com/media/2018/04/j18021qCeRi3yUBtqd2UFj1c0RQ-329x495.jpg"  style="border-radius:0px;" height="150"  width="100"></button>
+
+
+
+
+
+
+<button url="https://stream.fushaar.link/movie/19540/19540-480p.mp4/chunk.m3u8"><img src="https://media.fushaar.com/media/2018/03/wh1f7peigW0qUXXwynwVAt7axZd-329x495.jpg"  style="border-radius:0px;" height="150"  width="100"></button>
+
+
+
+
+
+<button url="https://stream.fushaar.link/movie/32225/32225-480p.mp4/chunk.m3u8"><img src="https://media.fushaar.com/media/2020/09/aKx1ARwG55zZ0GpRvU2WrGrCG9o-329x495.jpg"  style="border-radius:0px;" height="150"  width="100"></button>
+
+
+
+
+
+<button url="https://stream.fushaar.link/movie/44137/44137-480p.mp4/chunk.m3u8"><img src="https://media.fushaar.com/media/2023/01/26yQPXymbWeCLKwcmyL8dRjAzth-329x495.jpg"  style="border-radius:0px;" height="150"  width="100"></button>
+
+
+
+
+<button url="https://stream.fushaar.link/movie/44356/44356-480p.mp4/chunk.m3u8"><img src="https://media.fushaar.com/media/2023/02/wE0I6efAW4cDDmZQWtwZMOW44EJ-329x495.jpg"  style="border-radius:0px;" height="150"  width="100"></button>
+
+
+
+
+
+<button url="https://stream.fushaar.link/movie/3493/3493-480p.mp4/chunk.m3u8"><img src="https://media.fushaar.com/media/2014/10/11178468_ori-329x495.jpg"  style="border-radius:0px;" height="150"  width="100"></button>
+
+
+
+
+
+<button url="https://stream.fushaar.link/movie/3402/3402-480p.mp4/chunk.m3u8"><img src="https://media.fushaar.com/media/2014/10/11176778_ori-329x495.jpg"  style="border-radius:0px;" height="150"  width="100"></button>
+
+
+
+
+
+<button url="https://stream.fushaar.link/movie/5185/5185-480p.mp4/chunk.m3u8"><img src="https://media.fushaar.com/media/2015/01/11180817_ori-329x495.jpg"  style="border-radius:0px;" height="150"  width="100"></button>
+
+
+
+
+
+<button url="https://stream.fushaar.link/movie/32922/32922-480p.mp4/chunk.m3u8"><img src="https://media.fushaar.com/media/2020/11/6WC3cIhuaLZSq3SbtdOp2ZTSTe-329x495.jpg"  style="border-radius:0px;" height="150"  width="100"></button>
+
+
+
+
+
+
+<button url="https://stream.fushaar.link/movie/32730/32730-480p.mp4/chunk.m3u8"><img src="https://media.fushaar.com/media/2020/10/3eg0kGC2Xh0vhydJHO37Sp4cmMt-329x495.jpg"  style="border-radius:0px;" height="150"  width="100"></button>
+
+
+
+
+
+<button url="https://stream.fushaar.link/movie/33107/33107-480p.mp4/chunk.m3u8"><img src="https://media.fushaar.com/media/2020/12/a2Dcje3NkmySevZo5hVCfPaxqdL-329x495.jpg"  style="border-radius:0px;" height="150"  width="100"></button>
+
+
+
+
+
+
+<button url="https://stream.fushaar.link/movie/32995/32995-480p.mp4/chunk.m3u8"><img src="https://media.fushaar.com/media/2020/11/ePXuKdXZuJx8hHMNr2yM4jY2L7Z-329x495.jpg"  style="border-radius:0px;" height="150"  width="100"></button>
+
+
+
+
+
+
+
+<button url="https://stream.fushaar.link/movie/33292/33292-480p.mp4/chunk.m3u8"><img src="https://media.fushaar.com/media/2020/12/xxv6yHSNTGaf7aqwF1XdLVNpvpB-329x495.jpg"  style="border-radius:0px;" height="150"  width="100"></button>
+
+
+
+
+
+
+<button url="https://stream.fushaar.link/movie/32131/32131-480p.mp4/chunk.m3u8"><img src="https://media.fushaar.com/media/2020/08/k68nPLbIST6NP96JmTxmZijEvCA-329x495.jpg"  style="border-radius:0px;" height="150"  width="100"></button>
+
+
+
+
+
+<button url="https://stream.fushaar.link/movie/33116/33116-480p.mp4/chunk.m3u8"><img src="https://media.fushaar.com/media/2020/12/7vqBXEJ57ChtmPgrtySw6qxEZHA-329x495.jpg"  style="border-radius:0px;" height="150"  width="100"></button>
+
+
+
+
+
+<button url="https://stream.fushaar.link/movie/33466/33466-480p.mp4/chunk.m3u8"><img src="https://media.fushaar.com/media/2021/01/jAGGV80ZO10YcmUJXK7YSBh1yvK-329x495.jpg"  style="border-radius:0px;" height="150"  width="100"></button>
+
+
+
+
+<button url="https://stream.fushaar.link/movie/33385/33385-480p.mp4/chunk.m3u8"><img src="https://media.fushaar.com/media/2021/01/o1WvNhoackad1QiAGRgjJCQ1Trj-329x495.jpg"  style="border-radius:0px;" height="150"  width="100"></button>
+
+
+
+
+<button url="https://stream.fushaar.link/movie/33365/33365-480p.mp4/chunk.m3u8"><img src="https://media.fushaar.com/media/2021/01/bhNHCeJDFDaB00A46AoCw2mggdE-329x495.jpg"  style="border-radius:0px;" height="150"  width="100"></button>
+
+
+
+
+
+<button url="https://stream.fushaar.link/movie/33319/33319-480p.mp4/chunk.m3u8"><img src="https://media.fushaar.com/media/2020/12/4ZocdxnOO6q2UbdKye2wgofLFhB-329x495.jpg"  style="border-radius:0px;" height="150"  width="100"></button>
+
+
+
+
+
+
+<button url="https://stream.fushaar.link/movie/33307/33307-480p.mp4/chunk.m3u8"><img src="https://media.fushaar.com/media/2020/12/4n8QNNdk4BOX9Dslfbz5Dy6j1HK-329x495.jpg"  style="border-radius:0px;" height="150"  width="100"></button>
+
+
+
+
+
+<button url="https://stream.fushaar.link/movie/33624/33624-480p.mp4/chunk.m3u8"><img src="https://media.fushaar.com/media/2021/01/vYvppZMvXYheYTWVd8Rnn9nsmNp-329x495.jpg"  style="border-radius:0px;" height="150"  width="100"></button>
+
+
+
+
+
+
+<button url="https://stream.fushaar.link/movie/33586/33586-480p.mp4/chunk.m3u8"><img src="https://media.fushaar.com/media/2021/01/dDf8M1yMwvBVe8VtOKxCpOog8CF-329x495.jpg"  style="border-radius:0px;" height="150"  width="100"></button>
+
+
+
+
+
+
+<button url="https://stream.fushaar.link/movie/33515/33515-480p.mp4/chunk.m3u8"><img src="https://media.fushaar.com/media/2021/01/pklyUbh4k1DbHdnsOMASyw7C6NH-329x495.jpg"  style="border-radius:0px;" height="150"  width="100"></button>
+
+
+
+
+
+
+
+<button url="https://stream.fushaar.link/movie/33814/33814-480p.mp4/chunk.m3u8"><img src="https://media.fushaar.com/media/2021/02/7iPQIyDhDjaAyKlIzKFePZktjx5-329x495.jpg"  style="border-radius:0px;" height="150"  width="100"></button>
+
+
+
+
+
+
+
+<button url="https://stream.fushaar.link/movie/33770/33770-480p.mp4/chunk.m3u8"><img src="https://media.fushaar.com/media/2021/02/t7EUMSlfUN3jUSZUJOLURAzJzZs-329x495.jpg"  style="border-radius:0px;" height="150"  width="100"></button>
+
+
+
+
+<button url="https://stream.fushaar.link/movie/33699/33699-480p.mp4/chunk.m3u8"><img src="https://media.fushaar.com/media/2021/02/yCTo0s8xzQplZY5h70cRy2OA4Pt-329x495.jpg"  style="border-radius:0px;" height="150"  width="100"></button>
+
+
+
+
+
+<button url="https://stream.fushaar.link/movie/33637/33637-480p.mp4/chunk.m3u8"><img src="https://media.fushaar.com/media/2021/02/e6SK2CAbO3ENy52UTzP3lv32peC-329x495.jpg"  style="border-radius:0px;" height="150"  width="100"></button>
+
+
+
+
+
+<button url="https://stream.fushaar.link/movie/34192/34192-480p.mp4/chunk.m3u8"><img src="https://media.fushaar.com/media/2021/03/1UCOF11QCw8kcqvce8LKOO6pimh-329x495.jpg"  style="border-radius:0px;" height="150"  width="100"></button>
+
+
+
+
+<button url="https://stream.fushaar.link/movie/33935/33935-480p.mp4/chunk.m3u8"><img src="https://media.fushaar.com/media/2021/03/wlP25H14OvKoFORIwuKomZzioA5-329x495.jpg"  style="border-radius:0px;" height="150"  width="100"></button>
+
+
+
+
+
+
+
+<button url="https://stream.fushaar.link/movie/35141/35141-480p.mp4/chunk.m3u8"><img src="https://media.fushaar.com/media/2021/03/burp795vripHCoq8VAT0Dm5SPE-329x495.jpg"  style="border-radius:0px;" height="150"  width="100"></button>
+
+
+
+
+
+<button url="https://stream.fushaar.link/movie/34841/34841-480p.mp4/chunk.m3u8"><img src="https://media.fushaar.com/media/2021/03/mq3S2Hc4TPK9H7vWk9ekG7NdENB-329x495.jpg"  style="border-radius:0px;" height="150"  width="100"></button>
+
+
+
+
+
+
+<button url="https://stream.fushaar.link/movie/34555/34555-480p.mp4/chunk.m3u8"><img src="https://media.fushaar.com/media/2021/03/bOoa7JUQh8YXBPfkIMLAvZFTiZA-329x495.jpg"  style="border-radius:0px;" height="150"  width="100"></button>
+
+
+
+
+
+
+<button url="https://stream.fushaar.link/movie/34538/34538-480p.mp4/chunk.m3u8"><img src="https://media.fushaar.com/media/2021/03/4AHkWCSau4OmMJTFo36bFMlCRtu-329x495.jpg"  style="border-radius:0px;" height="150"  width="100"></button>
+
+
+
+
+
+<button url="https://stream.fushaar.link/movie/35135/35135-480p.mp4/chunk.m3u8"><img src="https://media.fushaar.com/media/2021/03/tnAuB8q5vv7Ax9UAEje5Xi4BXik-329x495.jpg"  style="border-radius:0px;" height="150"  width="100"></button>
+
+
+
+
+
+<button url="https://stream.fushaar.link/movie/36266/36266-480p.mp4/chunk.m3u8"><img src="https://media.fushaar.com/media/2021/04/8UlWHLMpgZm9bx6QYh0NFoq67TZ-329x495.jpg"  style="border-radius:0px;" height="150"  width="100"></button>
+
+
+
+
+
+<button url="https://stream.fushaar.link/movie/36058/36058-480p.mp4/chunk.m3u8"><img src="https://media.fushaar.com/media/2021/04/6Y9fl8tD1xtyUrOHV2MkCYTpzgi-329x495.jpg"  style="border-radius:0px;" height="150"  width="100"></button>
+
+
+
+
+
+
+<button url="https://stream.fushaar.link/movie/35807/35807-480p.mp4/chunk.m3u8"><img src="https://media.fushaar.com/media/2021/04/9At4gHXspTVG89nUZBJNM5zGmHm-329x495.jpg"  style="border-radius:0px;" height="150"  width="100"></button>
+
+
+
+
+
+
+
+
+<button url="https://stream.fushaar.link/movie/32137/32137-480p.mp4/chunk.m3u8"><img src="https://media.fushaar.com/media/2020/08/sA154deR0X51EcR2lm2FfDczryg-329x495.jpg"  style="border-radius:0px;" height="150"  width="100"></button>
+
+
+
+
+
+
+<button url="https://stream.fushaar.link/movie/37102/37102-480p.mp4/chunk.m3u8"><img src="https://media.fushaar.com/media/2021/04/8RIjjmWZi8tJf5lRxyHGErentsv-329x495.jpg"  style="border-radius:0px;" height="150"  width="100"></button>
+
+
+
+
+
+
+<button url="https://stream.fushaar.link/movie/37096/37096-480p.mp4/chunk.m3u8"><img src="https://media.fushaar.com/media/2021/04/6Wdl9N6dL0Hi0T1qJLWSz6gMLbd-329x495.jpg"  style="border-radius:0px;" height="150"  width="100"></button>
+
+
+
+
+
+<button url="https://stream.fushaar.link/movie/37332/37332-480p.mp4/chunk.m3u8"><img src="https://media.fushaar.com/media/2021/06/YxopfHpsCV1oF8CZaL4M3Eodqa-329x495.jpg"  style="border-radius:0px;" height="150"  width="100"></button>
+
+
+
+
+
+
+<button url="https://stream.fushaar.link/movie/37285/37285-480p.mp4/chunk.m3u8"><img src="https://media.fushaar.com/media/2021/05/rEm96ib0sPiZBADNKBHKBv5bve9-329x495.jpg"  style="border-radius:0px;" height="150"  width="100"></button>
+
+
+
+
+
+
+<button url="https://stream.fushaar.link/movie/37239/37239-480p.mp4/chunk.m3u8"><img src="https://media.fushaar.com/media/2021/05/xCEg6KowNISWvMh8GvPSxtdf9TO-329x495.jpg"  style="border-radius:0px;" height="150"  width="100"></button>
+
+
+
+
+
+<button url="https://stream.fushaar.link/movie/37375/37375-480p.mp4/chunk.m3u8"><img src="https://media.fushaar.com/media/2021/06/oBgWY00bEFeZ9N25wWVyuQddbAo-329x495.jpg"  style="border-radius:0px;" height="150"  width="100"></button>
+
+
+
+
+
+<button url="https://stream.fushaar.link/movie/37476/37476-480p.mp4/chunk.m3u8"><img src="https://media.fushaar.com/media/2021/06/ePYagdzUwKpzTP73n9CD3D1MFn-329x495.jpg"  style="border-radius:0px;" height="150"  width="100"></button>
+
+
+
+
+
+<button url="https://stream.fushaar.link/movie/37433/37433-480p.mp4/chunk.m3u8"><img src="https://media.fushaar.com/media/2021/06/uZkNbB8isWXHMDNoIbqXvmslBMC-329x495.jpg"  style="border-radius:0px;" height="150"  width="100"></button>
+
+
+
+
+
+
+<button url="https://stream.fushaar.link/movie/37412/37412-480p.mp4/chunk.m3u8"><img src="https://media.fushaar.com/media/2021/06/8377XckHbfJDMrkSpEa9ZQJlVE0-329x495.jpg"  style="border-radius:0px;" height="150"  width="100"></button>
+
+
+
+
+
+
+
+<button url="https://stream.fushaar.link/movie/37349/37349-480p.mp4/chunk.m3u8"><img src="https://media.fushaar.com/media/2021/06/8oW2n2iCA9AZ0bnoZ7qinRx3LDq-329x495.jpg"  style="border-radius:0px;" height="150"  width="100"></button>
+
+
+
+
+
+
+<button url="https://stream.fushaar.link/movie/37690/37690-480p.mp4/chunk.m3u8"><img src="https://media.fushaar.com/media/2021/06/iiHubBBVFg6K7t5THdsImqy1ct2-329x495.jpg"  style="border-radius:0px;" height="150"  width="100"></button>
+
+
+
+
+
+<button url="https://stream.fushaar.link/movie/37530/37530-240p.mp4/chunk.m3u8"><img src="https://media.fushaar.com/media/2021/06/dPOyYnCkRbWAEem85N3VFpQODf5-329x495.jpg"  style="border-radius:0px;" height="150"  width="100"></button>
+
+
+
+
+<button url="https://stream.fushaar.link/movie/37835/37835-480p.mp4/chunk.m3u8"><img src="https://media.fushaar.com/media/2021/07/xipF6XqfSYV8DxLqfLN6aWlwuRp-329x495.jpg"  style="border-radius:0px;" height="150"  width="100"></button>
+
+
+
+
+
+
+<button url="https://stream.fushaar.link/movie/37785/37785-480p.mp4/chunk.m3u8"><img src="https://media.fushaar.com/media/2021/06/vpq8XjZ3ZalcbqWOYIdqcV7FbIJ-329x495.jpg"  style="border-radius:0px;" height="150"  width="100"></button>
+
+
+
+
+
+
+<button url="https://stream.fushaar.link/movie/38029/38029-480p.mp4/chunk.m3u8"><img src="https://media.fushaar.com/media/2021/07/wnesEmcq7xdw1Rm1Bn6XEFTkenR-329x495.jpg"  style="border-radius:0px;" height="150"  width="100"></button>
+
+
+
+
+<button url="https://stream.fushaar.link/movie/38011/38011-480p.mp4/chunk.m3u8"><img src="https://media.fushaar.com/media/2021/07/4xTtLkGEmUD5Oqjsv3lrkeLr2NW-329x495.jpg"  style="border-radius:0px;" height="150"  width="100"></button>
+
+
+
+
+
+
+<button url="https://stream.fushaar.link/movie/37966/37966-480p.mp4/chunk.m3u8"><img src="https://media.fushaar.com/media/2021/07/AoWY1gkcNzabh229Icboa1Ff0BM-329x495.jpg"  style="border-radius:0px;" height="150"  width="100"></button>
+
+
+
+
+
+<button url="https://stream.fushaar.link/movie/37958/37958-480p.mp4/chunk.m3u8"><img src="https://media.fushaar.com/media/2021/07/ppiL13JJx2LkyoNb8JM0h7nxYmk-329x495.jpg"  style="border-radius:0px;" height="150"  width="100"></button>
+
+
+
+
+
+<button url="https://stream.fushaar.link/movie/37871/37871-480p.mp4/chunk.m3u8"><img src="https://media.fushaar.com/media/2021/07/lv3RonWge4GlC9ymNzC0oWpFCfv-329x495.jpg"  style="border-radius:0px;" height="150"  width="100"></button>
+
+
+
+
+
+
+<button url="https://stream.fushaar.link/movie/38149/38149-480p.mp4/chunk.m3u8"><img src="https://media.fushaar.com/media/2021/07/uHA5COgDzcxjpYSHHulrKVl6ByL-329x495.jpg"  style="border-radius:0px;" height="150"  width="100"></button>
+
+
+
+
+
+
+<button url="https://stream.fushaar.link/movie/38142/38142-480p.mp4/chunk.m3u8"><img src="https://media.fushaar.com/media/2021/07/7bbEASVf9XWtfxWiuWUMY3uyhTb-329x495.jpg"  style="border-radius:0px;" height="150"  width="100"></button>
+
+
+
+
+
+<button url="https://stream.fushaar.link/movie/38084/38084-480p.mp4/chunk.m3u8"><img src="https://media.fushaar.com/media/2021/07/yC3GnBUNnrCJc7fIHoWqROEVMne-329x495.jpg"  style="border-radius:0px;" height="150"  width="100"></button>
+
+
+
+
+
+<button url="https://stream.fushaar.link/movie/38070/38070-480p.mp4/chunk.m3u8"><img src="https://media.fushaar.com/media/2021/07/5OSfx8jJrjHWO9SU3Wtfd7Rs8PF-329x495.jpg"  style="border-radius:0px;" height="150"  width="100"></button>
+
+
+
+
+
+<button url="https://stream.fushaar.link/movie/38291/38291-480p.mp4/chunk.m3u8"><img src="https://media.fushaar.com/media/2021/07/piGZDwFW4urLYDWGiYJMrt6hdCS-329x495.jpg"  style="border-radius:0px;" height="150"  width="100"></button>
+
+
+
+
+<button url="https://stream.fushaar.link/movie/38265/38265-480p.mp4/chunk.m3u8"><img src="https://media.fushaar.com/media/2021/07/ijizwYu2B04gVkrbGlclAAfdN3p-329x495.jpg"  style="border-radius:0px;" height="150"  width="100"></button>
+
+
+
+
+
+<button url="https://stream.fushaar.link/movie/38260/38260-480p.mp4/chunk.m3u8"><img src="https://media.fushaar.com/media/2021/07/ZPAxk_4f-329x495.jpg"  style="border-radius:0px;" height="150"  width="100"></button>
+
+
+
+
+
+<button url="https://stream.fushaar.link/movie/38200/38200-480p.mp4/chunk.m3u8"><img src="https://media.fushaar.com/media/2021/07/byXLJZq5vfveYdAWaC4uMtojsWj-329x495.jpg"  style="border-radius:0px;" height="150"  width="100"></button>
+
+
+
+
+
+
+<button url="https://stream.fushaar.link/movie/38559/38559-480p.mp4/chunk.m3u8"><img src="https://media.fushaar.com/media/2021/08/rODS466qSdrwMlGdbUwPENhDN2c-329x495.jpg"  style="border-radius:0px;" height="150"  width="100"></button>
+
+
+
+
+
+
+<button url="https://stream.fushaar.link/movie/38484/38484-480p.mp4/chunk.m3u8"><img src="https://media.fushaar.com/media/2021/08/nxxuWC32Y6TULj4VnVwMPUFLIpK-329x495.jpg"  style="border-radius:0px;" height="150"  width="100"></button>
+
+
+
+
+
+<button url="https://stream.fushaar.link/movie/38575/38575-480p.mp4/chunk.m3u8"><img src="https://media.fushaar.com/media/2021/08/9dKCd55IuTT5QRs989m9Qlb7d2B-329x495.jpg"  style="border-radius:0px;" height="150"  width="100"></button>
+
+
+
+
+
+
+<button url="https://stream.fushaar.link/movie/38659/38659-480p.mp4/chunk.m3u8"><img src="https://media.fushaar.com/media/2021/08/uIXF0sQGXOxQhbaEaKOi2VYlIL0-329x495.jpg"  style="border-radius:0px;" height="150"  width="100"></button>
+
+
+
+
+
+<button url="https://stream.fushaar.link/movie/38626/38626-480p.mp4/chunk.m3u8"><img src="https://media.fushaar.com/media/2021/08/ttpKJ7XQxDZV252KNEHXtykYT41-329x495.jpg"  style="border-radius:0px;" height="150"  width="100"></button>
+
+
+
+
+
+
+
+<button url="https://stream.fushaar.link/movie/38608/38608-480p.mp4/chunk.m3u8"><img src="https://media.fushaar.com/media/2021/08/fBJducGBcmrcIOQdhm4BUBNDiMu-329x495.jpg"  style="border-radius:0px;" height="150"  width="100"></button>
+
+
+
+
+
+
+<button url="https://stream.fushaar.link/movie/38876/38876-480p.mp4/chunk.m3u8"><img src="https://media.fushaar.com/media/2021/08/sshNnwmQLk720iBQ0dZg3GVGKfK-329x495.jpg"  style="border-radius:0px;" height="150"  width="100"></button>
+
+
+
+
+
+
+<button url="https://stream.fushaar.link/movie/38857/38857-480p.mp4/chunk.m3u8"><img src="https://media.fushaar.com/media/2021/08/ojDg0PGvs6R9xYFodRct2kdI6wC-329x495.jpg"  style="border-radius:0px;" height="150"  width="100"></button>
+
+
+
+
+
+
+
+<button url="https://stream.fushaar.link/movie/38721/38721-480p.mp4/chunk.m3u8"><img src="https://media.fushaar.com/media/2021/08/zc0OzUOF8B4x4AH4bubxw0mHCnF-329x495.jpg"  style="border-radius:0px;" height="150"  width="100"></button>
+
+
+
+
+
+
+<button url="https://stream.fushaar.link/movie/38728/38728-480p.mp4/chunk.m3u8"><img src="https://media.fushaar.com/media/2021/08/aw58HDsDmj3jQr7KfZvWBPQJGHw-329x495.jpg"  style="border-radius:0px;" height="150"  width="100"></button>
+
+
+
+
+
+
+<button url="https://stream.fushaar.link/movie/39010/39010-480p.mp4/chunk.m3u8"><img src="https://media.fushaar.com/media/2021/09/bOVh5Z1BrLbAtDGekutpBuo4sv0-329x495.jpg"  style="border-radius:0px;" height="150"  width="100"></button>
+
+
+
+
+
+<button url="https://stream.fushaar.link/movie/38911/38911-480p.mp4/chunk.m3u8"><img src="https://media.fushaar.com/media/2021/09/zGvFnwoXJKrYnKhoVPytqkqCJ8V-329x495.jpg"  style="border-radius:0px;" height="150"  width="100"></button>
+
+
+
+
+
+
+<button url="https://stream.fushaar.link/movie/39243/39243-480p.mp4/chunk.m3u8"><img src="https://media.fushaar.com/media/2021/09/uQWgSRXeYRWCvGIX9LDNBW6XBYD-329x495.jpg"  style="border-radius:0px;" height="150"  width="100"></button>
+
+
+
+
+
+
+<button url="https://stream.fushaar.link/movie/39267/39267-480p.mp4/chunk.m3u8"><img src="https://media.fushaar.com/media/2021/09/gC1a58xIkZ8HwsYAq7r6Ymp7MSW-329x495.jpg"  style="border-radius:0px;" height="150"  width="100"></button>
+
+
+
+
+
+
+
+<button url="https://stream.fushaar.link/movie/39496/39496-480p.mp4/chunk.m3u8"><img src="https://media.fushaar.com/media/2021/10/5AaKulwpUtkscAokKWtLenGTfVS-329x495.jpg"  style="border-radius:0px;" height="150"  width="100"></button>
+
+
+
+
+
+
+
+<button url="https://stream.fushaar.link/movie/38639/38639-480p.mp4/chunk.m3u8"><img src="https://media.fushaar.com/media/2021/08/hMYoG5ORvBaHqd7mhkcqOR5XlDi-329x495.jpg"  style="border-radius:0px;" height="150"  width="100"></button>
+
+
+
+
+
+
+
+<button url="https://stream.fushaar.link/movie/39733/39733-480p.mp4/chunk.m3u8"><img src="https://media.fushaar.com/media/2021/11/6zwGWDpY8Zu0L6W4SYWERBR8Msw-329x495.jpg"  style="border-radius:0px;" height="150"  width="100"></button>
+
+
+
+
+
+
+<button url="https://stream.fushaar.link/movie/39701/39701-480p.mp4/chunk.m3u8"><img src="https://media.fushaar.com/media/2021/10/iPTZGFmPs7HsXHYxiuxGolihjOH-329x495.jpg"  style="border-radius:0px;" height="150"  width="100"></button>
+
+
+
+
+
+
+
+<button url="https://stream.fushaar.link/movie/39679/39679-480p.mp4/chunk.m3u8"><img src="https://media.fushaar.com/media/2021/10/Shark-_The_Beginning-TP-329x495.jpg"  style="border-radius:0px;" height="150"  width="100"></button>
+
+
+
+
+
+<button url="https://stream.fushaar.link/movie/39586/39586-480p.mp4/chunk.m3u8"><img src="https://media.fushaar.com/media/2021/10/lr3cYNDlJcpT1EWzFH42aSIvkab-329x495.jpg"  style="border-radius:0px;" height="150"  width="100"></button>
+
+
+
+
+
+
+<button url="https://stream.fushaar.link/movie/39003/39003-480p.mp4/chunk.m3u8"><img src="https://media.fushaar.com/media/2021/09/1BIoJGKbXjdFDAqUEiA2VHqkK1Z-329x495.jpg"  style="border-radius:0px;" height="150"  width="100"></button>
+
+
+
+
+
+
+<button url="https://stream.fushaar.link/movie/39828/39828-480p.mp4/chunk.m3u8"><img src="https://media.fushaar.com/media/2021/11/19VaTIO5e9MfoXxIMALaEaiGAIN-329x495.jpg"  style="border-radius:0px;" height="150"  width="100"></button>
+
+
+
+
+
+<button url="https://stream.fushaar.link/movie/39924/39924-480p.mp4/chunk.m3u8"><img src="https://media.fushaar.com/media/2021/11/hwjbcVx1mUxHX7XgW5NdeK4N1Pn-329x495.jpg"  style="border-radius:0px;" height="150"  width="100"></button>
+
+
+
+
+
+<button url="https://stream.fushaar.link/movie/39902/39902-480p.mp4/chunk.m3u8"><img src="https://media.fushaar.com/media/2021/11/3OXiTjU30gWtqxmx4BU9RVp2OTv-329x495.jpg"  style="border-radius:0px;" height="150"  width="100"></button>
+
+
+
+
+
+<button url="https://stream.fushaar.link/movie/39875/39875-480p.mp4/chunk.m3u8"><img src="https://media.fushaar.com/media/2021/11/wdE6ewaKZHr62bLqCn7A2DiGShm-329x495.jpg"  style="border-radius:0px;" height="150"  width="100"></button>
+
+
+
+
+<button url="https://stream.fushaar.link/movie/39411/39411-480p.mp4/chunk.m3u8"><img src="https://media.fushaar.com/media/2021/10/iOPXG7q6ZqxSFp2iSY2CvgeRXyC-329x495.jpg"  style="border-radius:0px;" height="150"  width="100"></button>
+
+
+
+
+
+
+<button url="https://stream.fushaar.link/movie/40117/40117-480p.mp4/chunk.m3u8"><img src="https://media.fushaar.com/media/2021/12/a6balsDWCFMHPaPT6rFoBpNjR6z-329x495.jpg"  style="border-radius:0px;" height="150"  width="100"></button>
+
+
+
+
+
+<button url="https://stream.fushaar.link/movie/39435/39435-480p.mp4/chunk.m3u8"><img src="https://media.fushaar.com/media/2021/10/rjkmN1dniUHVYAtwuV3Tji7FsDO-329x495.jpg"  style="border-radius:0px;" height="150"  width="100"></button>
+
+
+
+
+
+<button url="https://stream.fushaar.link/movie/40477/40477-480p.mp4/chunk.m3u8"><img src="https://media.fushaar.com/media/2021/12/MV5BMGJkNDJlZWUtOGM1Ny00YjNkLThiM2QtY2ZjMzQxMTIxNWNmXkEyXkFqcGdeQXVyMDM2NDM2MQ@@._V1_-329x495.jpg"  style="border-radius:0px;" height="150"  width="100"></button>
+
+
+
+
+
+<button url="https://stream.fushaar.link/movie/40358/40358-480p.mp4/chunk.m3u8"><img src="https://media.fushaar.com/media/2021/12/MV5BZjgwNWUyZmMtZGYyNi00NGIxLThiNDktYjUwYzNkOTAyNzQ2XkEyXkFqcGdeQXVyODE2NzM0ODI@._V1_-329x495.jpg"  style="border-radius:0px;" height="150"  width="100"></button>
+
+
+
+
+
+<button url="https://stream.fushaar.link/movie/40348/40348-480p.mp4/chunk.m3u8"><img src="https://media.fushaar.com/media/2021/12/MV5BYjE1NTA2ZDEtYjYxOC00MDM3LWJkMDktMDU4OGZiZWVhMDg3XkEyXkFqcGdeQXVyMTMwMDA5ODU3._V1_-329x495.jpg"  style="border-radius:0px;" height="150"  width="100"></button>
+
+
+
+
+
+<button url="https://stream.fushaar.link/movie/40206/40206-480p.mp4/chunk.m3u8"><img src="https://media.fushaar.com/media/2021/12/hcmtEns8LZdkztVz5kX3cirugaa-329x495.jpg"  style="border-radius:0px;" height="150"  width="100"></button>
+
+
+
+
+
+<button url="https://stream.fushaar.link/movie/39950/39950-480p.mp4/chunk.m3u8"><img src="https://media.fushaar.com/media/2021/11/6AdXwFTRTAzggD2QUTt5B7JFGKL-329x495.jpg"  style="border-radius:0px;" height="150"  width="100"></button>
+
+
+
+
+
+
+
+<button url="https://stream.fushaar.link/movie/40627/40627-480p.mp4/chunk.m3u8"><img src="https://media.fushaar.com/media/2022/01/bnofwLKvg2g7Ky9sSpyTHaan37n-329x495.jpg"  style="border-radius:0px;" height="150"  width="100"></button>
+
+
+
+
+
+<button url="https://stream.fushaar.link/movie/40777/40777-480p.mp4/chunk.m3u8"><img src="https://media.fushaar.com/media/2022/01/mvCVaas7FkRV8uvyIJl1ANdT28k-329x495.jpg"  style="border-radius:0px;" height="150"  width="100"></button>
+
+
+
+
+
+
+<button url="https://stream.fushaar.link/movie/40756/40756-480p.mp4/chunk.m3u8"><img src="https://media.fushaar.com/media/2022/01/1MZ42GYL84wW4U9HtcKMuTOx6fD-329x495.jpg"  style="border-radius:0px;" height="150"  width="100"></button>
+
+
+
+
+
+
+<button url="https://stream.fushaar.link/movie/41097/41097-480p.mp4/chunk.m3u8"><img src="https://media.fushaar.com/media/2022/02/zqf711LsnQ5CcW3rISFw2t7OYzb-329x495.jpg"  style="border-radius:0px;" height="150"  width="100"></button>
+
+
+
+
+
+<button url="https://stream.fushaar.link/movie/41274/41274-480p.mp4/chunk.m3u8"><img src="https://media.fushaar.com/media/2022/02/1bB7uV5ljDWKG2m5Z4cgWwDMAeY-329x495.jpg"  style="border-radius:0px;" height="150"  width="100"></button>
+
+
+
+
+
+
+<button url="https://stream.fushaar.link/movie/40381/40381-480p.mp4/chunk.m3u8"><img src="https://media.fushaar.com/media/2021/12/MV5BZWMyYzFjYTYtNTRjYi00OGExLWE2YzgtOGRmYjAxZTU3NzBiXkEyXkFqcGdeQXVyMzQ0MzA0NTM@._V1_FMjpg_UX1000_-329x495.jpg"  style="border-radius:0px;" height="150"  width="100"></button>
+
+
+
+
+<button url="https://stream.fushaar.link/movie/41395/41395-480p.mp4/chunk.m3u8"><img src="https://media.fushaar.com/media/2022/03/bv9dy8mnwftdY2j6gG39gCfSFpV-329x495.jpg"  style="border-radius:0px;" height="150"  width="100"></button>
+
+
+
+
+<button url="https://stream.fushaar.link/movie/41386/41386-480p.mp4/chunk.m3u8"><img src="https://media.fushaar.com/media/2022/03/8Kce1utfytAG5m1PbtVoDzmDZJH-329x495.jpg"  style="border-radius:0px;" height="150"  width="100"></button>
+
+
+
+
+
+<button url="https://stream.fushaar.link/movie/41376/41376-480p.mp4/chunk.m3u8"><img src="https://media.fushaar.com/media/2022/03/6FSGYvPEhIx3ThOikGqHmKxeyNN-329x495.jpg"  style="border-radius:0px;" height="150"  width="100"></button>
+
+
+
+
+
+
+<button url="https://stream.fushaar.link/movie/41534/41534-480p.mp4/chunk.m3u8"><img src="https://media.fushaar.com/media/2022/03/rJPGPZ5soaG27MK90oKpioSiJE2-329x495.jpg"  style="border-radius:0px;" height="150"  width="100"></button>
+
+
+
+
+<button url="https://stream.fushaar.link/movie/41339/41339-480p.mp4/chunk.m3u8"><img src="https://media.fushaar.com/media/2022/03/sqLowacltbZLoCa4KYye64RvvdQ-329x495.jpg"  style="border-radius:0px;" height="150"  width="100"></button>
+
+
+
+
+<button url="https://stream.fushaar.link/movie/41802/41802-480p.mp4/chunk.m3u8"><img src="https://media.fushaar.com/media/2022/05/61J34xHVVdQHbJ4MSCWQo4e727v-329x495.jpg"  style="border-radius:0px;" height="150"  width="100"></button>
+
+
+
+
+
+<button url="https://stream.fushaar.link/movie/41103/41103-480p.mp4/chunk.m3u8"><img src="https://media.fushaar.com/media/2022/02/image-329x495.jpeg"  style="border-radius:0px;" height="150"  width="100"></button>
+
+
+
+
+
+<button url="https://stream.fushaar.link/movie/42009/42009-480p.mp4/chunk.m3u8"><img src="https://media.fushaar.com/media/2022/05/jegNcphmFVmQiApURN1V6k3z7oU-329x495.jpg"  style="border-radius:0px;" height="150"  width="100"></button>
+
+
+
+
+
+<button url="https://stream.fushaar.link/movie/41950/41950-480p.mp4/chunk.m3u8"><img src="https://media.fushaar.com/media/2022/05/b1OSwHDIflDSbirMr6k3Ivqf2yu-329x495.jpg"  style="border-radius:0px;" height="150"  width="100"></button>
+
+
+
+
+
+
+<button url="https://stream.fushaar.link/movie/41945/41945-480p.mp4/chunk.m3u8"><img src="https://media.fushaar.com/media/2022/05/h5hVeCfYSb8gIO0F41gqidtb0AI-329x495.jpg"  style="border-radius:0px;" height="150"  width="100"></button>
+
+
+
+
+
+
+<button url="https://stream.fushaar.link/movie/41865/41865-480p.mp4/chunk.m3u8"><img src="https://media.fushaar.com/media/2022/05/neMZH82Stu91d3iqvLdNQfqPPyl-329x495.jpg"  style="border-radius:0px;" height="150"  width="100"></button>
+
+
+
+
+
+
+<button url="https://stream.fushaar.link/movie/42093/42093-480p.mp4/chunk.m3u8"><img src="https://media.fushaar.com/media/2022/05/wxP2Mzv9CdjOK6t4dNnFGqIQl0V-329x495.jpg"  style="border-radius:0px;" height="150"  width="100"></button>
+
+
+
+
+
+
+<button url="https://stream.fushaar.link/movie/42047/42047-480p.mp4/chunk.m3u8"><img src="https://media.fushaar.com/media/2022/05/6JjfSchsU6daXk2AKX8EEBjO3Fm-329x495.jpg"  style="border-radius:0px;" height="150"  width="100"></button>
+
+
+
+
+
+
+
+<button url="https://stream.fushaar.link/movie/42182/42182-480p.mp4/chunk.m3u8"><img src="https://media.fushaar.com/media/2022/06/aqhLeieyTpTUKPOfZ3jzo2La0Mq-329x495.jpg"  style="border-radius:0px;" height="150"  width="100"></button>
+
+
+
+
+
+
+<button url="https://stream.fushaar.link/movie/42157/42157-480p.mp4/chunk.m3u8"><img src="https://media.fushaar.com/media/2022/06/yzQ9YUXH9Tfj8MDU66i4wSFrBvt-329x495.jpg"  style="border-radius:0px;" height="150"  width="100"></button>
+
+
+
+
+
+<button url="https://stream.fushaar.link/movie/42337/42337-480p.mp4/chunk.m3u8"><img src="https://media.fushaar.com/media/2022/06/uTCfTibqtk4f90cC59bLPMOmsfc-329x495.jpg"  style="border-radius:0px;" height="150"  width="100"></button>
+
+
+
+
+
+<button url="https://stream.fushaar.link/movie/42213/42213-480p.mp4/chunk.m3u8"><img src="https://media.fushaar.com/media/2022/06/2hLfrdvZNaF8iUk5n4wVQ7C9w6P-329x495.jpg"  style="border-radius:0px;" height="150"  width="100"></button>
+
+
+
+
+
+<button url="https://stream.fushaar.link/movie/37125/37125-480p.mp4/chunk.m3u8"><img src="https://media.fushaar.com/media/2021/05/v3QIFUWgtVN4wejVuDZowuyJ20W-329x495.jpg"  style="border-radius:0px;" height="150"  width="100"></button>
+
+
+
+
+
+
+<button url="https://stream.fushaar.link/movie/23935/23935-480p.mp4/chunk.m3u8"><img src="https://media.fushaar.com/media/2018/12/gzHxCzqfGx62zNHJ4OIfWpQLueo-329x495.jpg"  style="border-radius:0px;" height="150"  width="100"></button>
+
+
+
+
+
+<button url="https://stream.fushaar.link/movie/2256/2256-480p.mp4/chunk.m3u8"><img src="https://media.fushaar.com/media/2014/07/11178461_ori-329x495.jpg"  style="border-radius:0px;" height="150"  width="100"></button>
+
+
+
+
+
+<button url="https://stream.fushaar.link/movie/25949/25949-480p.mp4/chunk.m3u8"><img src="https://media.fushaar.com/media/2019/05/ziEuG1essDuWuC5lpWUaw1uXY2O-329x495.jpg"  style="border-radius:0px;" height="150"  width="100"></button>
+
+
+
+<button url="https://stream.fushaar.link/movie/26778/26778-480p.mp4/chunk.m3u8"><img src="https://media.fushaar.com/media/2019/08/keym7MPn1icW1wWfzMnW3HeuzWU-329x495.jpg"  style="border-radius:0px;" height="150"  width="100"></button>
+
+
+
+
+
+
+<button url="https://stream.fushaar.link/movie/40535/40535-480p.mp4/chunk.m3u8"><img src="https://media.fushaar.com/media/2021/12/gJYJyyvvhxxQDBTRfuBYMkvjhjh-329x495.jpg"  style="border-radius:0px;" height="150"  width="100"></button>
+
+
+
+
+
+<button url="https://stream.fushaar.link/movie/41054/41054-480p.mp4/chunk.m3u8"><img src="https://media.fushaar.com/media/2022/02/iXvAlIo4DPLBiraC2KLu4977Wo2-329x495.jpg"  style="border-radius:0px;" height="150"  width="100"></button>
+
+
+
+
+
+
+<button url="https://stream.fushaar.link/movie/41160/41160-480p.mp4/chunk.m3u8"><img src="https://media.fushaar.com/media/2022/02/3cccEF9QZgV9bLWyupJO41HSrOV-329x495.jpg"  style="border-radius:0px;" height="150"  width="100"></button>
+
+
+
+
+<button url="https://stream.fushaar.link/movie/40793/40793-480p.mp4/chunk.m3u8"><img src="https://media.fushaar.com/media/2022/01/x54tAgLfS51fO5EcipNJJ9tfSRK-329x495.jpg"  style="border-radius:0px;" height="150"  width="100"></button>
+
+
+
+<button url="https://stream.fushaar.link/movie/40971/40971-480p.mp4/chunk.m3u8"><img src="https://media.fushaar.com/media/2022/01/fU0QQzO6As3c1jkQWvcT82JWpXd-329x495.jpg"  style="border-radius:0px;" height="150"  width="100"></button>
+
+
+
+
+<button url="https://stream.fushaar.link/movie/40771/40771-480p.mp4/chunk.m3u8"><img src="https://media.fushaar.com/media/2022/01/pj0EPtI1mEwqjR34RQJdnbns0am-329x495.jpg"  style="border-radius:0px;" height="150"  width="100"></button>
+
+
+
+
+<button url="https://stream.fushaar.link/movie/41042/41042-480p.mp4/chunk.m3u8"><img src="https://media.fushaar.com/media/2022/02/daeVrgyj0ue8qb3AHyU3UeCwoZz-329x495.jpg"  style="border-radius:0px;" height="150"  width="100"></button>
+
+
+
+<button url="https://stream.fushaar.link/movie/40661/40661-480p.mp4/chunk.m3u8"><img src="https://media.fushaar.com/media/2022/01/2qNAt8w6ba6XBnnuudMpyhziUhp-329x495.jpg"  style="border-radius:0px;" height="150"  width="100"></button>
+
+
+
+
+<button url="https://stream.fushaar.link/movie/40719/40719-480p.mp4/chunk.m3u8"><img src="https://media.fushaar.com/media/2022/01/qAy3rQS3ZLoarmB2nfyk9MvILco-329x495.jpg"  style="border-radius:0px;" height="150"  width="100"></button>
+
+
+
+</div>
+
+
+<style type="text/css">
+body {
+	margin: auto;
+	width:auto;
+	height:auto;
+	padding: 0px 0;
+	background-color:#410200;
+}
+
+.container{
+	width:100%;
+	height:100px;
+}
+.nav {
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	height: 8%;
+	box-shadow: 0 0 5px #000;
+	background-color: #252525;
+	display: flex;
+	overflow-x: auto;
+}
+
+.nav__link {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	flex-grow: 1;
+	min-width: 20px;
+	overflow: hidden;
+	white-space: nowrap;
+	font-family: sans-serif;
+	font-size: 12px;
+    font-weight:990;
+    font-style:bold;
+	color: #FFFFFF;
+    border-right: 1px solid #000;
+    border-left: 1px solid #000;
+    border-top: 3px solid #EEE;
+	text-decoration: none;
+	-webkit-tap-highlight-color: transparent;
+	transition: background-color 0.1s ease-in-out;
+}
+
+.nav__link:hover {
+	background-color: #000000;
+}
+
+.nav__link--active {
+	color: #fff;
+}
+
+.nav__icon {
+	font-size: 32px;
+	height: 50px;
+	
+}
+
+
+	  #imageID{
+			  max-width:100%;
+			  height: 100%;
+			  z-index: 9999;
+			  position:fixed; 
+			  top:0; 
+			  left:0;
+		  }
+
+
+
+<style> h2{ color: #000; font-family: Arial, Helvetica, sans-serif; border-radius: 5px; margin:20px; } 
+
+div .jordan2{ margin:4px; border-radius: 0px;]

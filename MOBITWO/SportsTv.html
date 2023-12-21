@@ -1,0 +1,953 @@
+[<style type="text/css">
+.grid-container {
+display: grid;
+justify-content: center;
+grid-template-columns: repeat(3, 1fr);
+grid-gap: 5px 5px;
+padding: 0px;
+}
+.grid1-container {
+display: grid;
+justify-content: center;
+grid-template-columns: repeat(1, 1fr);
+grid-gap: 10px;
+
+color: white;
+padding: px;
+}
+h1 {
+text-align: center;
+margin-top: 1px;
+font-weight: bold;
+font-family: "Readex Pro", sans-serif;
+
+}
+
+h3 {
+text-align: center;
+margin-top: 0.7px;
+font-size: 32px;
+color: #FFFFFF;
+font-weight:990;
+font-style:bold;
+}
+
+
+.button {
+text-align: center;
+}
+ {
+display: block;
+}
+button:active {
+border: 2px solid #f00;
+}
+
+</style>
+
+<!----------  اكواد استايل التطبيق شامل  ------------>
+<style type="text/css">
+@import url("https://fonts.googleapis.com/css2?family=Readex+Pro&display=swap");
+body {
+padding: 0;
+margin: 0;
+user-select: none;
+list-style: none;
+background-size: cover;
+font-weight: 500;
+font-size: 16px;
+text-align: right;
+margin: auto;
+/* position: relative; */
+direction: ltr;
+
+}
+
+
+header {
+background: #410200;
+padding: 3px;
+color: #fff;
+margin-bottom: 10px;
+position: fixed;
+top: 0;
+height: 45px;
+width: 100%;
+box-shadow: 0px 3px 0px #EEEEEE;
+z-index: 1;
+}
+
+#i1 {
+position: fixed;
+top: 9px;
+
+right: 3px;
+font-size: 40px;
+}
+#i2 {
+position: fixed;
+top: 21px;
+left: 14px;
+font-size: 40px;
+}
+#i3 {
+position: fixed;
+top: 16px;
+left: 40px;
+font-size: 40px;
+}
+
+#page:hover {
+background: none;
+}
+#page {
+margin-top: 75px;
+width: 100%;
+}
+
+#page a:hover {
+background: #fff;
+}
+#page a {
+height: 50px;
+padding-top: 2px;
+padding-bottom: 2px;
+margin-bottom: 11px;
+border: 2px solid rgba(188, 17, 21, 255);
+border-radius: 15px;
+width: 91%;
+display: inline-block;
+margin-right: 14px;
+margin-left: 14px;
+background: white;
+}
+#page a img {
+/*height:50px;
+margin-right:10px;
+width:50px;
+padding-bottom:4px;
+*/
+height: 50px;
+margin-right: 10px;
+width: 50px;
+padding-bottom: 4px;
+}
+#page a p {
+text-align: center;
+font-family: "Readex Pro", sans-serif;
+/* position: absolute; */
+/* margin-right: 20px; */
+/* margin-top: -40px; */
+display: inline-block;
+font-weight: 550;
+color: rgba(188, 17, 21, 255);
+}
+</style>
+
+<!----------  اكواد استايل القائمة  ------------>
+<style>
+.sidenav {
+height: 100%;
+width: 0;
+position: fixed;
+z-index: 1;
+top: 0;
+right: 0;
+
+
+overflow-x: hidden;
+transition: 0.5s;
+padding-top: 10px;
+}
+
+.sidenav a {
+padding: 8px 8px 8px 32px;
+text-decoration: none;
+font-size: 19px;
+color: #fff;
+display: block;
+transition: 0.3s;
+text-align: center;
+font-family: "Readex Pro", sans-serif;
+}
+
+.sidenav a:hover {
+color: #cccccc;
+}
+
+.sidenav .closebtn {
+position: absolute;
+top: 5px;
+right: 0;
+font-size: 15px;
+margin-left: 0px;
+}
+
+@media screen and (max-height: 450px) {
+.sidenav {
+padding-top: 15px;
+}
+.sidenav a {
+font-size: 18px;
+}
+}
+
+html {
+overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+width: 7px;
+}
+::-webkit-scrollbar-thumb {
+-webkit-shadow: inset 0 0 0 #000;
+-webkit-border-radius: 0;
+background-image: -webkit-linear-gradient(top, #333 100%, #000 100%);
+}
+::-webkit-scrollbar-track {
+-webkit-shadow: inset 0 0 0 #000;
+-webkit-border-radius: 100px;
+}
+</style>
+</head>
+<body dir="rtl">
+<header>
+
+
+<center><h3> SPORT TV </h3></center>
+
+
+  
+  
+  
+  
+  
+  
+
+
+</div>
+</div>
+</div>
+</header>
+</body>
+
+
+
+
+
+
+
+<!DOCTYPE html>	
+	<html>
+	
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>TV LIVE</title>
+                         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+
+</nav>
+
+<style type="text/css">
+body {
+ margin: auto;
+ width:auto;
+ height:auto;
+ padding: 0px 0;
+ background-color:#410200;
+}
+
+.container{
+ width:100%;
+ height:100px;
+}
+.nav {
+ position: fixed;
+ bottom: 0;
+ width: 100%;
+ height: 10%;
+ box-shadow: 0 0 2px #000000;
+ background-color:#121212;
+ display: flex;
+ overflow-x: auto;
+}
+
+.nav__link {
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ justify-content: center;
+ flex-grow: 1;
+ min-width: 50px;
+ overflow: hidden;
+ white-space: nowrap;
+ font-family: sans-serif;
+ font-size: 13px;
+ color: #FFFFFF;
+ text-decoration: none;
+ -webkit-tap-highlight-color: transparent;
+ transition: background-color 0.1s ease-in-out;
+}
+
+.nav__link:hover {
+ background-color: #000000;
+}
+
+.nav__link--active {
+ color: #fff;
+}
+
+.nav__icon {
+ font-size: 32px;
+ 
+}
+
+	#imageID{
+	 max-width:100%;
+	 height: 100%;
+	 z-index: 9999;
+	 position:fixed; 
+	 top:0; 
+	 left:0;
+	}
+
+
+
+
+
+
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+button{
+    border-radius: 0px ;
+    border: 3px solid #410200;
+    padding:0px;
+    margin:0px;
+    width:99%;
+    height: 65px;
+    background:linear-gradient(950deg,rgba(100, 100, 100, 0.3),rgba( 100, 100, 100, 0.0)) ;
+    }
+   button:hover {
+  background-color:#820a2c;
+}
+.topnav {
+  overflow: hidden;
+  background-color:#333333;
+  position:;
+  margin:0px;
+  position: fixed;
+  top: 3px;
+
+  }
+.topnav2 {
+  overflow: hidden;
+  background-color:#222222;
+  position:;
+  margin:0px;
+
+
+}
+
+.topnav #myLinks {
+  display: none;
+}
+
+.topnav a {
+  float:center ;
+  color:#FFFFFF;
+  padding: 0px 2px;
+  text-decoration: none;
+  font-size: 25px;
+   font-weight:990;
+   font-style:bold;
+  
+  }
+  .topnav2 a {
+  float: center;
+  color:#FFFFFF;
+  padding: 0px 0px;
+  text-decoration: none;
+  font-size: 23px;
+   font-weight:990;
+   font-style:bold;
+  
+  }
+.rating{
+  color:#FFFFFF;
+    font-size: 15px;
+      padding: 21px 5px;
+      float: left;
+      font-weight:990;
+      font-style:bold;
+ }
+.rating2{
+  color:#FFFFFF;
+    font-size: 16px;
+      padding: 22px 4px;
+      float: right;
+      font-weight:990;
+      font-style:bold;
+
+  
+  }
+
+img {
+    width:95px;
+    height:100%;
+    float: left;
+    border: 7px solid #555;
+
+}
+
+
+.topnav a.icon {
+  float:center;
+}
+
+.topnav a:hover {
+  background-color:;
+  color:;
+}
+.c {
+  background:linear-gradient(950deg,rgba(0,100,0,0.9),rgba(0,100,0,0.9)) ;
+  color: white;
+}
+.e {
+  background:#FFFFFF ;
+  color: #101010;
+}
+.w {
+  background:#FFFFFF ;
+  color: #101010;
+}
+.x {
+  background:#FFFFFF ;
+  color: #101010;
+}
+.s {
+  background:#FFFFFF ;
+  color: #101010;
+}
+.d {
+  background:#FFFFFF ;
+  color: #101010;
+}
+.f {
+  background:#FFFFFF ;
+  color: #101010;
+}
+.active {
+  background-color: #FF0000;
+  color: white;
+}
+</style>
+</head>
+<body>
+
+
+
+    
+    
+<style>
+body {
+  font-family: Arial;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.openBtn {
+  background: #f1f1f1;
+  border: none;
+  padding: 10px 15px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.openBtn:hover {
+  background: #bbb;
+}
+
+.overlay {
+  height: 100%;
+  width: 100%;
+  display: none;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0, 0.9);
+}
+
+.overlay-content {
+  position: relative;
+  top: 46%;
+  width: 80%;
+  text-align: center;
+  margin-top: 30px;
+  margin: auto;
+}
+
+.overlay .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+  cursor: pointer;
+  color: white;
+}
+
+.overlay .closebtn:hover {
+  color: #ccc;
+}
+
+.overlay input[type=text@CCORCH@ {
+  padding: 15px;
+  font-size: 17px;
+  border: none;
+  float: left;
+  width: 80%;
+  background: white;
+}
+
+.overlay input[type=text@CCORCH@:hover {
+  background: #f1f1f1;
+}
+
+.overlay button {
+  float: left;
+  width: 20%;
+  padding: 15px;
+  background: #ddd;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+}
+
+.overlay button:hover {
+  background: #bbb;
+}
+</style>
+</head>
+<body>
+
+
+
+<script>
+function openSearch() {
+  document.getElementById("myOverlay").style.display = "block";
+}
+
+function closeSearch() {
+  document.getElementById("myOverlay").style.display = "none";
+}
+</script>
+    
+    
+    
+    
+    
+    
+    <style>/* latin-ext */
+            @font-face {font-family: 'Righteous'; font-style: normal; font-weight: 400; font-display: swap; src: url(https://fonts.gstatic.com/s/righteous/v9/1cXxaUPXBpj2rGoU7C9WhnGFucE.woff2) format('woff2'); unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF; } /* latin */
+            @font-face {font-family: 'Righteous'; font-style: normal; font-weight: 400; font-display: swap; src: url(https://fonts.gstatic.com/s/righteous/v9/1cXxaUPXBpj2rGoU7C9WiHGF.woff2) format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }@font-face {font-family: 'Tajawal'; font-style: normal; font-weight: 500; src: local('Tajawal Medium'), local('Tajawal-Medium'), url(https://fonts.gstatic.com/s/tajawal/v3/Iurf6YBj_oCad4k1l8KiHrRpiYlJ.woff2) format('woff2'); unicode-range: U+0600-06FF, U+200C-200E, U+2010-2011, U+204F, U+2E41, U+FB50-FDFF, U+FE80-FEFC; } @font-face {font-family: 'Tajawal'; font-style: normal; font-weight: 500; src: local('Tajawal Medium'), local('Tajawal-Medium'), url(https://fonts.gstatic.com/s/tajawal/v3/Iurf6YBj_oCad4k1l8KiHrFpiQ.woff2) format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; } @font-face {font-family: 'Tajawal'; font-style: normal; font-weight: 800; src: local('Tajawal ExtraBold'), local('Tajawal-ExtraBold'), url(https://fonts.gstatic.com/s/tajawal/v3/Iurf6YBj_oCad4k1l5anHrRpiYlJ.woff2) format('woff2'); unicode-range: U+0600-06FF, U+200C-200E, U+2010-2011, U+204F, U+2E41, U+FB50-FDFF, U+FE80-FEFC; }@font-face {font-family: 'Tajawal'; font-style: normal; font-weight: 800; src: local('Tajawal ExtraBold'), local('Tajawal-ExtraBold'), url(https://fonts.gstatic.com/s/tajawal/v3/Iurf6YBj_oCad4k1l5anHrFpiQ.woff2) format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }@font-face {font-family: 'Changa'; font-style: normal; font-weight: 800; font-display: swap; src: url(https://fonts.gstatic.com/s/changa/v10/2-c79JNi2YuVOUcOarRPgnNGooxCZy22cjLj9ytf.woff2) format('woff2'); unicode-range: U+0600-06FF, U+200C-200E, U+2010-2011, U+204F, U+2E41, U+FB50-FDFF, U+FE80-FEFC; }@font-face {font-family: 'Changa'; font-style: normal; font-weight: 800; font-display: swap; src: url(https://fonts.gstatic.com/s/changa/v10/2-c79JNi2YuVOUcOarRPgnNGooxCZy22cjnj9ytf.woff2) format('woff2'); unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF; }@font-face {font-family: 'Changa'; font-style: normal; font-weight: 800; font-display: swap; src: url(https://fonts.gstatic.com/s/changa/v10/2-c79JNi2YuVOUcOarRPgnNGooxCZy22cjfj9w.woff2) format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }</style>
+	  
+
+
+
+
+<div>
+</div></div></div>
+
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<title>Page Title</title>
+		   <script src="https://unpkg.com/scrollreveal"></script>
+		   <link href='https://fonts.googleapis.com/icon?family=Material+Icons' rel='stylesheet'/>
+			 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
+  <link href="https://cdn.bootcss.com/font-awesome/5.5.0/css/all.css" rel="stylesheet"> 
+  <link href="https://cdn.bootcss.com/font-awesome/5.3.0/css/all.css" rel="stylesheet"> 
+		   <link href="https://fonts.googleapis.com/css?family=Baloo+2|Montserrat&display=swap" rel="stylesheet">
+    
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<scrolltotop class="tag-block show"><i class="fal fa-chevron-up"></i></scrolltotop>
+</script>
+<script type='text/javascript' src='https://www.zimabadk.com/wp-includes/js/jquery/jquery.js' id='jquery-js'></script>
+
+
+
+<link rel='dns-prefetch' href='//pro.fontawesome.com' />
+<link rel='dns-prefetch' href='//s.w.org' />
+
+	
+
+
+
+</style>
+<link rel='stylesheet' id='font-awesome-css'  href='https://pro.fontawesome.com/releases/v5.10.0/css/all.css?ver=5.7.2' type='text/css' media='all' />
+</script>
+
+
+
+
+
+
+
+
+
+
+<scrolltotop class="tag-block show"><i class="fal fa-chevron-up"></i></scrolltotop>
+</script>
+<script type='text/javascript' src='https://www.zimabadk.com/wp-includes/js/jquery/jquery.js' id='jquery-js'></script>
+
+
+
+<link rel='dns-prefetch' href='//pro.fontawesome.com' />
+<link rel='dns-prefetch' href='//s.w.org' />
+
+		
+<link rel='stylesheet' id='font-awesome-css'  href='https://pro.fontawesome.com/releases/v5.10.0/css/all.css?ver=5.7.2' type='text/css' media='all' />
+</script>
+</body></html>
+	
+	<div class="container">
+		<div class="header">
+		<div class="hide"></div>
+
+
+
+	<div class="firstfield" >
+	  
+   </div>
+   
+</div>   
+	</script>
+
+
+<div>
+	<div class="firstfield" >
+   
+  <link href="https://raw.githack.com/saessovic/video/main/video-js.css" rel="stylesheet"></link>
+  <script src="https://raw.githack.com/saessovic/video/main/video2.js"></script>
+  <script src="https://raw.githack.com/saessovic/video/main/jquery-3.1.1.min.js"></script>
+  
+<head>
+
+
+<div style="position: fixed;  border: 7px solid #410200; top: 48px; width: 100%"><center>
+<video id="my-video" class="video-js vjs-default-skin vjs-fluid" controls preload="none"
+   poster="https://i.imgur.com/RdJLhml.jpg" data-setup='{ "aspectRatio":"720:405", "playbackRates": [@CCORCH@ }'>
+    <source src="https://shls-live-ak.akamaized.net/out/v1/81153498b61444bfaef4ff09b55e55aa/index_6.m3u8" type='application/x-mpegURL'>
+    <source src="https://shls-live-ak.akamaized.net/out/v1/81153498b61444bfaef4ff09b55e55aa/index_6.m3u8" type='application/x-mpegURL'>
+    <p class="vjs-no-js">
+      To view this video please enable JavaScript, and consider upgrading to a web browser that
+      <li  data-url=="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+    </p>
+  </video>
+ </div>
+</body>
+</html>
+    <ul id="playlist">
+
+  <script>
+  $(function(){
+$("#playlist button").on("click", function() {
+var player = videojs('my-video');
+player.pause();
+var new_url = $(this).attr("url");
+player.src(new_url);
+// set src track corresponding to new movie //
+player.load();
+player.play();
+});
+});</script>
+	<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+		<body>
+
+ 
+ 
+<body>
+ <ul id="playlist">
+<div style="align=center; padding-top: 60%;">
+<p style="font-size:13px">
+
+
+
+
+<ul style="list-style-type:none">
+<style>ul{padding-left:0px; text-align:center;}
+li{ display:inline-block;padding:0px;}
+</style>
+
+  
+
+ 
+
+
+	  
+   </div>
+ 
+
+<div>
+
+
+
+
+	</script>
+	<style type="text/css">
+	 
+		}
+		button{
+			background-color: white;
+			color: black;
+			border: none;
+			border-radius: 5px;
+			size: 20px;
+			width: 70px;
+			padding: 10px;
+		}
+		div .jordan2{
+		  overflow-x: scroll;
+		  overflow-y: hidden;
+		  white-space: nowrap;}
+		}
+  
+	</style>
+</head>
+
+<div>
+	<div class="firstfield" >
+	  
+   </div>
+
+
+<style>
+div.scrollmenu {
+  background: #252525;
+  border: 2px solid #121212;
+  overflow: auto;
+  white-space: nowrap;
+  padding: 2px 2px;
+   margin: 2px;
+
+}
+
+div.scrollmenu a {
+  display: inline-block;
+  text-align: center;
+   border: 4px solid #555;
+  padding: 13px;
+  font-weight:990;
+  font-style:bold;
+  text-decoration: none;
+   width:125px;
+    margin: 3px 1px;
+
+
+}
+
+div.scrollmenu a:hover {
+  background:#820a2c ;
+    color: #FFF;
+  border: 4px solid #FFF;
+  
+}
+</style>
+</head>
+<body>
+
+<div class="scrollmenu">
+  <a href="go:03" class="c">SPORT <i class="fas fa-check-circle fa-lg"></i></a> 
+  <a href="go:01" class="f">ARABE <i class="fas fa-tv"></i></a>
+  <a href="go:02" class="s">FRANCE <i class="fas fa-tv"></i></a>
+  <a href="go:04" class="d">KIDS <i class="fas fa-tv"></i></a>
+  <a href="go:05" class="x">DOCUM <i class="fas fa-tv"></i></a> 
+  <a href="go:06" class="e">NEWS <i class="fas fa-tv"></i></a>
+  <a href="go:07" class="w">WORLD <i class="fas fa-tv"></i></a> 
+</div>
+
+
+
+
+<button url="https://stream.ayas.ir/hls2/ayas2.m3u8"><img src="https://www3.0zz0.com/2023/12/13/18/226645674.png"class="img1"  style="border-radius:0px;" height="70"  width="90"><div class="rating">LIVE MATCH 1</div><div class="rating2"><div class="fa fa-tv">
+
+
+<button url="https://stream.ayas.ir/hls2/ayas1.m3u8"><img src="https://www3.0zz0.com/2023/12/13/18/226645674.png"class="img1"  style="border-radius:0px;" height="70"  width="90"><div class="rating">LIVE MATCH 2</div><div class="rating2"><div class="fa fa-tv">
+
+
+<button url="https://tv.ayas.ir/hls/aiosport/aiosport_360/index.m3u8"><img src="https://www3.0zz0.com/2023/12/13/18/226645674.png"class="img1"  style="border-radius:0px;" height="70"  width="90"><div class="rating">LIVE MATCH 3</div><div class="rating2"><div class="fa fa-tv">
+
+
+<button url="https://af.ayassport.ir/hls2/ssc1.m3u8"><img src="https://www3.0zz0.com/2023/12/13/18/226645674.png"class="img1"  style="border-radius:0px;" height="70"  width="90"><div class="rating">LIVE MATCH 4</div><div class="rating2"><div class="fa fa-tv">
+
+
+
+<button url="https://stream.live12.ir/hls2/persiana.m3u8"><img src="https://www3.0zz0.com/2023/12/13/18/226645674.png"class="img1"  style="border-radius:0px;" height="70"  width="90"><div class="rating">LIVE MATCH 5</div><div class="rating2"><div class="fa fa-tv">
+
+
+<button url="https://stream.ayas.ir/hls2/ayas3.m3u8"><img src="https://www3.0zz0.com/2023/12/13/18/226645674.png"class="img1"  style="border-radius:0px;" height="70"  width="90"><div class="rating">LIVE MATCH 6</div><div class="rating2"><div class="fa fa-tv">
+
+
+<button url="https://stream.ayas.ir/hls2/ayas5.m3u8"><img src="https://www3.0zz0.com/2023/12/13/18/226645674.png"class="img1"  style="border-radius:0px;" height="70"  width="90"><div class="rating">LIVE MATCH 7</div><div class="rating2"><div class="fa fa-tv">
+
+
+<button url="https://stream.ayas.ir/hls2/ayas4.m3u8"><img src="https://www3.0zz0.com/2023/12/13/18/226645674.png"class="img1"  style="border-radius:0px;" height="70"  width="90"><div class="rating">LIVE MATCH 8</div><div class="rating2"><div class="fa fa-tv">
+
+
+
+
+
+<button url="https://shls-live-event1-prod-dub.shahid.net/out/v1/0456ede1a39145d98b3d8c8062ddc998/index_6.m3u8"><img src="https://up6.cc/2023/06/168666307106681.png"class="img1"  style="border-radius:0px;" height="70"  width="90"><div class="rating">SHAHID SPORT</div><div class="rating2"><div class="fa fa-tv">
+
+
+
+<button url="https://live.aionet.ir/hls/varzesh/varzesh_360/index.m3u8"><img src="https://rasekhoon.net/_files/images/news/shabake_varzesh_lig.jpg"class="img1"  style="border-radius:0px;" height="70"  width="90"><div class="rating">VARZESH</div><div class="rating2"><div class="fa fa-tv">
+
+
+
+<button url="https://d3awaj0f2u3w26.cloudfront.net/v1/manifest/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-gy7euubgydp20-ssai-prd/8fd3efae-4468-4ca0-9486-c6cdcb7b65d7/0.m3u8"><img src="https://www.lequipe.fr/_medias/img-photo-jpg/-/1500000001721571/0-350-233-75/532ef.jpg"class="img1"  style="border-radius:0px;" height="70"  width="90"><div class="rating">L'EQUIPE LIVE 1</div><div class="rating2"><div class="fa fa-tv">
+
+
+<button url=" https://d2l55nvfkhk4sg.cloudfront.net/v1/manifest/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-jg7go1lqzgpny-ssai-prd/435d04a5-ab47-47c5-a2c1-bae01ae6d0c1/0.m3u8"><img src="https://www.lequipe.fr/_medias/img-photo-jpg/-/1500000001721572/0-350-233-75/13e5b.jpg"class="img1"  style="border-radius:0px;" height="70"  width="90"><div class="rating">L'EQUIPE LIVE 2</div><div class="rating2"><div class="fa fa-tv">
+
+
+
+<button url="https://partneta.cdn.mgmlcdn.com/omsport/smil:omsport.stream.smil/chunklist_b900000.m3u8"><img src="https://up6.cc/2023/12/17015393232181.jpg"class="img1"  style="border-radius:0px;" height="70"  width="90"><div class="rating">OMAN SPORT</div><div class="rating2"><div class="fa fa-tv">
+
+
+
+
+<button url="https://5c7b683162943.streamlock.net/live/ngrp:sportsone_all/chunklist_w1666535787_b978000.m3u8"><img src="https://up6.cc/2023/12/170153956462981.png"class="img1"  style="border-radius:0px;" height="70"  width="90"><div class="rating">BAHRAINE SPORT 1</div><div class="rating2"><div class="fa fa-tv">
+
+
+
+
+<button url="https://5c7b683162943.streamlock.net/live/ngrp:bahrainsportstwo_all/chunklist_w1077953784_b978000.m3u8"><img src="https://up6.cc/2023/12/170153956462981.png"class="img1"  style="border-radius:0px;" height="70"  width="90"><div class="rating">BAHRAINE SPORT 2</div><div class="rating2"><div class="fa fa-tv">
+
+
+
+
+<button url="https://d2hrvno5bw6tg2.cloudfront.net/smrtv-ch02/_definst_/ch-02.smil/chunklist_b1692000_slita.m3u8"><img src="https://www.raisport.rai.it/dl/img/2020/02/1600x900_1582535790299.Livello_1.jpg"class="img1"  style="border-radius:0px;" height="70"  width="90"><div class="rating">RAI SPORT</div><div class="rating2"><div class="fa fa-tv">
+
+
+
+
+
+<button url="https://cdnamd-hls-globecast.akamaized.net/live/ramdisk/arriadia/hls_snrt/index.m3u8"><img src="https://up6.cc/2022/07/165667775692161.jpg"class="img1"  style="border-radius:0px;" height="90"  width="130"><div class="rating">ARRIADIA</div><div class="rating2"><div class="fa fa-tv">
+
+
+<button url="https://svs.itworkscdn.net/smc4sportslive/smc4.smil/playlist.m3u8"><img src="https://up6.cc/2022/06/165652318423771.jpg"class="img1"  style="border-radius:0px;" height="90"  width="130"><div class="rating">SHARJA SPORT</div><div class="rating2"><div class="fa fa-tv">
+
+
+<button url="https://dmitnthvll.cdn.mangomolo.com/dubaisports/smil:dubaisports.stream.smil/chunklist.m3u8"><img src="https://up6.cc/2022/06/165652716821191.png"class="img1"  style="border-radius:0px;" height="90"  width="130"><div class="rating">DUBAI SPORTS 1</div><div class="rating2"><div class="fa fa-tv">
+
+
+<button url="https://dmitwlvvll.cdn.mangomolo.com/dubaisportshd/smil:dubaisportshd.smil/chunklist.m3u8"><img src="https://up6.cc/2022/06/165652714187121.png"class="img1"  style="border-radius:0px;" height="90"  width="130"><div class="rating">DUBAI SPORTS 2</div><div class="rating2"><div class="fa fa-tv">
+
+
+<button url="https://admdn1.cdn.mangomolo.com/adsports1/smil:adsports1.stream.smil/chunklist.m3u8"><img src="https://up6.cc/2022/02/164597195508831.jpg"class="img1"  style="border-radius:0px;" height="90"  width="130"><div class="rating">AD SPORTS 1</div><div class="rating2"><div class="fa fa-tv">
+
+
+<button url="https://admdn5.cdn.mangomolo.com/adsports2/smil:adsports2.stream.smil/chunklist.m3u8"><img src="https://up6.cc/2022/07/165826278988181.jpg"class="img1"  style="border-radius:0px;" height="90"  width="130"><div class="rating">AD SPORTS 2</div><div class="rating2"><div class="fa fa-tv">
+
+
+<button url="https://sp1564435593.mytvchain.info/live/sp1564435593/index.m3u8"><img src="https://sportbusiness.club/wp-content/uploads/2020/09/France-TV-Sport-1-Logo.jpg"class="img1"  style="border-radius:0px;" height="70"  width="90"><div class="rating">FR SPORTS</div><div class="rating2"><div class="fa fa-tv">
+
+
+
+
+<button url="https://edge.taghtia.com/sa/9.m3u8"><img src="https://img.kooora.com/?i=01%2Fef4_yfjwoamdbmn.jpg"class="img1"  style="border-radius:0px;" height="70"  width="90"><div class="rating">SAUDI SPORT 1</div><div class="rating2"><div class="fa fa-tv">
+
+
+
+
+<button url="https://edge.taghtia.com/sa/10.m3u8"><img src="https://img.kooora.com/?i=01%2Fef4_yfjwoamdbmn.jpg"class="img1"  style="border-radius:0px;" height="70"  width="90"><div class="rating">SAUDI SPORT 2</div><div class="rating2"><div class="fa fa-tv">
+
+
+
+
+</div>
+
+<style type="text/css">
+body {
+	margin: auto;
+	width:auto;
+	height:auto;
+	padding: 0px 0;
+	background-color:#410200;
+}
+
+.container{
+	width:100%;
+	height:100px;
+}
+.nav {
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	height: 8%;
+	box-shadow: 0 0 5px #000;
+	background-color: #252525;
+	display: flex;
+	overflow-x: auto;
+}
+
+.nav__link {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	flex-grow: 1;
+	min-width: 20px;
+	overflow: hidden;
+	white-space: nowrap;
+	font-family: sans-serif;
+	font-size: 12px;
+    font-weight:990;
+    font-style:bold;
+	color: #FFFFFF;
+    border-right: 1px solid #000;
+    border-left: 1px solid #000;  
+    border-top: 3px solid #EEE;
+	text-decoration: none;
+	-webkit-tap-highlight-color: transparent;
+	transition: background-color 0.1s ease-in-out;
+}
+
+.nav__link:hover {
+	background-color: #000000;
+}
+
+.nav__link--active {
+	color: #fff;
+}
+
+.nav__icon {
+	font-size: 32px;
+	height: 50px;
+	
+}
+
+
+	  #imageID{
+			  max-width:100%;
+			  height: 100%;
+			  z-index: 9999;
+			  position:fixed; 
+			  top:0; 
+			  left:0;
+		  }
+
+
+
+<style> h2{ color: #000; font-family: Arial, Helvetica, sans-serif; border-radius: 5px; margin:20px; } 
+
+div .jordan2{ margin:4px; border-radius: 0px;]

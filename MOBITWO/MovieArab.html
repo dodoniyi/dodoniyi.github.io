@@ -1,0 +1,1097 @@
+[<style type="text/css">
+.grid-container {
+display: grid;
+justify-content: center;
+grid-template-columns: repeat(3, 1fr);
+grid-gap: 5px 5px;
+padding: 0px;
+}
+.grid1-container {
+display: grid;
+justify-content: center;
+grid-template-columns: repeat(1, 1fr);
+grid-gap: 10px;
+
+color: white;
+padding: px;
+}
+h1 {
+text-align: center;
+margin-top: 1px;
+font-weight: bold;
+font-family: "Readex Pro", sans-serif;
+
+}
+
+h3 {
+text-align: center;
+margin-top: 0.7px;
+font-size: 32px;
+color: #FFFFFF;
+font-weight:990;
+font-style:bold;
+}
+
+
+.button {
+text-align: center;
+}
+ {
+display: block;
+}
+button:active {
+border: 2px solid #f00;
+}
+
+</style>
+
+<!----------  اكواد استايل التطبيق شامل  ------------>
+<style type="text/css">
+@import url("https://fonts.googleapis.com/css2?family=Readex+Pro&display=swap");
+body {
+padding: 0;
+margin: 0;
+user-select: none;
+list-style: none;
+background-size: cover;
+font-weight: 500;
+font-size: 16px;
+text-align: right;
+margin: auto;
+/* position: relative; */
+direction: ltr;
+
+}
+
+
+header {
+background: #410200;
+padding: 3px;
+color: #fff;
+margin-bottom: 10px;
+position: fixed;
+top: 0;
+height: 45px;
+width: 100%;
+box-shadow: 0px 3px 0px #EEEEEE;
+z-index: 1;
+}
+
+#i1 {
+position: fixed;
+top: 9px;
+
+right: 3px;
+font-size: 40px;
+}
+#i2 {
+position: fixed;
+top: 21px;
+left: 14px;
+font-size: 40px;
+}
+#i3 {
+position: fixed;
+top: 16px;
+left: 40px;
+font-size: 40px;
+}
+
+#page:hover {
+background: none;
+}
+#page {
+margin-top: 75px;
+width: 100%;
+}
+
+#page a:hover {
+background: #fff;
+}
+#page a {
+height: 50px;
+padding-top: 2px;
+padding-bottom: 2px;
+margin-bottom: 11px;
+border: 2px solid rgba(188, 17, 21, 255);
+border-radius: 15px;
+width: 91%;
+display: inline-block;
+margin-right: 14px;
+margin-left: 14px;
+background: white;
+}
+#page a img {
+/*height:50px;
+margin-right:10px;
+width:50px;
+padding-bottom:4px;
+*/
+height: 50px;
+margin-right: 10px;
+width: 50px;
+padding-bottom: 4px;
+}
+#page a p {
+text-align: center;
+font-family: "Readex Pro", sans-serif;
+/* position: absolute; */
+/* margin-right: 20px; */
+/* margin-top: -40px; */
+display: inline-block;
+font-weight: 550;
+color: rgba(188, 17, 21, 255);
+}
+</style>
+
+<!----------  اكواد استايل القائمة  ------------>
+<style>
+.sidenav {
+height: 100%;
+width: 0;
+position: fixed;
+z-index: 1;
+top: 0;
+right: 0;
+
+
+overflow-x: hidden;
+transition: 0.5s;
+padding-top: 10px;
+}
+
+.sidenav a {
+padding: 8px 8px 8px 32px;
+text-decoration: none;
+font-size: 19px;
+color: #fff;
+display: block;
+transition: 0.3s;
+text-align: center;
+font-family: "Readex Pro", sans-serif;
+}
+
+.sidenav a:hover {
+color: #cccccc;
+}
+
+.sidenav .closebtn {
+position: absolute;
+top: 5px;
+right: 0;
+font-size: 15px;
+margin-left: 0px;
+}
+
+@media screen and (max-height: 450px) {
+.sidenav {
+padding-top: 15px;
+}
+.sidenav a {
+font-size: 18px;
+}
+}
+
+html {
+overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+width: 7px;
+}
+::-webkit-scrollbar-thumb {
+-webkit-shadow: inset 0 0 0 #000;
+-webkit-border-radius: 0;
+background-image: -webkit-linear-gradient(top, #bc1115 100%, #000 100%);
+}
+::-webkit-scrollbar-track {
+-webkit-shadow: inset 0 0 0 #000;
+-webkit-border-radius: 100px;
+}
+</style>
+</head>
+<body dir="rtl">
+<header>
+
+
+<center><h3> ARABE </h3></center>
+
+
+</header>
+<div id="page">
+<div class="grid1-container">
+<div align="center" class="button">
+<div id="buttons-list">
+  
+  
+  
+  
+  
+  
+</div>
+
+<script>
+function openNav() {
+document.getElementById("mySidenav").style.width = "250px";
+}
+
+function closeNav() {
+document.getElementById("mySidenav").style.width = "0";
+}
+</script>
+</div>
+</div>
+</div>
+</header>
+</body>
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>	
+	<html>
+	
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>MOVIES</title>
+
+
+</nav>
+
+<style type="text/css">
+body {
+ margin: auto;
+ width:auto;
+ height:auto;
+ padding: 0px 0;
+ background-color:#410200;
+}
+
+.container{
+ width:100%;
+ height:100px;
+}
+.nav {
+ position: fixed;
+ bottom: 0;
+ width: 100%;
+ height: 10%;
+ box-shadow: 0 0 2px #000000;
+ background-color:#121212;
+ display: flex;
+ overflow-x: auto;
+}
+
+.nav__link {
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ justify-content: center;
+ flex-grow: 1;
+ min-width: 50px;
+ overflow: hidden;
+ white-space: nowrap;
+ font-family: sans-serif;
+ font-size: 13px;
+ color: #cccccc;
+ text-decoration: none;
+ -webkit-tap-highlight-color: transparent;
+ transition: background-color 0.1s ease-in-out;
+}
+
+.nav__link:hover {
+ background-color: #000000;
+}
+
+.nav__link--active {
+ color: #fff;
+}
+
+.nav__icon {
+ font-size: 32px;
+ 
+}
+
+	#imageID{
+	 max-width:100%;
+	 height: 100%;
+	 z-index: 9999;
+	 position:fixed; 
+	 top:0; 
+	 left:0;
+	}
+
+
+
+
+
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+button{
+    border-radius: 0px;
+    border-color:#410200;
+    padding:4px;
+    margin:0px;
+    height:155px;
+    width: 32%;
+    background-color:#171717;
+    }
+    img {
+    width: 100%;
+    height: 100%;
+    border: 7px solid #555;
+
+}
+       button:hover {
+  background-color:#820a2c;
+}
+
+
+.topnav {
+  overflow: hidden;
+  background-color:#252525;
+  position: ;
+}
+
+.topnav #myLinks {
+  display: none;
+}
+
+.topnav a {
+  float:left;
+  color:#FFFFFF;
+  padding: 0px 6px;
+  text-decoration: none;
+  font-size: 17px;
+  font-weight:990;
+  font-style:bold;
+
+
+}
+.topnav2 a {
+  float:center;
+  color:#FFFFFF;
+  padding: 0px 0px;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight:990;
+  font-style:bold;
+}
+.topnav2 {
+  overflow: hidden;
+  background-color:#121212;
+  border: 5px solid #252525;
+  height:85px;
+  width: 100%;
+  padding: 0px 0px;
+  position: ;
+}
+.topnav3 {
+  overflow: hidden;
+  border: 4px solid #FFFFFF;
+  margin:0px;
+  border-radius:100%;
+  position: fixed;
+  width: 47px;
+  bottom: 76px;
+  right: 7px;
+  background:#2f5aaf;
+
+}
+  .topnav3 a {
+  float: center;
+  color:#FFFFFF;
+  text-decoration: none;
+  font-size: 0px;
+   font-weight:990;
+   font-style:bold;
+  }
+.topnav a.icon {
+  float:right;
+}
+
+.topnav a:hover {
+  background-color:;
+  color:;
+}
+.f {
+  background:linear-gradient(950deg,rgba(0,139,50,0.7),rgba( 0,139,0,0.9)) ;
+  color: #fff;
+}
+.c {
+  background:#FFFFFF ;
+  color: #101010;
+}
+
+.e {
+  background:#FFFFFF ;
+  color: #101010;
+}
+.g {
+  background:#FFFFFF ;
+  color: #101010;
+}
+.h {
+  background:#FFFFFF ;
+  color: #101010;
+}
+.t {
+  background:#FFFFFF ;
+  color: #101010;
+}
+.s {
+  background:#FFFFFF ;
+  color: #101010;
+}
+.d {
+  background:#FFFFFF ;
+  color: #101010;
+}
+.active {
+  background-color: #252525;
+  color: white;
+}
+</style>
+</head>
+<body>
+
+
+
+    
+    
+<style>
+body {
+  font-family: Arial;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.openBtn {
+  background: #f1f1f1;
+  border: none;
+  padding: 10px 15px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.openBtn:hover {
+  background: #bbb;
+}
+
+.overlay {
+  height: 100%;
+  width: 100%;
+  display: none;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0, 0.9);
+}
+
+.overlay-content {
+  position: relative;
+  top: 46%;
+  width: 80%;
+  text-align: center;
+  margin-top: 30px;
+  margin: auto;
+}
+
+.overlay .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+  cursor: pointer;
+  color: white;
+}
+
+.overlay .closebtn:hover {
+  color: #ccc;
+}
+
+.overlay input[type=text@CCORCH@ {
+  padding: 15px;
+  font-size: 17px;
+  border: none;
+  float: left;
+  width: 80%;
+  background: white;
+}
+
+.overlay input[type=text@CCORCH@:hover {
+  background: #f1f1f1;
+}
+
+.overlay button {
+  float: left;
+  width: 20%;
+  padding: 15px;
+  background: #ddd;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+}
+
+.overlay button:hover {
+  background: #bbb;
+}
+</style>
+</head>
+<body>
+
+
+
+<script>
+function openSearch() {
+  document.getElementById("myOverlay").style.display = "block";
+}
+
+function closeSearch() {
+  document.getElementById("myOverlay").style.display = "none";
+}
+</script>
+    
+    
+    
+    
+    
+    
+    <style>/* latin-ext */
+            @font-face {font-family: 'Righteous'; font-style: normal; font-weight: 400; font-display: swap; src: url(https://fonts.gstatic.com/s/righteous/v9/1cXxaUPXBpj2rGoU7C9WhnGFucE.woff2) format('woff2'); unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF; } /* latin */
+            @font-face {font-family: 'Righteous'; font-style: normal; font-weight: 400; font-display: swap; src: url(https://fonts.gstatic.com/s/righteous/v9/1cXxaUPXBpj2rGoU7C9WiHGF.woff2) format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }@font-face {font-family: 'Tajawal'; font-style: normal; font-weight: 500; src: local('Tajawal Medium'), local('Tajawal-Medium'), url(https://fonts.gstatic.com/s/tajawal/v3/Iurf6YBj_oCad4k1l8KiHrRpiYlJ.woff2) format('woff2'); unicode-range: U+0600-06FF, U+200C-200E, U+2010-2011, U+204F, U+2E41, U+FB50-FDFF, U+FE80-FEFC; } @font-face {font-family: 'Tajawal'; font-style: normal; font-weight: 500; src: local('Tajawal Medium'), local('Tajawal-Medium'), url(https://fonts.gstatic.com/s/tajawal/v3/Iurf6YBj_oCad4k1l8KiHrFpiQ.woff2) format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; } @font-face {font-family: 'Tajawal'; font-style: normal; font-weight: 800; src: local('Tajawal ExtraBold'), local('Tajawal-ExtraBold'), url(https://fonts.gstatic.com/s/tajawal/v3/Iurf6YBj_oCad4k1l5anHrRpiYlJ.woff2) format('woff2'); unicode-range: U+0600-06FF, U+200C-200E, U+2010-2011, U+204F, U+2E41, U+FB50-FDFF, U+FE80-FEFC; }@font-face {font-family: 'Tajawal'; font-style: normal; font-weight: 800; src: local('Tajawal ExtraBold'), local('Tajawal-ExtraBold'), url(https://fonts.gstatic.com/s/tajawal/v3/Iurf6YBj_oCad4k1l5anHrFpiQ.woff2) format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }@font-face {font-family: 'Changa'; font-style: normal; font-weight: 800; font-display: swap; src: url(https://fonts.gstatic.com/s/changa/v10/2-c79JNi2YuVOUcOarRPgnNGooxCZy22cjLj9ytf.woff2) format('woff2'); unicode-range: U+0600-06FF, U+200C-200E, U+2010-2011, U+204F, U+2E41, U+FB50-FDFF, U+FE80-FEFC; }@font-face {font-family: 'Changa'; font-style: normal; font-weight: 800; font-display: swap; src: url(https://fonts.gstatic.com/s/changa/v10/2-c79JNi2YuVOUcOarRPgnNGooxCZy22cjnj9ytf.woff2) format('woff2'); unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF; }@font-face {font-family: 'Changa'; font-style: normal; font-weight: 800; font-display: swap; src: url(https://fonts.gstatic.com/s/changa/v10/2-c79JNi2YuVOUcOarRPgnNGooxCZy22cjfj9w.woff2) format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }</style>
+
+
+         
+ 
+ 
+
+
+
+		   <link href='https://fonts.googleapis.com/icon?family=Material+Icons' rel='stylesheet'/>
+			 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
+  <link href="https://cdn.bootcss.com/font-awesome/5.5.0/css/all.css" rel="stylesheet"> 
+  <link href="https://cdn.bootcss.com/font-awesome/5.3.0/css/all.css" rel="stylesheet"> 
+		   <link href="https://fonts.googleapis.com/css?family=Baloo+2|Montserrat&display=swap" rel="stylesheet">
+           <link rel='stylesheet' id='font-awesome-css'  href='https://pro.fontawesome.com/releases/v5.10.0/css/all.css?ver=5.7.2' type='text/css' media='all' />
+
+	</head>
+    
+
+	
+	<div class="container">
+		<div class="header">
+		<div class="hide"></div>
+
+
+
+	<div class="firstfield" >
+	  
+   </div>
+   
+  <!--
+
+  Uses the latest versions of video.js and videojs-contrib-hls.
+
+  To use specific versions, please change the URLs to the form:
+
+  <link href="https://vjs.zencdn2.net/5.16.0/video-js.css" rel="stylesheet">
+  <script src="https://vjs.zencdn2.net/5.16.0/video.js"></script>
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+
+  -->
+</style>
+
+
+  
+  <link href="https://raw.githack.com/saessovic/video/main/video-js.css" rel="stylesheet"></link>
+  <script src="https://raw.githack.com/saessovic/video/main/video2.js"></script>
+  <script src="https://raw.githack.com/saessovic/video/main/jquery-3.1.1.min.js"></script>
+  
+<head>
+
+
+<div style="position: fixed; border: 7px solid #333333;  top: 47px; width: 100%"><center>
+<video id="my-video" class="video-js vjs-default-skin vjs-fluid" controls preload="none"
+   poster="https://i.imgur.com/RdJLhml.jpg" data-setup='{ "aspectRatio":"720:405", "playbackRates": [@CCORCH@ }'>
+    <source src="https://stream.fushaar.link/movie/43459/43459-480p.mp4/chunk.m3u8" type='application/x-mpegURL'>
+    <source src="https://stream.fushaar.link/movie/43459/43459-480p.mp4/chunk.m3u8" type='application/x-mpegURL'>
+    <p class="vjs-no-js">
+      To view this video please enable JavaScript, and consider upgrading to a web browser that
+      <li  data-url=="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+    </p>
+  </video>
+ </div>
+</body>
+</html>
+    <ul id="playlist">
+
+  <script>
+  $(function(){
+$("#playlist button,button2").on("click", function() {
+var player = videojs('my-video');
+player.pause();
+var new_url = $(this).attr("url");
+player.src(new_url);
+// set src track corresponding to new movie //
+player.load();
+player.play();
+});
+});</script>
+	<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+		<body>
+
+
+ 
+ 
+<body>
+ <ul id="playlist">
+<div style="align=center; padding-top: 45%;">
+<p style="font-size:13px">
+
+
+
+
+<ul style="list-style-type:none">
+<style>ul{padding-left:0px; text-align:center;}
+li{ display:inline-block;padding:0px;}
+</style>
+
+  
+
+ 
+
+
+	  
+   </div>
+ 
+
+<div>
+
+
+
+
+	</script>
+	<style type="text/css">
+	 
+		}
+		button{
+			background-color: white;
+			color: black;
+			border: none;
+			border-radius: 5px;
+			size: 20px;
+			width: 70px;
+			padding: 10px;
+		}
+		div .jordan2{
+		  overflow-x: scroll;
+		  overflow-y: hidden;
+		  white-space: nowrap;}
+		}
+  
+	</style>
+</head>
+
+<div>
+	<div class="firstfield" >
+	  
+   </div>
+
+
+<style>
+div.scrollmenu {
+  background: #252525;
+  border: 2px solid #121212;
+  overflow: auto;
+  white-space: nowrap;
+  padding: 2px 2px;
+}
+
+div.scrollmenu a {
+  display: inline-block;
+  text-align: center;
+  padding: 13px;
+  font-weight:990;
+  font-style:bold;
+  text-decoration: none;
+  border: 4px solid #555;
+      margin: 3px 1px;
+         width:145px;
+
+
+}
+
+div.scrollmenu a:hover {
+  background:#820a2c ;
+    color: #FFF;
+  border: 4px solid #FFF;
+  
+}
+</style>
+</head>
+<body>
+
+<div class="scrollmenu">
+  <a href="go:11" class="f">ARABE <i class="fas fa-check-circle fa-lg"></i></a> 
+  <a href="go:10" class="d">ACTION <i class="fas fa-film fa-lg"></i></a> 
+  <a href="go:12" class="c">NEW  <i class="fas fa-film fa-lg"></i></a> 
+  <a href="go:13" class="e">HORROR <i class="fas fa-film fa-lg"></i></a> 
+  <a href="go:14" class="s">CARTOON <i class="fas fa-film fa-lg"></i></a> 
+  <a href="go:15" class="g">DOCUMEN <i class="fas fa-film fa-lg"></i></a> 
+  <a href="go:16" class="h">SCI-FI <i class="fas fa-film fa-lg"></i></a> 
+  <a href="go:17" class="t">WESTERN <i class="fas fa-film fa-lg"></i></a> 
+
+</div>
+
+
+
+<button url="https://admvta.cdn.mgmlcdn.com/vod/_definst_/smil:2021-04-24/vidzYx1HVRsEM.smil/chunklist_b906787.m3u8"><img src="https://up6.cc/2022/08/165975096066851.jpg"  style="border-radius:0px;" height="150"  width="100"></button>
+
+
+
+
+<button url="https://dmifrta.cdn.mangomolo.com/vod/_definst_/smil:2021-09-21/videFM4Nszl8d.smil/chunklist_b828371.m3u8"><img src="https://admango.cdn.mangomolo.com/analytics/uploads/71/614f8d4e24.jpg"  style="border-radius:0px;" height="150"  width="100"></button>
+
+
+
+
+
+
+
+<button url="https://dmifrta.cdn.mangomolo.com/vod/_definst_/smil:2021-09-21/vidrvoCEfu0mK.smil/chunklist_b718543.m3u8"><img src="https://admango.cdn.mangomolo.com/analytics/uploads/71/614fa98bcb.png"  style="border-radius:0px;" height="150"  width="100"></button>
+
+
+
+
+
+<button url="https://dmifrta.cdn.mangomolo.com/vod/_definst_/smil:2021-09-21/vid54McB0envF.smil/chunklist_b870685.m3u8"><img src="https://admango.cdn.mangomolo.com/analytics/uploads/71/614faa09ad.jpg"  style="border-radius:0px;" height="150"  width="100"></button>
+
+
+
+
+
+<button url="https://dmifrta.cdn.mangomolo.com/vod/_definst_/smil:2021-09-21/vidC5Sg34QebF.smil/chunklist_b618400.m3u8"><img src="https://admango.cdn.mangomolo.com/analytics/uploads/71/614faaef0d.jpg"  style="border-radius:0px;" height="150"  width="100"></button>
+
+
+
+
+
+
+<button url="https://dmifrta.cdn.mangomolo.com/vod/_definst_/smil:2021-09-21/vidWKTYh9uO4P.smil/chunklist_b1258119.m3u8"><img src="https://admango.cdn.mangomolo.com/analytics/uploads/71/614fabe61c.jpg"  style="border-radius:0px;" height="150"  width="100"></button>
+
+
+
+
+
+
+<button url="https://dmifrta.cdn.mangomolo.com/vod/_definst_/smil:2021-09-21/vidqpYoMI6Se8.smil/chunklist_b790825.m3u8"><img src="https://admango.cdn.mangomolo.com/analytics/uploads/71/614facbadd.jpg"  style="border-radius:0px;" height="150"  width="100"></button>
+
+
+
+
+
+<button url="https://dmifrta.cdn.mangomolo.com/vod/_definst_/smil:2021-09-21/vidFLJtSlQhZ4.smil/chunklist_b710930.m3u8"><img src="https://admango.cdn.mangomolo.com/analytics/uploads/71/614fad97bb.jpg"  style="border-radius:0px;" height="150"  width="100"></button>
+
+
+
+
+
+<button url="https://dmifrta.cdn.mangomolo.com/vod/_definst_/smil:2021-09-26/vidNoKa6ujhXE.smil/chunklist_b807977.m3u8"><img src="https://admango.cdn.mangomolo.com/analytics/uploads/71/614fae69ac.jpg"  style="border-radius:0px;" height="150"  width="100"></button>
+
+
+
+
+
+
+<button url="https://dmifrta.cdn.mangomolo.com/vod/_definst_/smil:2021-09-26/vidhkbKofqVxi.smil/chunklist_b1158562.m3u8"><img src="https://admango.cdn.mangomolo.com/analytics/uploads/71/61510ea3b4.jpg"  style="border-radius:0px;" height="150"  width="100"></button>
+
+
+
+
+
+
+<button url="https://dmifrta.cdn.mangomolo.com/vod/_definst_/smil:2021-09-26/vidGi3aHKbyQz.smil/chunklist_b666140.m3u8"><img src="https://admango.cdn.mangomolo.com/analytics/uploads/71/614fb40166.jpg"  style="border-radius:0px;" height="150"  width="100"></button>
+
+
+
+
+
+<button url="https://dmifrta.cdn.mangomolo.com/vod/_definst_/smil:2022-02-14/vid7SCtUhWnMa.smil/chunklist_b895111.m3u8"><img src="https://admango.cdn.mangomolo.com/analytics/uploads/71/6212a5daa8.jpg"  style="border-radius:0px;" height="150"  width="100"></button>
+
+
+
+<button url="https://dmifrta.cdn.mangomolo.com/vod/_definst_/smil:2022-02-21/vidsi3udQB2vn.smil/chunklist_b825379.m3u8"><img src="https://admango.cdn.mangomolo.com/analytics/uploads/71/6212ab386f.jpg"  style="border-radius:0px;" height="150"  width="100"></button>
+
+
+
+
+
+<button url="https://dmifrta.cdn.mangomolo.com/vod/_definst_/smil:2021-09-21/vidLZ0nUVbAP9.smil/chunklist_b898638.m3u8"><img src="https://admango.cdn.mangomolo.com/analytics/uploads/71/614f8cf6e4.jpg"  style="border-radius:0px;" height="150"  width="100"></button>
+
+
+
+<button url="https://dmifrta.cdn.mangomolo.com/vod/_definst_/smil:2021-09-21/vid2qGBYhzKFV.smil/chunklist_b702714.m3u8"><img src="https://admango.cdn.mangomolo.com/analytics/uploads/71/614b216cf3.jpg"  style="border-radius:0px;" height="150"  width="100"></button>
+
+
+
+
+<button url="https://dmifrta.cdn.mangomolo.com/vod/_definst_/smil:2021-09-21/vidlZsA7EwSuV.smil/chunklist_b898642.m3u8"><img src="https://admango.cdn.mangomolo.com/analytics/uploads/71/614b1f703d.jpg"  style="border-radius:0px;" height="150"  width="100"></button>
+
+
+
+
+<button url="https://dmifrta.cdn.mangomolo.com/vod/_definst_/smil:2021-09-21/vidMmLUxFazJR.smil/chunklist_b939230.m3u8"><img src="https://admango.cdn.mangomolo.com/analytics/uploads/71/614b1fa95b.jpg"  style="border-radius:0px;" height="150"  width="100"></button>
+
+
+
+
+<button url="https://dmifrta.cdn.mangomolo.com/vod/_definst_/smil:2021-09-21/vid9yBQGNzpIA.smil/chunklist_b1019297.m3u8"><img src="https://admango.cdn.mangomolo.com/analytics/uploads/71/614b0afe11.jpg"  style="border-radius:0px;" height="150"  width="100"></button>
+
+
+
+<button url="https://dmifrta.cdn.mangomolo.com/vod/_definst_/smil:2021-09-21/vidR2ZcJFdOz8.smil/chunklist_b693448.m3u8"><img src="https://admango.cdn.mangomolo.com/analytics/uploads/71/614b05feef.jpg"  style="border-radius:0px;" height="150"  width="100"></button>
+
+
+
+<button url="https://dmifrta.cdn.mangomolo.com/vod/_definst_/smil:2021-09-21/vid1GvVsIawAM.smil/chunklist_b714490.m3u8"><img src="https://admango.cdn.mangomolo.com/analytics/uploads/71/614b05b513.jpg"  style="border-radius:0px;" height="150"  width="100"></button>
+
+
+
+
+<button url="https://dmifrta.cdn.mangomolo.com/vod/_definst_/smil:2021-09-21/vidKaYxcP6F2h.smil/chunklist_b831147.m3u8"><img src="https://admango.cdn.mangomolo.com/analytics/uploads/71/614b05568a.png"  style="border-radius:0px;" height="150"  width="100"></button>
+
+
+
+
+<button url="https://dmifrta.cdn.mangomolo.com/vod/_definst_/smil:2021-09-21/vidj2vq4RQTiK.smil/chunklist_b1009556.m3u8"><img src="https://admango.cdn.mangomolo.com/analytics/uploads/71/614b048d9a.jpg"  style="border-radius:0px;" height="150"  width="100"></button>
+
+
+
+<button url="https://dmifrta.cdn.mangomolo.com/vod/_definst_/smil:2021-09-21/vidgP9zjkfCNb.smil/chunklist_b423658.m3u8"><img src="https://admango.cdn.mangomolo.com/analytics/uploads/71/614b045437.jpg"  style="border-radius:0px;" height="150"  width="100"></button>
+
+
+
+<button url="https://dmifrta.cdn.mangomolo.com/vod/_definst_/smil:2021-09-21/vidi6cTyvtgQf.smil/chunklist_b842213.m3u8"><img src="https://admango.cdn.mangomolo.com/analytics/uploads/71/614b04092b.jpg"  style="border-radius:0px;" height="150"  width="100"></button>
+
+
+
+<button url="https://dmifrta.cdn.mangomolo.com/vod/_definst_/smil:2021-09-21/vidJaszh6fXMG.smil/chunklist_b806683.m3u8"><img src="https://admango.cdn.mangomolo.com/analytics/uploads/71/614b03b050.jpg"  style="border-radius:0px;" height="150"  width="100"></button>
+
+
+
+
+<button url="https://dmifrta.cdn.mangomolo.com/vod/_definst_/smil:2021-09-21/vidkxDaUPKOiB.smil/chunklist_b1046664.m3u8"><img src="https://admango.cdn.mangomolo.com/analytics/uploads/71/614b03662e.jpg"  style="border-radius:0px;" height="150"  width="100"></button>
+
+
+
+
+
+<button url="https://dmifrta.cdn.mangomolo.com/vod/_definst_/smil:2021-09-21/vid9syqZ4DmoA.smil/chunklist_b679587.m3u8"><img src="https://admango.cdn.mangomolo.com/analytics/uploads/71/614b02720a.jpg"  style="border-radius:0px;" height="150"  width="100"></button>
+
+
+
+
+<button url="https://dmifrta.cdn.mangomolo.com/vod/_definst_/smil:2021-09-21/vidGF0A69lBoe.smil/chunklist_b828238.m3u8"><img src="https://admango.cdn.mangomolo.com/analytics/uploads/71/614b021da8.jpg"  style="border-radius:0px;" height="150"  width="100"></button>
+
+
+
+<button url="https://dmifrta.cdn.mangomolo.com/vod/_definst_/smil:2021-09-21/vidqEBaG0eimT.smil/chunklist_b728079.m3u8"><img src="https://admango.cdn.mangomolo.com/analytics/uploads/71/614affa728.jpg"  style="border-radius:0px;" height="150"  width="100"></button>
+
+
+
+<button url="https://dmifrta.cdn.mangomolo.com/vod/_definst_/smil:2020-03-16/vid8Jbi5caEAG.smil/chunklist_b642546.m3u8"><img src="https://admango.cdn.mangomolo.com/analytics/Recorder/uploads/71/thumb_1590285079_cp.jpg"  style="border-radius:0px;" height="150"  width="100"></button>
+
+
+
+
+<button url="https://dmifrta.cdn.mangomolo.com/vod/_definst_/smil:2020-03-16/vid9b4zi0mAMB.smil/chunklist_b637754.m3u8"><img src="https://admango.cdn.mangomolo.com/analytics/Recorder/uploads/71/thumb_1590264696_cp.jpg"  style="border-radius:0px;" height="150"  width="100"></button>
+
+
+
+<button url="https://dmifrta.cdn.mangomolo.com/vod/_definst_/smil:2020-03-16/vidx9MnSECH5q.smil/chunklist_b636846.m3u8"><img src="https://admango.cdn.mangomolo.com/analytics/Recorder/uploads/71/thumb_1590001557_cp.jpg"  style="border-radius:0px;" height="150"  width="100"></button>
+
+
+
+<button url="https://dmifrta.cdn.mangomolo.com/vod/_definst_/smil:2020-03-16/vidhN5mLSCPi0.smil/chunklist_b1200000.m3u8"><img src="https://admango.cdn.mangomolo.com/analytics/uploads/71/61596b274d.jpg"  style="border-radius:0px;" height="150"  width="100"></button>
+
+
+<button url="https://dmifrta.cdn.mangomolo.com/vod/_definst_/smil:2020-04-08/vidry7YSCRJZj.smil/chunklist_b1200000.m3u8"><img src="https://admango.cdn.mangomolo.com/analytics/uploads/71/60ac312d12.jpg"  style="border-radius:0px;" height="150"  width="100"></button>
+
+
+
+
+<button url="https://dmifrta.cdn.mangomolo.com/vod/_definst_/smil:2020-03-16/vidSlLybJq0h8.smil/chunklist_b638310.m3u8"><img src="https://admango.cdn.mangomolo.com/analytics/Recorder/uploads/71/thumb_1590284011_cp.jpg"  style="border-radius:0px;" height="150"  width="100"></button>
+
+
+
+<button url="https://dmifrta.cdn.mangomolo.com/vod/_definst_/smil:2020-03-16/vid6071nwLQEG.smil/chunklist_b636750.m3u8"><img src="https://admango.cdn.mangomolo.com/analytics/Recorder/uploads/71/thumb_1599983551_cp.jpg"  style="border-radius:0px;" height="150"  width="100"></button>
+
+
+
+<button url="https://dmifrta.cdn.mangomolo.com/vod/_definst_/smil:2020-03-16/vid3x12RXIorC.smil/chunklist_b1200000.m3u8"><img src="https://admango.cdn.mangomolo.com/analytics/Recorder/uploads/71/thumb_1599983505_cp.jpg"  style="border-radius:0px;" height="150"  width="100"></button>
+
+
+
+<button url="https://dmifrta.cdn.mangomolo.com/vod/_definst_/smil:2020-03-16/vid2yUrmnLJld.smil/chunklist_b638150.m3u8"><img src="https://admango.cdn.mangomolo.com/analytics/Recorder/uploads/71/thumb_1590264990_cp.jpg"  style="border-radius:0px;" height="150"  width="100"></button>
+
+
+
+<button url="https://dmifrta.cdn.mangomolo.com/vod/_definst_/smil:2020-03-16/vidwG8sNikMcZ.smil/chunklist_b639384.m3u8"><img src="https://admango.cdn.mangomolo.com/analytics/Recorder/uploads/71/thumb_1590001526_cp.jpg"  style="border-radius:0px;" height="150"  width="100"></button>
+
+
+<button url="https://dmifrta.cdn.mangomolo.com/vod/_definst_/smil:2020-03-16/vid65WL8zrwoe.smil/chunklist_b1200000.m3u8"><img src="https://admango.cdn.mangomolo.com/analytics/Recorder/uploads/71/thumb_1590290983_cp.jpg"  style="border-radius:0px;" height="150"  width="100"></button>
+
+
+
+<button url="https://dmifrta.cdn.mangomolo.com/vod/_definst_/smil:2020-03-16/vidr8bec3OUL2.smil/chunklist_b1200000.m3u8"><img src="https://admango.cdn.mangomolo.com/analytics/Recorder/uploads/71/thumb_1590291592_cp.jpg"  style="border-radius:0px;" height="150"  width="100"></button>
+
+
+
+<button url="https://dmifrta.cdn.mangomolo.com/vod/_definst_/smil:2020-03-16/vidJWEnhiamUG.smil/chunklist_b635866.m3u8"><img src="https://admango.cdn.mangomolo.com/analytics/Recorder/uploads/71/thumb_1590001282_cp.jpg"  style="border-radius:0px;" height="150"  width="100"></button>
+
+
+
+<button url="https://dmifrta.cdn.mangomolo.com/vod/_definst_/smil:2020-03-16/vidSwFWj1oqzE.smil/chunklist_b637526.m3u8"><img src="https://admango.cdn.mangomolo.com/analytics/Recorder/uploads/71/thumb_1590292153_cp.jpg"  style="border-radius:0px;" height="150"  width="100"></button>
+
+
+<button url="https://dmifrta.cdn.mangomolo.com/vod/_definst_/smil:2020-03-16/vidUPaoWxmNVI.smil/chunklist_b1200000.m3u8"><img src="https://admango.cdn.mangomolo.com/analytics/Recorder/uploads/71/thumb_1590291106_cp.jpg"  style="border-radius:0px;" height="150"  width="100"></button>
+
+
+<button url="https://dmifrta.cdn.mangomolo.com/vod/_definst_/smil:2020-03-16/vidpWO4nBI68r.smil/chunklist_b1200000.m3u8"><img src="https://admango.cdn.mangomolo.com/analytics/Recorder/uploads/71/thumb_1590291514_cp.jpg"  style="border-radius:0px;" height="150"  width="100"></button>
+
+
+
+<button url="https://dmifrta.cdn.mangomolo.com/vod/_definst_/smil:2020-03-16/vidcebwn0Okxs.smil/chunklist_b635328.m3u8"><img src="https://admango.cdn.mangomolo.com/analytics/uploads/71/5fb64f3c3b_cp.jpg"  style="border-radius:0px;" height="150"  width="100"></button>
+
+
+
+<button url="https://dmifrta.cdn.mangomolo.com/vod/_definst_/smil:2020-04-08/vidIfKknmslMF.smil/chunklist_b1200000.m3u8"><img src="https://admango.cdn.mangomolo.com/analytics/Recorder/uploads/71/thumb_1590291529_cp.jpg"  style="border-radius:0px;" height="150"  width="100"></button>
+
+
+<button url="https://dmifrta.cdn.mangomolo.com/vod/_definst_/smil:2020-03-16/vidaHh73gZV6L.smil/chunklist_b1200000.m3u8"><img src="https://admango.cdn.mangomolo.com/analytics/Recorder/uploads/71/thumb_1590001257_cp.jpg"  style="border-radius:0px;" height="150"  width="100"></button>
+
+
+
+<button url="https://dmifrta.cdn.mangomolo.com/vod/_definst_/smil:2020-03-16/vidfCMQkKXDal.smil/chunklist_b638638.m3u8"><img src="https://admango.cdn.mangomolo.com/analytics/Recorder/uploads/71/thumb_1590285119_cp.jpg"  style="border-radius:0px;" height="150"  width="100"></button>
+
+
+
+<button url="https://dmifrta.cdn.mangomolo.com/vod/_definst_/smil:2020-03-16/vidnb9qgU3Wek.smil/chunklist_b1200000.m3u8"><img src="https://admango.cdn.mangomolo.com/analytics/Recorder/uploads/71/thumb_1590291773_cp.jpg"  style="border-radius:0px;" height="150"  width="100"></button>
+
+
+<button url="https://dmifrta.cdn.mangomolo.com/vod/_definst_/smil:2020-03-16/videonNLqI8BA.smil/chunklist_b634260.m3u8"><img src="https://admango.cdn.mangomolo.com/analytics/Recorder/uploads/71/thumb_1590265486_cp.jpg"  style="border-radius:0px;" height="150"  width="100"></button>
+
+
+
+<button url="https://dmifrta.cdn.mangomolo.com/vod/_definst_/smil:2020-03-16/vidRL8JrxIoTk.smil/chunklist_b1200000.m3u8"><img src="https://admango.cdn.mangomolo.com/analytics/Recorder/uploads/71/thumb_1590285012_cp.jpg"  style="border-radius:0px;" height="150"  width="100"></button>
+
+
+<button url="https://dmifrta.cdn.mangomolo.com/vod/_definst_/smil:2020-03-16/vidYlHtE7RIeW.smil/chunklist_b702269.m3u8"><img src="https://admango.cdn.mangomolo.com/analytics/Recorder/uploads/71/thumb_1590285054_cp.jpg"  style="border-radius:0px;" height="150"  width="100"></button>
+
+
+<button url="https://dmifrta.cdn.mangomolo.com/vod/_definst_/smil:2020-03-16/vid1c03ZVQNfP.smil/chunklist_b638272.m3u8"><img src="https://admango.cdn.mangomolo.com/analytics/Recorder/uploads/71/thumb_1590001393_cp.jpg"  style="border-radius:0px;" height="150"  width="100"></button>
+
+
+<button url="https://dmifrta.cdn.mangomolo.com/vod/_definst_/smil:2020-03-16/vidZfeO1jCVwu.smil/chunklist_b634164.m3u8"><img src="https://admango.cdn.mangomolo.com/analytics/Recorder/uploads/71/thumb_1590001330_cp.jpg"  style="border-radius:0px;" height="150"  width="100"></button>
+
+
+
+<button url="https://dmifrta.cdn.mangomolo.com/vod/_definst_/smil:2020-03-16/vidnGBiXQeNW2.smil/chunklist_b1200000.m3u8"><img src="https://admango.cdn.mangomolo.com/analytics/Recorder/uploads/71/thumb_1590265455_cp.jpg"  style="border-radius:0px;" height="150"  width="100"></button>
+
+
+<button url="https://dmifrta.cdn.mangomolo.com/vod/_definst_/smil:2020-03-16/viddyHCzG80TZ.smil/chunklist_b1200000.m3u8"><img src="https://admango.cdn.mangomolo.com/analytics/Recorder/uploads/71/thumb_1590001220_cp.jpg"  style="border-radius:0px;" height="150"  width="100"></button>
+
+
+
+</div>
+
+
+<style type="text/css">
+body {
+	margin: auto;
+	width:auto;
+	height:auto;
+	padding: 0px 0;
+	background-color:#410200;
+}
+
+.container{
+	width:100%;
+	height:100px;
+}
+.nav {
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	height: 8%;
+	box-shadow: 0 0 5px #000;
+	background-color: #252525;
+	display: flex;
+	overflow-x: auto;
+}
+
+.nav__link {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	flex-grow: 1;
+	min-width: 20px;
+	overflow: hidden;
+	white-space: nowrap;
+	font-family: sans-serif;
+	font-size: 12px;
+    font-weight:990;
+    font-style:bold;
+	color: #FFFFFF;
+    border-right: 1px solid #000;
+    border-left: 1px solid #000;
+    border-top: 3px solid #EEE;
+	text-decoration: none;
+	-webkit-tap-highlight-color: transparent;
+	transition: background-color 0.1s ease-in-out;
+}
+
+.nav__link:hover {
+	background-color: #000000;
+}
+
+.nav__link--active {
+	color: #fff;
+}
+
+.nav__icon {
+	font-size: 32px;
+	height: 50px;
+	
+}
+
+
+	  #imageID{
+			  max-width:100%;
+			  height: 100%;
+			  z-index: 9999;
+			  position:fixed; 
+			  top:0; 
+			  left:0;
+		  }
+
+
+
+<style> h2{ color: #000; font-family: Arial, Helvetica, sans-serif; border-radius: 5px; margin:20px; } 
+
+div .jordan2{ margin:4px; border-radius: 0px;]

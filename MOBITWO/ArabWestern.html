@@ -1,0 +1,954 @@
+[<style type="text/css">
+.grid-container {
+display: grid;
+justify-content: center;
+grid-template-columns: repeat(3, 1fr);
+grid-gap: 5px 5px;
+padding: 0px;
+}
+.grid1-container {
+display: grid;
+justify-content: center;
+grid-template-columns: repeat(1, 1fr);
+grid-gap: 10px;
+
+color: white;
+padding: px;
+}
+h1 {
+text-align: center;
+margin-top: 1px;
+font-weight: bold;
+font-family: "Readex Pro", sans-serif;
+
+}
+
+h3 {
+text-align: center;
+margin-top: 0.7px;
+font-size: 32px;
+color: #FFFFFF;
+font-weight:990;
+font-style:bold;
+}
+
+
+.button {
+text-align: center;
+}
+ {
+display: block;
+}
+button:active {
+border: 2px solid #f00;
+}
+
+</style>
+
+<!----------  اكواد استايل التطبيق شامل  ------------>
+<style type="text/css">
+@import url("https://fonts.googleapis.com/css2?family=Readex+Pro&display=swap");
+body {
+padding: 0;
+margin: 0;
+user-select: none;
+list-style: none;
+background-size: cover;
+font-weight: 500;
+font-size: 16px;
+text-align: right;
+margin: auto;
+/* position: relative; */
+direction: ltr;
+
+}
+
+
+header {
+background: #410200;
+padding: 3px;
+color: #fff;
+margin-bottom: 10px;
+position: fixed;
+top: 0;
+height: 45px;
+width: 100%;
+box-shadow: 0px 3px 0px #EEEEEE;
+z-index: 1;
+}
+
+#i1 {
+position: fixed;
+top: 9px;
+
+right: 3px;
+font-size: 40px;
+}
+#i2 {
+position: fixed;
+top: 21px;
+left: 14px;
+font-size: 40px;
+}
+#i3 {
+position: fixed;
+top: 16px;
+left: 40px;
+font-size: 40px;
+}
+
+#page:hover {
+background: none;
+}
+#page {
+margin-top: 75px;
+width: 100%;
+}
+
+#page a:hover {
+background: #fff;
+}
+#page a {
+height: 50px;
+padding-top: 2px;
+padding-bottom: 2px;
+margin-bottom: 11px;
+border: 2px solid rgba(188, 17, 21, 255);
+border-radius: 15px;
+width: 91%;
+display: inline-block;
+margin-right: 14px;
+margin-left: 14px;
+background: white;
+}
+#page a img {
+/*height:50px;
+margin-right:10px;
+width:50px;
+padding-bottom:4px;
+*/
+height: 50px;
+margin-right: 10px;
+width: 50px;
+padding-bottom: 4px;
+}
+#page a p {
+text-align: center;
+font-family: "Readex Pro", sans-serif;
+/* position: absolute; */
+/* margin-right: 20px; */
+/* margin-top: -40px; */
+display: inline-block;
+font-weight: 550;
+color: rgba(188, 17, 21, 255);
+}
+</style>
+
+<!----------  اكواد استايل القائمة  ------------>
+<style>
+.sidenav {
+height: 100%;
+width: 0;
+position: fixed;
+z-index: 1;
+top: 0;
+right: 0;
+
+
+overflow-x: hidden;
+transition: 0.5s;
+padding-top: 10px;
+}
+
+.sidenav a {
+padding: 8px 8px 8px 32px;
+text-decoration: none;
+font-size: 19px;
+color: #fff;
+display: block;
+transition: 0.3s;
+text-align: center;
+font-family: "Readex Pro", sans-serif;
+}
+
+.sidenav a:hover {
+color: #cccccc;
+}
+
+.sidenav .closebtn {
+position: absolute;
+top: 5px;
+right: 0;
+font-size: 15px;
+margin-left: 0px;
+}
+
+@media screen and (max-height: 450px) {
+.sidenav {
+padding-top: 15px;
+}
+.sidenav a {
+font-size: 18px;
+}
+}
+
+html {
+overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+width: 7px;
+}
+::-webkit-scrollbar-thumb {
+-webkit-shadow: inset 0 0 0 #000;
+-webkit-border-radius: 0;
+background-image: -webkit-linear-gradient(top, #bc1115 100%, #000 100%);
+}
+::-webkit-scrollbar-track {
+-webkit-shadow: inset 0 0 0 #000;
+-webkit-border-radius: 100px;
+}
+</style>
+</head>
+<body dir="rtl">
+<header>
+
+
+<center><h3> WESTERNS </h3></center>
+
+
+</header>
+<div id="page">
+<div class="grid1-container">
+<div align="center" class="button">
+<div id="buttons-list">
+  
+  
+  
+  
+  
+  
+</div>
+
+<script>
+function openNav() {
+document.getElementById("mySidenav").style.width = "250px";
+}
+
+function closeNav() {
+document.getElementById("mySidenav").style.width = "0";
+}
+</script>
+</div>
+</div>
+</div>
+</header>
+</body>
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>	
+	<html>
+	
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>MOVIES</title>
+
+
+</nav>
+
+<style type="text/css">
+body {
+ margin: auto;
+ width:auto;
+ height:auto;
+ padding: 0px 0;
+ background-color:#410200;
+}
+
+.container{
+ width:100%;
+ height:100px;
+}
+.nav {
+ position: fixed;
+ bottom: 0;
+ width: 100%;
+ height: 10%;
+ box-shadow: 0 0 2px #000000;
+ background-color:#121212;
+ display: flex;
+ overflow-x: auto;
+}
+
+.nav__link {
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ justify-content: center;
+ flex-grow: 1;
+ min-width: 50px;
+ overflow: hidden;
+ white-space: nowrap;
+ font-family: sans-serif;
+ font-size: 13px;
+ color: #cccccc;
+ text-decoration: none;
+ -webkit-tap-highlight-color: transparent;
+ transition: background-color 0.1s ease-in-out;
+}
+
+.nav__link:hover {
+ background-color: #000000;
+}
+
+.nav__link--active {
+ color: #fff;
+}
+
+.nav__icon {
+ font-size: 32px;
+ 
+}
+
+	#imageID{
+	 max-width:100%;
+	 height: 100%;
+	 z-index: 9999;
+	 position:fixed; 
+	 top:0; 
+	 left:0;
+	}
+
+
+
+
+
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+button{
+    border-radius: 0px;
+    border-color:#410200;
+    padding:4px;
+    margin:0px;
+    height:155px;
+    width: 32%;
+    background-color:#171717;
+    }
+    img {
+    width: 100%;
+    height: 100%;
+    border: 7px solid #555;
+
+}
+       button:hover {
+  background-color:#820a2c;
+}
+
+
+.topnav {
+  overflow: hidden;
+  background-color:#252525;
+  position: ;
+}
+
+.topnav #myLinks {
+  display: none;
+}
+
+.topnav a {
+  float:left;
+  color:#FFFFFF;
+  padding: 0px 6px;
+  text-decoration: none;
+  font-size: 17px;
+  font-weight:990;
+  font-style:bold;
+
+
+}
+.topnav2 a {
+  float:center;
+  color:#FFFFFF;
+  padding: 0px 0px;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight:990;
+  font-style:bold;
+}
+.topnav2 {
+  overflow: hidden;
+  background-color:#121212;
+  border: 5px solid #252525;
+  height:85px;
+  width: 100%;
+  padding: 0px 0px;
+  position: ;
+}
+.topnav3 {
+  overflow: hidden;
+  border: 4px solid #FFFFFF;
+  margin:0px;
+  border-radius:100%;
+  position: fixed;
+  width: 47px;
+  bottom: 76px;
+  right: 7px;
+  background:#2f5aaf;
+
+}
+  .topnav3 a {
+  float: center;
+  color:#FFFFFF;
+  text-decoration: none;
+  font-size: 0px;
+   font-weight:990;
+   font-style:bold;
+  }
+.topnav a.icon {
+  float:right;
+}
+
+.topnav a:hover {
+  background-color:;
+  color:;
+}
+.t {
+  background:linear-gradient(950deg,rgba(0,139,50,0.7),rgba( 0,139,0,0.9)) ;
+  color: white;
+}
+.g {
+  background:#FFFFFF ;
+  color: #101010;
+}
+.h {
+  background:#FFFFFF ;
+  color: #101010;
+}
+.e {
+  background:#FFFFFF ;
+  color: #101010;
+}
+.s {
+  background:#FFFFFF ;
+  color: #101010;
+}
+.d {
+  background:#FFFFFF ;
+  color: #101010;
+}
+.c {
+  background:#FFFFFF ;
+  color: #101010;
+}
+.f {
+  background:#FFFFFF ;
+  color: #101010;
+}
+
+.active {
+  background-color: #252525;
+  color: white;
+}
+</style>
+</head>
+<body>
+
+
+
+    
+    
+<style>
+body {
+  font-family: Arial;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.openBtn {
+  background: #f1f1f1;
+  border: none;
+  padding: 10px 15px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.openBtn:hover {
+  background: #bbb;
+}
+
+.overlay {
+  height: 100%;
+  width: 100%;
+  display: none;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0, 0.9);
+}
+
+.overlay-content {
+  position: relative;
+  top: 46%;
+  width: 80%;
+  text-align: center;
+  margin-top: 30px;
+  margin: auto;
+}
+
+.overlay .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+  cursor: pointer;
+  color: white;
+}
+
+.overlay .closebtn:hover {
+  color: #ccc;
+}
+
+.overlay input[type=text@CCORCH@ {
+  padding: 15px;
+  font-size: 17px;
+  border: none;
+  float: left;
+  width: 80%;
+  background: white;
+}
+
+.overlay input[type=text@CCORCH@:hover {
+  background: #f1f1f1;
+}
+
+.overlay button {
+  float: left;
+  width: 20%;
+  padding: 15px;
+  background: #ddd;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+}
+
+.overlay button:hover {
+  background: #bbb;
+}
+</style>
+</head>
+<body>
+
+
+
+<script>
+function openSearch() {
+  document.getElementById("myOverlay").style.display = "block";
+}
+
+function closeSearch() {
+  document.getElementById("myOverlay").style.display = "none";
+}
+</script>
+    
+    
+    
+    
+    
+    
+    <style>/* latin-ext */
+            @font-face {font-family: 'Righteous'; font-style: normal; font-weight: 400; font-display: swap; src: url(https://fonts.gstatic.com/s/righteous/v9/1cXxaUPXBpj2rGoU7C9WhnGFucE.woff2) format('woff2'); unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF; } /* latin */
+            @font-face {font-family: 'Righteous'; font-style: normal; font-weight: 400; font-display: swap; src: url(https://fonts.gstatic.com/s/righteous/v9/1cXxaUPXBpj2rGoU7C9WiHGF.woff2) format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }@font-face {font-family: 'Tajawal'; font-style: normal; font-weight: 500; src: local('Tajawal Medium'), local('Tajawal-Medium'), url(https://fonts.gstatic.com/s/tajawal/v3/Iurf6YBj_oCad4k1l8KiHrRpiYlJ.woff2) format('woff2'); unicode-range: U+0600-06FF, U+200C-200E, U+2010-2011, U+204F, U+2E41, U+FB50-FDFF, U+FE80-FEFC; } @font-face {font-family: 'Tajawal'; font-style: normal; font-weight: 500; src: local('Tajawal Medium'), local('Tajawal-Medium'), url(https://fonts.gstatic.com/s/tajawal/v3/Iurf6YBj_oCad4k1l8KiHrFpiQ.woff2) format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; } @font-face {font-family: 'Tajawal'; font-style: normal; font-weight: 800; src: local('Tajawal ExtraBold'), local('Tajawal-ExtraBold'), url(https://fonts.gstatic.com/s/tajawal/v3/Iurf6YBj_oCad4k1l5anHrRpiYlJ.woff2) format('woff2'); unicode-range: U+0600-06FF, U+200C-200E, U+2010-2011, U+204F, U+2E41, U+FB50-FDFF, U+FE80-FEFC; }@font-face {font-family: 'Tajawal'; font-style: normal; font-weight: 800; src: local('Tajawal ExtraBold'), local('Tajawal-ExtraBold'), url(https://fonts.gstatic.com/s/tajawal/v3/Iurf6YBj_oCad4k1l5anHrFpiQ.woff2) format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }@font-face {font-family: 'Changa'; font-style: normal; font-weight: 800; font-display: swap; src: url(https://fonts.gstatic.com/s/changa/v10/2-c79JNi2YuVOUcOarRPgnNGooxCZy22cjLj9ytf.woff2) format('woff2'); unicode-range: U+0600-06FF, U+200C-200E, U+2010-2011, U+204F, U+2E41, U+FB50-FDFF, U+FE80-FEFC; }@font-face {font-family: 'Changa'; font-style: normal; font-weight: 800; font-display: swap; src: url(https://fonts.gstatic.com/s/changa/v10/2-c79JNi2YuVOUcOarRPgnNGooxCZy22cjnj9ytf.woff2) format('woff2'); unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF; }@font-face {font-family: 'Changa'; font-style: normal; font-weight: 800; font-display: swap; src: url(https://fonts.gstatic.com/s/changa/v10/2-c79JNi2YuVOUcOarRPgnNGooxCZy22cjfj9w.woff2) format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }</style>
+
+
+         
+ 
+ 
+
+
+
+		   <link href='https://fonts.googleapis.com/icon?family=Material+Icons' rel='stylesheet'/>
+			 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
+  <link href="https://cdn.bootcss.com/font-awesome/5.5.0/css/all.css" rel="stylesheet"> 
+  <link href="https://cdn.bootcss.com/font-awesome/5.3.0/css/all.css" rel="stylesheet"> 
+		   <link href="https://fonts.googleapis.com/css?family=Baloo+2|Montserrat&display=swap" rel="stylesheet">
+           <link rel='stylesheet' id='font-awesome-css'  href='https://pro.fontawesome.com/releases/v5.10.0/css/all.css?ver=5.7.2' type='text/css' media='all' />
+
+	</head>
+    
+
+	
+	<div class="container">
+		<div class="header">
+		<div class="hide"></div>
+
+
+
+	<div class="firstfield" >
+	  
+   </div>
+   
+  <!--
+
+  Uses the latest versions of video.js and videojs-contrib-hls.
+
+  To use specific versions, please change the URLs to the form:
+
+  <link href="https://vjs.zencdn2.net/5.16.0/video-js.css" rel="stylesheet">
+  <script src="https://vjs.zencdn2.net/5.16.0/video.js"></script>
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+
+  -->
+</style>
+
+
+  
+  <link href="https://raw.githack.com/saessovic/video/main/video-js.css" rel="stylesheet"></link>
+  <script src="https://raw.githack.com/saessovic/video/main/video2.js"></script>
+  <script src="https://raw.githack.com/saessovic/video/main/jquery-3.1.1.min.js"></script>
+  
+<head>
+
+
+<div style="position: fixed; border: 7px solid #333333;  top: 47px; width: 100%"><center>
+<video id="my-video" class="video-js vjs-default-skin vjs-fluid" controls preload="none"
+   poster="https://i.imgur.com/RdJLhml.jpg" data-setup='{ "aspectRatio":"720:405", "playbackRates": [@CCORCH@ }'>
+    <source src="https://stream.fushaar.link/movie/43459/43459-480p.mp4/chunk.m3u8" type='application/x-mpegURL'>
+    <source src="https://stream.fushaar.link/movie/43459/43459-480p.mp4/chunk.m3u8" type='application/x-mpegURL'>
+    <p class="vjs-no-js">
+      To view this video please enable JavaScript, and consider upgrading to a web browser that
+      <li  data-url=="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+    </p>
+  </video>
+ </div>
+</body>
+</html>
+    <ul id="playlist">
+
+  <script>
+  $(function(){
+$("#playlist button,button2").on("click", function() {
+var player = videojs('my-video');
+player.pause();
+var new_url = $(this).attr("url");
+player.src(new_url);
+// set src track corresponding to new movie //
+player.load();
+player.play();
+});
+});</script>
+	<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+		<body>
+
+
+ 
+ 
+<body>
+ <ul id="playlist">
+<div style="align=center; padding-top: 45%;">
+<p style="font-size:13px">
+
+
+
+
+<ul style="list-style-type:none">
+<style>ul{padding-left:0px; text-align:center;}
+li{ display:inline-block;padding:0px;}
+</style>
+
+  
+
+ 
+
+
+	  
+   </div>
+ 
+
+<div>
+
+
+
+
+	</script>
+	<style type="text/css">
+	 
+		}
+		button{
+			background-color: white;
+			color: black;
+			border: none;
+			border-radius: 5px;
+			size: 20px;
+			width: 70px;
+			padding: 10px;
+		}
+		div .jordan2{
+		  overflow-x: scroll;
+		  overflow-y: hidden;
+		  white-space: nowrap;}
+		}
+  
+	</style>
+</head>
+
+<div>
+	<div class="firstfield" >
+	  
+   </div>
+
+
+<style>
+div.scrollmenu {
+  background: #252525;
+  border: 2px solid #121212;
+  overflow: auto;
+  white-space: nowrap;
+  padding: 2px 2px;
+}
+
+div.scrollmenu a {
+  display: inline-block;
+  text-align: center;
+  padding: 13px;
+  font-weight:990;
+  font-style:bold;
+  text-decoration: none;
+  border: 4px solid #555;
+      margin: 3px 1px;
+         width:145px;
+
+
+}
+
+div.scrollmenu a:hover {
+  background:#820a2c ;
+    color: #FFF;
+  border: 4px solid #FFF;
+  
+}
+</style>
+</head>
+<body>
+
+<div class="scrollmenu">
+  <a href="go:17" class="t">WESTERN <i class="fas fa-check-circle fa-lg"></i></a>
+  <a href="go:10" class="d">ACTION <i class="fas fa-film fa-lg"></i></a>
+  <a href="go:11" class="f">ARABE <i class="fas fa-film fa-lg"></i></a>
+  <a href="go:12" class="c">NEW  <i class="fas fa-film fa-lg"></i></a> 
+  <a href="go:13" class="e">HORROR <i class="fas fa-film fa-lg"></i></a> 
+  <a href="go:14" class="s">CARTOON <i class="fas fa-film fa-lg"></i></a> 
+  <a href="go:15" class="g">DOCUMEN <i class="fas fa-film fa-lg"></i></a> 
+  <a href="go:16" class="h">SCI-FI <i class="fas fa-film fa-lg"></i></a> 
+
+</div>
+
+
+
+<button url="https://stream.fushaar.link/movie/13386/13386-480p.mp4/chunk.m3u8"><img src="https://media.fushaar.com/media/2016/09/z6BP8yLwck8mN9dtdYKkZ4XGa3D-329x495.jpg"  style="border-radius:0px;" height="150"  width="100"></button>
+
+
+
+
+<button url="https://stream.fushaar.link/movie/491/491-480p.mp4/chunk.m3u8"><img src="https://media.fushaar.com/media/2014/07/11178027_ori-329x495.jpg"  style="border-radius:0px;" height="150"  width="100"></button>
+
+
+
+
+<button url="https://stream.fushaar.link/movie/498/498-480p.mp4/chunk.m3u8"><img src="https://media.fushaar.com/media/2014/07/10882283_ori-329x495.jpg"  style="border-radius:0px;" height="150"  width="100"></button>
+
+
+
+<button url="https://stream.fushaar.link/movie/1559/1559-480p.mp4/chunk.m3u8"><img src="https://media.fushaar.com/media/2014/07/11171702_ori-329x495.jpg"  style="border-radius:0px;" height="150"  width="100"></button>
+
+
+
+
+<button url="https://stream.fushaar.link/movie/4880/4880-480p.mp4/chunk.m3u8"><img src="https://media.fushaar.com/media/2014/12/11177172_ori-329x495.jpg"  style="border-radius:0px;" height="150"  width="100"></button>
+
+
+<button url="https://stream.fushaar.link/movie/5717/5717-480p.mp4/chunk.m3u8"><img src="https://media.fushaar.com/media/2015/02/fVbEYpICYZvSllchsg0NHPOZxqx-329x495.jpg"  style="border-radius:0px;" height="150"  width="100"></button>
+
+
+
+<button url="https://stream.fushaar.link/movie/4514/4514-480p.mp4/chunk.m3u8"><img src="https://media.fushaar.com/media/2014/12/11181756_ori.jpg"  style="border-radius:0px;" height="150"  width="100"></button>
+
+
+<button url="https://stream.fushaar.link/movie/4440/4440-480p.mp4/chunk.m3u8"><img src="https://media.fushaar.com/media/2014/11/dark-vellay-329x495.png"  style="border-radius:0px;" height="150"  width="100"></button>
+
+
+<button url="https://stream.fushaar.link/movie/9439/9439-480p.mp4/chunk.m3u8"><img src="https://media.fushaar.com/media/2015/11/2oj3cwUFQWzLNVUGNMpg0srNrfR-329x495.jpg"  style="border-radius:0px;" height="150"  width="100"></button>
+
+
+<button url="https://stream.fushaar.link/movie/7568/7568-480p.mp4/chunk.m3u8"><img src="https://media.fushaar.com/media/2015/06/4d4rl3MzxC8lkXTq8XBOCZfaYmp-329x495.jpg"  style="border-radius:0px;" height="150"  width="100"></button>
+
+
+<button url="https://stream.fushaar.link/movie/13583/13583-480p.mp4/chunk.m3u8"><img src="https://media.fushaar.com/media/2016/10/if7udRqCSs7z8neovZpOlni1PU2-329x495.jpg"  style="border-radius:0px;" height="150"  width="100"></button>
+
+
+<button url="https://stream.fushaar.link/movie/12976/12976-480p.mp4/chunk.m3u8"><img src="https://media.fushaar.com/media/2016/08/lpBUXFTWMaoWsWBGgu98LgUoTHE-329x495.jpg"  style="border-radius:0px;" height="150"  width="100"></button>
+
+
+
+<button url="https://stream.fushaar.link/movie/12955/12955-480p.mp4/chunk.m3u8"><img src="https://media.fushaar.com/media/2016/08/jlXb2vpQdan082VPVcKpjsmLFQt-329x495.jpg"  style="border-radius:0px;" height="150"  width="100"></button>
+
+
+
+<button url="https://stream.fushaar.link/movie/11963/11963-480p.mp4/chunk.m3u8"><img src="https://media.fushaar.com/media/2016/04/4BffiEm4xkrC7de5KZ51kK3uNYJ-329x495.jpg"  style="border-radius:0px;" height="150"  width="100"></button>
+
+
+
+<button url="https://stream.fushaar.link/movie/18664/18664-480p.mp4/chunk.m3u8"><img src="https://media.fushaar.com/media/2017/12/he6s2dOWmzWXsZGa0QLbcMVZJnx-329x495.jpg"  style="border-radius:0px;" height="150"  width="100"></button>
+
+
+<button url="https://stream.fushaar.link/movie/17771/17771-480p.mp4/chunk.m3u8"><img src="https://media.fushaar.com/media/2017/09/bW9s0cE8IBRYdWPrQ6UVStc2xCv-329x495.jpg"  style="border-radius:0px;" height="150"  width="100"></button>
+
+
+
+<button url="https://stream.fushaar.link/movie/44865/44865-480p.mp4/chunk.m3u8"><img src="https://media.fushaar.com/media/2023/03/95Bn6HZBBJcG7LOBMAzNH0gmLih-329x495.jpg"  style="border-radius:0px;" height="150"  width="100"></button>
+
+
+
+<button url="https://stream.fushaar.link/movie/43982/43982-480p.mp4/chunk.m3u8"><img src="https://media.fushaar.com/media/2022/12/1AnXfjxFqMsQmUPSvt9YxUJhfFw-329x495.jpg"  style="border-radius:0px;" height="150"  width="100"></button>
+
+
+<button url="https://stream.fushaar.link/movie/41928/41928-480p.mp4/chunk.m3u8"><img src="https://media.fushaar.com/media/2022/05/z1zBn2YCBTG4TDSxVekRqYZ1yml-329x495.jpg"  style="border-radius:0px;" height="150"  width="100"></button>
+
+
+<button url="https://stream.fushaar.link/movie/40096/40096-480p.mp4/chunk.m3u8"><img src="https://media.fushaar.com/media/2021/12/kEy48iCzGnp0ao1cZbNeWR6yIhC-329x495.jpg"  style="border-radius:0px;" height="150"  width="100"></button>
+
+
+<button url="https://stream.fushaar.link/movie/39828/39828-480p.mp4/chunk.m3u8"><img src="https://media.fushaar.com/media/2021/11/19VaTIO5e9MfoXxIMALaEaiGAIN-329x495.jpg"  style="border-radius:0px;" height="150"  width="100"></button>
+
+
+<button url="https://stream.fushaar.link/movie/39483/39483-480p.mp4/chunk.m3u8"><img src="https://media.fushaar.com/media/2021/10/l0dsdCtkmVlJ5oaeKO9riNmXRht-329x495.jpg"  style="border-radius:0px;" height="150"  width="100"></button>
+
+
+<button url="https://stream.fushaar.link/movie/39348/39348-480p.mp4/chunk.m3u8"><img src="https://media.fushaar.com/media/2021/10/wqaaWAlXgLNGdAemU7wNvFZ70hr-329x495.jpg"  style="border-radius:0px;" height="150"  width="100"></button>
+
+
+
+<button url="https://stream.fushaar.link/movie/32333/32333-480p.mp4/chunk.m3u8"><img src="https://media.fushaar.com/media/2020/09/jkAZb9jteax1XRnEFlCU9Oer1YJ-329x495.jpg"  style="border-radius:0px;" height="150"  width="100"></button>
+
+
+<button url="https://stream.fushaar.link/movie/30828/30828-480p.mp4/chunk.m3u8"><img src="https://media.fushaar.com/media/2020/05/3yB6EJL8D7DGJeb5khODufiwl98-329x495.jpg"  style="border-radius:0px;" height="150"  width="100"></button>
+
+
+
+<button url="https://stream.fushaar.link/movie/30043/30043-480p.mp4/chunk.m3u8"><img src="https://media.fushaar.com/media/2020/03/yQqMvQJ9DZV7J4WkDda5Y8yzsPw-329x495.jpg"  style="border-radius:0px;" height="150"  width="100"></button>
+
+
+<button url="https://stream.fushaar.link/movie/28697/28697-480p.mp4/chunk.m3u8"><img src="https://media.fushaar.com/media/2019/11/sXsxhjzTK3HpCnT7mrqsrGGw6qy-329x495.jpg"  style="border-radius:0px;" height="150"  width="100"></button>
+
+
+<button url="https://stream.fushaar.link/movie/27502/27502-480p.mp4/chunk.m3u8"><img src="https://media.fushaar.com/media/2019/09/kcfPHZHSQODLCWdkUVLYATNyEVo-329x495.jpg"  style="border-radius:0px;" height="150"  width="100"></button>
+
+
+<button url="https://stream.fushaar.link/movie/26929/26929-480p.mp4/chunk.m3u8"><img src="https://media.fushaar.com/media/2019/08/zkc5mGLaB68YhSkvDOGi7Jy4bFV-329x495.jpg"  style="border-radius:0px;" height="150"  width="100"></button>
+
+
+<button url="https://stream.fushaar.link/movie/26732/26732-480p.mp4/chunk.m3u8"><img src="https://media.fushaar.com/media/2019/07/Ag09MK7Jev4UVeZ6DcWpsMeCaXB-329x495.jpg"  style="border-radius:0px;" height="150"  width="100"></button>
+
+
+<button url="https://stream.fushaar.link/movie/25710/25710-480p.mp4/chunk.m3u8"><img src="https://media.fushaar.com/media/2019/04/ukGXa5zT3z1TNYgO25EUc9abegR-329x495.jpg"  style="border-radius:0px;" height="150"  width="100"></button>
+
+
+<button url="https://stream.fushaar.link/movie/22406/22406-480p.mp4/chunk.m3u8"><img src="https://media.fushaar.com/media/2018/09/dNZxjsJwmKorpPvd0kquJffYROr-329x495.jpg"  style="border-radius:0px;" height="150"  width="100"></button>
+
+
+<button url="https://stream.fushaar.link/movie/20074/20074-480p.mp4/chunk.m3u8"><img src="https://media.fushaar.com/media/2018/04/bBB7Cx3KPSEqtJ6agfkLQKoXJHL-329x495.jpg"  style="border-radius:0px;" height="150"  width="100"></button>
+
+
+
+</div>
+
+
+<style type="text/css">
+body {
+	margin: auto;
+	width:auto;
+	height:auto;
+	padding: 0px 0;
+	background-color:#410200;
+}
+
+.container{
+	width:100%;
+	height:100px;
+}
+.nav {
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	height: 8%;
+	box-shadow: 0 0 5px #000;
+	background-color: #252525;
+	display: flex;
+	overflow-x: auto;
+}
+
+.nav__link {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	flex-grow: 1;
+	min-width: 20px;
+	overflow: hidden;
+	white-space: nowrap;
+	font-family: sans-serif;
+	font-size: 12px;
+    font-weight:990;
+    font-style:bold;
+	color: #FFFFFF;
+    border-right: 1px solid #000;
+    border-left: 1px solid #000;
+    border-top: 3px solid #EEE; 
+    text-decoration: none;
+	-webkit-tap-highlight-color: transparent;
+	transition: background-color 0.1s ease-in-out;
+}
+
+.nav__link:hover {
+	background-color: #000000;
+}
+
+.nav__link--active {
+	color: #fff;
+}
+
+.nav__icon {
+	font-size: 32px;
+	height: 50px;
+	
+}
+
+
+	  #imageID{
+			  max-width:100%;
+			  height: 100%;
+			  z-index: 9999;
+			  position:fixed; 
+			  top:0; 
+			  left:0;
+		  }
+
+
+
+<style> h2{ color: #000; font-family: Arial, Helvetica, sans-serif; border-radius: 5px; margin:20px; } 
+
+div .jordan2{ margin:4px; border-radius: 0px;]
