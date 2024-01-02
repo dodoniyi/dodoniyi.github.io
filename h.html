@@ -112,209 +112,7 @@ hr {margin-top: 5px;margin-bottom: 5px;}
 
 <body>
 
-<script>
-<!-- Hide from old browsers
-
-/******************************************
-* Find In Page Script -- Submitted/revised by Alan Koontz (alankoontz@REMOVETHISyahoo.com)
-* Visit Dynamic Drive (http://www.dynamicdrive.com/) for full source code
-* This notice must stay intact for use
-******************************************/
-
-//  revised by Alan Koontz -- May 2003
-
-var TRange = null;
-var dupeRange = null;
-var TestRange = null;
-var win = null;
-
-
-//  SELECTED BROWSER SNIFFER COMPONENTS DOCUMENTED AT
-//  http://www.mozilla.org/docs/web-developer/sniffer/browser_type.html
-
-var nom = navigator.appName.toLowerCase();
-var agt = navigator.userAgent.toLowerCase();
-var is_major   = parseInt(navigator.appVersion);
-var is_minor   = parseFloat(navigator.appVersion);
-var is_ie      = (agt.indexOf("msie") != -1);
-var is_ie4up   = (is_ie && (is_major >= 4));
-var is_not_moz = (agt.indexOf('netscape')!=-1)
-var is_nav     = (nom.indexOf('netscape')!=-1);
-var is_nav4    = (is_nav && (is_major == 4));
-var is_mac     = (agt.indexOf("mac")!=-1);
-var is_gecko   = (agt.indexOf('gecko') != -1);
-var is_opera   = (agt.indexOf("opera") != -1);
-
-
-//  GECKO REVISION
-
-var is_rev=0
-if (is_gecko) {
-temp = agt.split("rv:")
-is_rev = parseFloat(temp[1])
-}
-
-
-//  USE THE FOLLOWING VARIABLE TO CONFIGURE FRAMES TO SEARCH
-//  (SELF OR CHILD FRAME)
-
-//  If you want to search another frame, change from "self" to
-//  the name of the target frame:
-//  e.g., var frametosearch = 'main'
-
-//var frametosearch = 'main';
-var frametosearch = self;
-
-
-function search(whichform, whichframe) {
-
-//  TEST FOR IE5 FOR MAC (NO DOCUMENTATION)
-
-if (is_ie4up && is_mac) return;
-
-//  TEST FOR NAV 6 (NO DOCUMENTATION)
-
-if (is_gecko && (is_rev <1)) return;
-
-//  TEST FOR Opera (NO DOCUMENTATION)
-
-if (is_opera) return;
-
-//  INITIALIZATIONS FOR FIND-IN-PAGE SEARCHES
-
-if(whichform.findthis.value!=null && whichform.findthis.value!='') {
-
-       str = whichform.findthis.value;
-       win = whichframe;
-       var frameval=false;
-       if(win!=self)
-{
-
-       frameval=true;  // this will enable Nav7 to search child frame
-       win = parent.frames[whichframe];
-
-}
-
-    
-}
-
-else return;  //  i.e., no search string was entered
-
-var strFound;
-
-//  NAVIGATOR 4 SPECIFIC CODE
-
-if(is_nav4 && (is_minor < 5)) {
-   
-  strFound=win.find(str); // case insensitive, forward search by default
-
-//  There are 3 arguments available:
-//  searchString: type string and it's the item to be searched
-//  caseSensitive: boolean -- is search case sensitive?
-//  backwards: boolean --should we also search backwards?
-//  strFound=win.find(str, false, false) is the explicit
-//  version of the above
-//  The Mac version of Nav4 has wrapAround, but
-//  cannot be specified in JS
-
- 
-        }
-
-//  NAVIGATOR 7 and Mozilla rev 1+ SPECIFIC CODE (WILL NOT WORK WITH NAVIGATOR 6)
-
-if (is_gecko && (is_rev >= 1)) {
-   
-    if(frameval!=false) win.focus(); // force search in specified child frame
-    strFound=win.find(str, false, false, true, false, frameval, false);
-
-//  The following statement enables reversion of focus 
-//  back to the search box after each search event 
-//  allowing the user to press the ENTER key instead
-//  of clicking the search button to continue search.
-//  Note: tends to be buggy in Mozilla as of 1.3.1
-//  (see www.mozilla.org) so is excluded from users 
-//  of that browser.
-
-    if (is_not_moz)  whichform.findthis.focus();
-
-//  There are 7 arguments available:
-//  searchString: type string and it's the item to be searched
-//  caseSensitive: boolean -- is search case sensitive?
-//  backwards: boolean --should we also search backwards?
-//  wrapAround: boolean -- should we wrap the search?
-//  wholeWord: boolean: should we search only for whole words
-//  searchInFrames: boolean -- should we search in frames?
-//  showDialog: boolean -- should we show the Find Dialog?
-
-
-}
-
- if (is_ie4up) {
-
-  // EXPLORER-SPECIFIC CODE revised 5/21/03
-
-  if (TRange!=null) {
-	  
-   TestRange=win.document.body.createTextRange();
- 
-	  
-
-   if (dupeRange.inRange(TestRange)) {
-
-   TRange.collapse(false);
-   strFound=TRange.findText(str);
-    if (strFound) {
-        //the following line added by Mike and Susan Keenan, 7 June 2003
-        win.document.body.scrollTop = win.document.body.scrollTop + TRange.offsetTop;
-        TRange.select();
-        }
-
-
-   }
-   
-   else {
-
-     TRange=win.document.body.createTextRange();
-     TRange.collapse(false);
-     strFound=TRange.findText(str);
-     if (strFound) {
-        //the following line added by Mike and Susan Keenan, 7 June 2003
-        win.document.body.scrollTop = TRange.offsetTop;
-        TRange.select();
-        }
-
-
-
-   }
-  }
-  
-   if (TRange==null || strFound==0) {
-   TRange=win.document.body.createTextRange();
-   dupeRange = TRange.duplicate();
-   strFound=TRange.findText(str);
-    if (strFound) {
-        //the following line added by Mike and Susan Keenan, 7 June 2003
-        win.document.body.scrollTop = TRange.offsetTop;
-        TRange.select();
-        }
-
-   
-   }
-
- }
-
-  if (!strFound) alert ("String '"+str+"' not found!") // string not found
-
-        
-}
-// -->
-</script>
-
-<!--  EXAMPLE FORM OF FIND-IN-PAGE SEARCH USING SUBMIT (ALLOWING 'ENTER/RETURN' KEY PRESS EVENT) -->
-<form name="form1" onSubmit="search(document.form1, frametosearch); return false"><input type="text" name="findthis" size="15" title="Press 'ALT s' after clicking submit to repeatedly search page"> <input type="submit" value="Find in Page" ACCESSKEY="s"></form>
-
-<div id="logo"><strong><font size="7" color="yellow">AA M⚽BILE TV</font></strong></div>
-
+<div id="logo"><strong><font size="7" color="yellow">AA M⚽BILE TV </font></strong></div>
 
 
 
@@ -329,6 +127,7 @@ if (is_gecko && (is_rev >= 1)) {
     <!-- Call to Action Well -->
     <div class="card text-black bg-secondary my-5 py-4" style="background-color: transparent;border: 0px;">
    
+
 <div class="row">
 
 
@@ -341,30 +140,337 @@ if (is_gecko && (is_rev >= 1)) {
 
 <!-- start edit event -->
 
+<h3 class="text-center tit"><a href="go:WEBSITE" target="_blank"><strong><font size="6" color="white">www.aamobiletv.tk</font></strong></a></h3>
 
-<h3 class="text-center tit"><strong><font size="6" color="white">PLAYER ⚽ 1</font></strong></a></h3>
+<h3 class="text-center tit"><marquee bgcolor="#FFFFFF" direction="left" height="35" scrollamount="10" scrolldelay="100" style="border-color: #212529;border-style: ridge;color: white;font-size: 20pt;" width="100%"><strong> ANNOUNCEMENT!!! (1) Ensure you are using the latest version of the app. Download the newest version from the App Website (2) To use the App, you need: CHROME Browser, BRAVE Browser(Beta) Network Stream (Video) Player, MX player, Wuffy Media Player. Download them from OTHER RESOURCES on homepage. (3) Enjoy: 📌England-FA Cup, 📌England-Premier League, 📌England-League Cup, 📌Spain-Laliga, 📌Spain-Copa Del Rey, 📌Serie A, 📌Bundesliga, 📌Ligue 1, 📌Primera Liga, 📌UEFA Champions League, 📌UEFA Europa League, 📌UEFA Conference League, 📌UEFA Nations League, 📌NBA Basketball, 📌NHL Hockey and OTHERS (4) SHARE THE APP WITH YOUR FRIENDS </strong></marquee><br></h3>
 
-<h3 class="text-center tit"><a href="https://aamobiletv.blogspot.com/"><strong><font size="5" color="yellow">👉DOWNLOAD AA MOBILE TV</font></strong></a></h3>
+<h3 class="text-center tit"><a href="http://action_share" target="_blank"><strong><font size="4" color="white">SHARE THE APP WITH YOUR FRIENDS</font></strong></a></h3>
 
-<h3 class="text-center tit"><strong><font size="4" color="yellow">⚽CHECK ANY OF THE CHANNELS BELOW FOR YOUR LIVE MATCH ⚽</font></strong></a></h3>
+<div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="heading" style="background-image: url(https://i.imgur.com/pLccTCf.gif);">
+                  <h4 class="panel-title" style="background-image: url(https://i.imgur.com/pLccTCf.gif);">
+                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse1xT" aria-expanded="false" aria-controls="collapse">
+                       <b><strong><font size="7" color="red">TV-SECTION </font></strong></b>
+                    </a>
+                  </h4>
+                </div>
+                <div id="collapse1xT" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading">
+                  <div class="panel-body">
+       <table class="table table-light table-striped text-left">
+           <tbody>
+<tr class=""><td><a class="small" href="go:SPORTS" target="_blank"><b> <strong><font size="5" color="black">📌 SP⚽RTS</font></strong></b></a><span class="float-right emd"></span></td></tr>
+<tr class=""><td><a class="small" href="go:KIDS" target="_blank"><b> <strong><font size="5" color="green">📌 KIDDIES</font></strong></b></a><span class="float-right emd"></td></tr>
+<tr class=""><td><a class="small" href="go:NEWSS" target="_blank"><b> <strong><font size="5" color="blue">📌 NEWS</font></strong></b></a><span class="float-right emd"></td></tr>
+<tr class=""><td><a class="small" href="go:DOCU" target="_blank"><b> <strong><font size="5" color="brown">📌 DOCUMENTARY</font></strong></b></a><span class="float-right emd"></td></tr>
+<tr class=""><td><a class="small" href="go:ENTMT" target="_blank"><b> <strong><font size="5" color="purple">📌 ENTERTAINMENTS</font></strong></b></a><span class="float-right emd"></span></td></tr>
+<tr class=""><td><a class="small" href="go:RELIG" target="_blank"><b> <strong><font size="5" color="red">📌 RELIGION</font></strong></b></a><span class="float-right emd"></td></tr>
+          </tbody>
+     </table>
+                  </div>
+       </div>
+</div>
 
-<h3 class="text-center tit"><a href="javascript:void(0)" onclick="location.href='intent://serv4.dwasat.com/upload/images/logo0.m3u8|Referer=https://yarigatv.basnews.com/#Intent;scheme=https;type=video;package=com.genuine.leone;end'" ><strong><font size="6" color="white">LIVE MATCH A ⚽ SD</strong></font></a></h3>
 
-<h3 class="text-center tit"><a href="javascript:void(0)" onclick="location.href='intent://serv4.dwasat.com/upload/images/logo1.m3u8|Referer=https://yarigatv.basnews.com/#Intent;scheme=https;type=video;package=com.genuine.leone;end'" ><strong><font size="6" color="white">LIVE MATCH 1 ⚽ SD</strong></font></a></h3>
+<div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="heading" style="background-image: url(https://i.imgur.com/pLccTCf.gif);">
+                  <h4 class="panel-title" style="background-image: url(https://i.imgur.com/pLccTCf.gif);">
+                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse2xT" aria-expanded="false" aria-controls="collapse">
+                       <b><strong><font size="6" color="blue">GAMES-SECTION </font></strong></b>
+                    </a>
+                  </h4>
+                </div>
+                <div id="collapse2xT" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading">
+                  <div class="panel-body">
+       <table class="table table-light table-striped text-left">
+           <tbody>
+<tr class=""><td><a class="small" href="go:GAMES" target="_blank"><b> <strong><font size="3" color="green">CLICK HERE TO ENTER THIS SECTION</font></strong></b></a><span class="float-right emd"></span></td></tr>
+          </tbody>
+     </table>
+                  </div>
+       </div>
+</div>
 
-<h3 class="text-center tit"><a href="javascript:void(0)" onclick="location.href='intent://serv4.dwasat.com/upload/images/logo2.m3u8|Referer=https://yarigatv.basnews.com/#Intent;scheme=https;type=video;package=com.genuine.leone;end'" ><strong><font size="6" color="white">LIVE MATCH 2 ⚽ SD</strong></font></a></h3>
 
-<h3 class="text-center tit"><a href="javascript:void(0)" onclick="location.href='intent://serv4.dwasat.com/upload/images/logo3.m3u8|Referer=https://yarigatv.basnews.com/#Intent;scheme=https;type=video;package=com.genuine.leone;end'" ><strong><font size="6" color="white">LIVE MATCH 3 ⚽ SD</strong></font></a></h3>
 
-<h3 class="text-center tit"><a href="javascript:void(0)" onclick="location.href='intent://serv4.dwasat.com/upload/images/logo4.m3u8|Referer=https://yarigatv.basnews.com/#Intent;scheme=https;type=video;package=com.genuine.leone;end'" ><strong><font size="6" color="white">LIVE MATCH 4 ⚽ SD</strong></font></a></h3>
+<div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="heading" style="background-image: url(https://i.imgur.com/pLccTCf.gif);">
+                  <h4 class="panel-title" style="background-image: url(https://i.imgur.com/pLccTCf.gif);">
+                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse3xT" aria-expanded="false" aria-controls="collapse">
+                       <b><strong><font size="6" color="green">RADIO-SECTION </font></strong></b>
+                    </a>
+                  </h4>
+                </div>
+                <div id="collapse3xT" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading">
+                  <div class="panel-body">
+       <table class="table table-light table-striped text-left">
+           <tbody>
+<tr class=""><td><a class="small" href="go:RADIO" target="_blank"><b> <strong><font size="3" color="red"> CLICK HERE TO ENTER THIS SECTION</font></strong></b></a><span class="float-right emd"></span></td></tr>
+          </tbody>
+     </table>
+                  </div>
+       </div>
+</div>
 
-<h3 class="text-center tit"><a href="javascript:void(0)" onclick="location.href='intent://serv4.dwasat.com/upload/images/logo5.m3u8|Referer=https://yarigatv.basnews.com/#Intent;scheme=https;type=video;package=com.genuine.leone;end'" ><strong><font size="6" color="white">LIVE MATCH 5 ⚽ SD</strong></font></a></h3>
+<h3 class="text-center tit"><a href="go:SCHEDULE" target="_blank"><strong><font size="5" color="white">👉LIVE LEAGUE MATCHES👈</font></strong></a></h3>
 
-<h3 class="text-center tit"><a href="javascript:void(0)" onclick="location.href='intent://serv4.dwasat.com/upload/images/logo6.m3u8|Referer=https://yarigatv.basnews.com/#Intent;scheme=https;type=video;package=com.genuine.leone;end'" ><strong><font size="6" color="white">LIVE MATCH 6 ⚽ SD</strong></font></a></h3>
+<h3 class="text-center tit"><a href="http://action_share" target="_blank"><strong><font size="4" color="yellow">SHARE THE APP WITH YOUR FRIENDS</font></strong></a></h3>
 
-<h3 class="text-center tit"><a href="javascript:void(0)" onclick="location.href='intent://serv4.dwasat.com/upload/images/logo7.m3u8|Referer=https://yarigatv.basnews.com/#Intent;scheme=https;type=video;package=com.genuine.leone;end'" ><strong><font size="6" color="white">LIVE MATCH 7 ⚽ SD</strong></font></a></h3>
 
-<h3 class="text-center tit"><a href="javascript:void(0)" onclick="location.href='intent://serv4.dwasat.com/upload/images/logo8.m3u8|Referer=https://yarigatv.basnews.com/#Intent;scheme=https;type=video;package=com.genuine.leone;end'" ><strong><font size="6" color="white">LIVE MATCH 8 ⚽ SD</strong></font></a></h3>
+<div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="heading" style="background-image: url(https://i.imgur.com/pLccTCf.gif);">
+                  <h4 class="panel-title" style="background-image: url(https://i.imgur.com/pLccTCf.gif);">
+                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse4xT" aria-expanded="false" aria-controls="collapse">
+                       <b><strong><font size="6" color="blue">☆EXCLUSIVE☆</font></strong></b>
+                    </a>
+                  </h4>
+                </div>
+                <div id="collapse4xT" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading">
+                  <div class="panel-body">
+       <table class="table table-light table-striped text-left">
+           <tbody>
+<tr class=""><td><a class="small" href="go:JIO3" target="_blank"><b> <strong><font size="5" color="blue">📌 JIO TV-3 STREAMS</font></strong></b></a><span class="float-right emd"></span></td></tr>
+<tr class=""><td><a class="small" href="go:JIO2" target="_blank"><b> <strong><font size="5" color="green">📌 JIO TV-2 STREAMS</font></strong></b></a><span class="float-right emd"></span></td></tr>
+<tr class=""><td><a class="small" href="https://www.aamobiletv.tk/jio1.html" target="_blank"><b> <strong><font size="5" color="red">📌 JIO TV-1 STREAMS</font></strong></b></a><span class="float-right emd"></span></td></tr>
+<tr class=""><td><a class="small" href="go:DADDY" target="_blank"><b> <strong><font size="4" color="black">📌 AAmobile STREAMS(NS)</font></strong></b></a><span class="float-right emd"></span></td></tr>
+<tr class=""><td><a class="small" href="go:DADDYHD" target="_blank"><b> <strong><font size="4" color="black">📌 AAmobile STREAMS(WEB-1)</font></strong></b></a><span class="float-right emd"></span></td></tr>
+<tr class=""><td><a class="small" href="go:DADDYLINK" target="_blank"><b> <strong><font size="4" color="black">📌 AAmobile STREAMS(WEB-2)</font></strong></b></a><span class="float-right emd"></span></td></tr>
+<tr class=""><td><a class="small" href="go:TUCANAL" target="_blank"><b> <strong><font size="5" color="red">📌 TUCANAL STREAMS</font></strong></b></a><span class="float-right emd"></span></td></tr>
+<tr class=""><td><a class="small" href="go:NOPAY" target="_blank"><b> <strong><font size="5" color="green">📌 NOPAY STREAMS</font></strong></b></a><span class="float-right emd"></span></td></tr>
+<tr class=""><td><a class="small" href="go:PHOTOCALL" target="_blank"><b> <strong><font size="5" color="blue">📌 PHOTOCALL</font></strong></b></a><span class="float-right emd"></span></td></tr>
+<tr class=""><td><a class="small" href="go:BIBLE" target="_blank"><b> <strong><font size="5" color="red">📌 BIBLE-Text & Audio</font></strong></b></a><span class="float-right emd"></span></td></tr>
+          </tbody>
+     </table>
+                  </div>
+       </div>
+</div>
+
+
+<div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="heading" style="background-image: url(https://i.imgur.com/pLccTCf.gif);">
+                  <h4 class="panel-title" style="background-image: url(https://i.imgur.com/pLccTCf.gif);">
+                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse455xT" aria-expanded="false" aria-controls="collapse">
+                       <b><strong><font size="7" color="red">VIP SPORTS</font></strong></b>
+                    </a>
+                  </h4>
+                </div>
+                <div id="collapse455xT" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading">
+                  <div class="panel-body">
+       <table class="table table-light table-striped text-left">
+           <tbody>
+<tr class=""><td><a class="small" href="go:VIPAY" target="_blank"><b> <strong><font size="4" color="black">₦ GET THE VIP PASSWORD</font></strong></b></a><span class="float-right emd"></span></td></tr>
+<tr class=""><td><a class="small" href="go:DADBY" target="_blank"><b> <strong><font size="5" color="purple">📌 DADBY STREAM TV</font></strong></b></a><span class="float-right emd"></span></td></tr>
+<tr class=""><td><a class="small" href="go:ExSP" target="_blank"><b> <strong><font size="5" color="red">📌 EX: SP⚽RTS TV-1</font></strong></b></a><span class="float-right emd"></span></td></tr>
+<tr class=""><td><a class="small" href="go:SEL-SPORT" target="_blank"><b> <strong><font size="5" color="purple">📌 SEL-SP⚽RTS TV</font></strong></b></a><span class="float-right emd"></span></td></tr>
+<tr class=""><td><a class="small" href="go:BEE-BEE" target="_blank"><b> <strong><font size="5" color="red">📌 bee-bee-SP⚽RTS</font></strong></b></a><span class="float-right emd"></span></td></tr>
+<tr class=""><td><a class="small" href="go:ExSP2" target="_blank"><b> <strong><font size="5" color="blue">📌 EX: SP⚽RTS TV-2</font></strong></b></a><span class="float-right emd"></span></td></tr>
+<tr class=""><td><a class="small" href="go:ExSP3" target="_blank"><b> <strong><font size="5" color="green">📌 EX: SP⚽RTS TV-3</font></strong></b></a><span class="float-right emd"></span></td></tr>
+<tr class=""><td><a class="small" href="go:ExSP4" target="_blank"><b> <strong><font size="5" color="blue">📌 EX: SP⚽RTS TV-4</font></strong></b></a><span class="float-right emd"></span></td></tr>
+<tr class=""><td><a class="small" href="go:ExSP5" target="_blank"><b> <strong><font size="5" color="red">📌 EX: SP⚽RTS TV-5</font></strong></b></a><span class="float-right emd"></span></td></tr>
+<tr class=""><td><a class="small" href="go:ExSP6" target="_blank"><b> <strong><font size="5" color="green">📌 EX: SP⚽RTS TV-6</font></strong></b></a><span class="float-right emd"></span></td></tr>
+<tr class=""><td><a class="small" href="go:DADASP" target="_blank"><b> <strong><font size="5" color="blue">📌 DADA SP⚽RTS TV</font></strong></b></a><span class="float-right emd"></span></td></tr>
+<tr class=""><td><a class="small" href="go:MAX-1" target="_blank"><b> <strong><font size="5" color="purple">📌 MAX SP⚽RTS TV</font></strong></b></a><span class="float-right emd"></span></td></tr>
+<tr class=""><td><a class="small" href="go:DIRECT-1" target="_blank"><b> <strong><font size="5" color="brown">📌 direct SP⚽RTS TV</font></strong></b></a><span class="float-right emd"></span></td></tr>
+<tr class=""><td><a class="small" href="go:VIP" target="_blank"><b> <strong><font size="4" color="blue">📌 VIP-Low Quality Channels</font></strong></b></a><span class="float-right emd"></span></td></tr>
+<tr class=""><td><a class="small" href="go:VIPAY" target="_blank"><b> <strong><font size="4" color="black">₦ GET THE VIP PASSWORD</font></strong></b></a><span class="float-right emd"></span></td></tr>
+          </tbody>
+     </table>
+                  </div>
+       </div>
+</div>
+
+
+<div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="heading" style="background-image: url(https://i.imgur.com/pLccTCf.gif);">
+                  <h4 class="panel-title" style="background-image: url(https://i.imgur.com/pLccTCf.gif);">
+                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse14xT" aria-expanded="false" aria-controls="collapse">
+                       <b><strong><font size="6" color="black">IPTV ☆ STREAMS</font></strong></b>
+                    </a>
+                  </h4>
+                </div>
+                <div id="collapse14xT" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading">
+                  <div class="panel-body">
+       <table class="table table-light table-striped text-left">
+           <tbody>
+<tr class=""><td><a class="small" href="https://zhangboheng.github.io/Easy-Web-TV-M3u8/" target="_blank"><b> <strong><font size="5" color="red">📌 EASY WEB TV</font></strong></b></a><span class="float-right emd"></span></td></tr>
+<tr class=""><td><a class="small" href="https://dev-iptv.web.app/" target="_blank"><b> <strong><font size="5" color="blue">📌 DEV-IPTV TV</font></strong></b></a><span class="float-right emd"></span></td></tr>
+<tr class=""><td><a class="small" href="go:jackal" target="_blank"><b> <strong><font size="5" color="purple">📌 JACKAL TV</font></strong></b></a><span class="float-right emd"></span></td></tr>
+<tr class=""><td><a class="small" href="https://worldtvmobile.com/" target="_blank"><b> <strong><font size="5" color="green">📌 WORLD MOBILE TV</font></strong></b></a><span class="float-right emd"></span></td></tr>
+<tr class=""><td><a class="small" href="https://vidgrid.tk.gg/" target="_blank"><b> <strong><font size="5" color="blue">📌 VIDGRID TV</font></strong></b></a><span class="float-right emd"></span></td></tr>
+<tr class=""><td><a class="small" href="go:teledunet" target="_blank"><b> <strong><font size="5" color="red">📌 TELEDUNET TV</font></strong></b></a><span class="float-right emd"></span></td></tr>
+<tr class=""><td><a class="small" href="http://totv.org/channels" target="_blank"><b> <strong><font size="5" color="green">📌 TOTV CHANNELS</font></strong></b></a><span class="float-right emd"></span></td></tr>
+<tr class=""><td><a class="small" href="https://www.foodieguide.com/iptvsearch/" target="_blank"><b> <strong><font size="5" color="black">📌 SEARCH FAVORITE</font></strong></b></a><span class="float-right emd"></span></td></tr>
+          </tbody>
+     </table>
+                  </div>
+       </div>
+</div>
+
+
+<div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="heading" style="background-image: url(https://i.imgur.com/pLccTCf.gif);">
+                  <h4 class="panel-title" style="background-image: url(https://i.imgur.com/pLccTCf.gif);">
+                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse311xT" aria-expanded="false" aria-controls="collapse">
+                       <b><strong><font size="5" color="green">VIDEO☆ON☆DEMAND</font></strong></b>
+                    </a>
+                  </h4>
+                </div>
+                <div id="collapse311xT" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading">
+                  <div class="panel-body">
+       <table class="table table-light table-striped text-left">
+           <tbody>
+<tr class=""><td><a class="small" href="go:VOD" target="_blank"><b> <strong><font size="3" color="red"> CLICK HERE TO ENTER THIS SECTION</font></strong></b></a><span class="float-right emd"></span></td></tr>
+          </tbody>
+     </table>
+                  </div>
+       </div>
+</div>
+
+
+
+<div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="heading" style="background-image: url(https://i.imgur.com/pLccTCf.gif);">
+                  <h4 class="panel-title" style="background-image: url(https://i.imgur.com/pLccTCf.gif);">
+                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse6xT" aria-expanded="false" aria-controls="collapse">
+                       <b><strong><font size="5" color="brown">OTHER RESOURCES</font></strong></b>
+                    </a>
+                  </h4>
+                </div>
+                <div id="collapse6xT" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading">
+                  <div class="panel-body">
+       <table class="table table-light table-striped text-left">
+           <tbody>
+<tr class=""><td><a class="small" href="go:AAIPTV" target="_blank"><b> <strong><font size="5" color="red">📌 IPTV-Public Hosts</font></strong></b></a><span class="float-right emd"></span></td></tr>
+<tr class=""><td><a class="small" href="go:IPTV" target="_blank"><b> <strong><font size="5" color="brown">📌 IPTV PLAYER</font></strong></b></a><span class="float-right emd"></span></td></tr>
+<tr class=""><td><a class="small" href="go:VPN" target="_blank"><b> <strong><font size="5" color="blue">📌 Recommended VPNs</font></strong></b></a><span class="float-right emd"></span></td></tr>
+<tr class=""><td><a class="small" href="go:STREAMER" target="_blank"><b> <strong><font size="5" color="black">📌 STREAMING PLAYERS</font></strong></b></a><span class="float-right emd"></span></td></tr>
+          </tbody>
+     </table>
+                  </div>
+       </div>
+</div>
+
+
+<h3 class="text-center tit"><a href="http://action_share" target="_blank"><strong><font size="4" color="white">SHARE THE APP WITH YOUR FRIENDS</font></strong></a></h3>
+
+
+<div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="heading" style="background-image: url(https://i.imgur.com/pLccTCf.gif);">
+                  <h4 class="panel-title" style="background-image: url(https://i.imgur.com/pLccTCf.gif);">
+                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse5xT" aria-expanded="false" aria-controls="collapse">
+                       <b><strong><font size="6" color="black"> 🥷 DEVELOPER 🥷</font></strong></b>
+                    </a>
+                  </h4>
+                </div>
+                <div id="collapse5xT" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading">
+                  <div class="panel-body">
+       <table class="table table-light table-striped text-left">
+           <tbody>
+<tr class=""><td><a class="small" href="mailto:aamobileworld@gmail.com" target="_blank"><b> <strong><font size="5" color="blue">📌 E-MAIL</font></strong></b></a><span class="float-right emd"></span></td></tr>
+<tr class=""><td><a class="small" href="http://action_notifications" target="_blank"><b> <strong><font size="5" color="blue">📌 NOTIFICATION</font></strong></b></a><span class="float-right emd"></span></td></tr>
+<tr class=""><td><a class="small" href="go:WEBSITE" target="_blank"><b> <strong><font size="5" color="blue">📌 WEBSITE</font></strong></b></a><span class="float-right emd"></span></td></tr>
+<tr class=""><td><a class="small" href="go:WHATS" target="_blank"><b> <strong><font size="5" color="blue">📌 WHATSAPP GROUP</font></strong></b></a><span class="float-right emd"></span></td></tr>
+<tr class=""><td><a class="small" href="go:FACE" target="_blank"><b> <strong><font size="5" color="blue">📌 FACEBOOK PAGE</font></strong></b></a><span class="float-right emd"></span></td></tr>
+<tr class=""><td><a class="small" href="go:OTHERAPP" target="_blank"><b> <strong><font size="5" color="blue">📌 OTHER APPS</font></strong></b></a><span class="float-right emd"></span></td></tr>
+<tr class=""><td><a class="small" href="go:TESTLAB" target="_blank"><b> <strong><font size="5" color="blue">📌 TEST LAB</font></strong></b></a><span class="float-right emd"></span></td></tr>
+          </tbody>
+     </table>
+                  </div>
+       </div>
+</div>
+
+
+<div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="heading" style="background-image: url();">
+                  <h4 class="panel-title" style="background-image: url();">
+                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse688xT" aria-expanded="false" aria-controls="collapse">
+                       <b><strong><font size="5" color="blue">☆SUPPORT THIS PROJECT☆</font></strong></b>
+                    </a>
+                  </h4>
+                </div>
+                <div id="collapse688xT" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading">
+                  <div class="panel-body">
+       <table class="table table-light table-striped text-left">
+           <tbody>
+<tr class=""><td><a class="small" href="go:WATCHADS" target="_blank"><b> <strong><font size="4" color="red">📌 WATCHING 30SECS VIDEO ADS</font></strong></b></a><span class="float-right emd"></span></td></tr>
+<tr class=""><td><a class="small" href="go:BANK" target="_blank"><b> <strong><font size="4" color="black">📌 BANK TRANSFER ONLY</font></strong></b></a><span class="float-right emd"></span></td></tr>
+<tr class=""><td><a class="small" href="go:OTHERS" target="_blank"><b> <strong><font size="4" color="green">📌 ALL METHODS OF PAYMENT</font></strong></b></a><span class="float-right emd"></span></td></tr>
+          </tbody>
+     </table>
+                  </div>
+       </div>
+</div>
+
+
+<h3 class="text-center tit"><a href="http://action_share" target="_blank"><strong><font size="4" color="white">SHARE THE APP WITH YOUR FRIENDS</font></strong></a></h3>
+
+
+<div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="heading" style="background-image: url(https://i.imgur.com/pLccTCf.gif);">
+                  <h4 class="panel-title" style="background-image: url(https://i.imgur.com/pLccTCf.gif);">
+                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse5667xT" aria-expanded="false" aria-controls="collapse">
+                       <b><strong><font size="5" color="green"> 👉 APP OPTIONS 👈</font></strong></b>
+                    </a>
+                  </h4>
+                </div>
+                <div id="collapse5667xT" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading">
+                  <div class="panel-body">
+       <table class="table table-light table-striped text-left">
+           <tbody>
+<tr class=""><td><a class="small" href="go:LAST" target="_blank"><b> <strong><font size="5" color="blue">📌 LAST VISITED</font></strong></b></a><span class="float-right emd"></span></td></tr>
+<tr class=""><td><a class="small" href="http://action_share" target="_blank"><b> <strong><font size="5" color="blue">📌 SHARE THE APP</font></strong></b></a><span class="float-right emd"></span></td></tr>
+<tr class=""><td><a class="small" href="http://action_profile" target="_blank"><b> <strong><font size="5" color="blue">📌 YOUR PROFILE</font></strong></b></a><span class="float-right emd"></span></td></tr>
+<tr class=""><td><a class="small" href="http://action_exit" target="_blank"><b> <strong><font size="5" color="blue">📌 APP EXIT</font></strong></b></a><span class="float-right emd"></span></td></tr>
+          </tbody>
+     </table>
+                  </div>
+       </div>
+</div>
+
+
+<div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="heading" style="background-image: url(https://i.imgur.com/pLccTCf.gif);">
+                  <h4 class="panel-title" style="background-image: url(https://i.imgur.com/pLccTCf.gif);">
+                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse1471xT" aria-expanded="false" aria-controls="collapse">
+                       <b><strong><font size="6" color="black">USEFUL TOOLS</font></strong></b>
+                    </a>
+                  </h4>
+                </div>
+                <div id="collapse1471xT" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading">
+                  <div class="panel-body">
+       <table class="table table-light table-striped text-left">
+           <tbody>
+<tr class=""><td><a class="small" href="go:TOOLS" target="_blank"><b> <strong><font size="5" color="blue">📌 MASSIVE TOOLS HERE</font></strong></b></a><span class="float-right emd"></span></td></tr>
+<tr class=""><td><a class="small" href="go:TEMPMAILS" target="_blank"><b> <strong><font size="5" color="green">📌 TEMPORARY EMAILS</font></strong></b></a><span class="float-right emd"></span></td></tr>
+          </tbody>
+     </table>
+                  </div>
+       </div>
+</div>
+
+
+
+<div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="heading" style="background-image: url(https://i.imgur.com/pLccTCf.gif);">
+                  <h4 class="panel-title" style="background-image: url(https://i.imgur.com/pLccTCf.gif);">
+                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse141xT" aria-expanded="false" aria-controls="collapse">
+                       <b><strong><font size="5" color="red">AI-CHAT (No Login)</font></strong></b>
+                    </a>
+                  </h4>
+                </div>
+                <div id="collapse141xT" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading">
+                  <div class="panel-body">
+       <table class="table table-light table-striped text-left">
+           <tbody>
+<tr class=""><td><a class="small" href="https://chat.chatgptdemo.net/" target="_blank"><b> <strong><font size="5" color="blue">📌 AI-CHAT OPTION 1</font></strong></b></a><span class="float-right emd"></span></td></tr>
+<tr class=""><td><a class="small" href="https://talkai.info/chat/" target="_blank"><b> <strong><font size="5" color="black">📌 AI-CHAT OPTION 2</font></strong></b></a><span class="float-right emd"></span></td></tr>
+<tr class=""><td><a class="small" href="https://www.aichatting.net/" target="_blank"><b> <strong><font size="5" color="green">📌 AI-CHAT OPTION 3</font></strong></b></a><span class="float-right emd"></span></td></tr>
+          </tbody>
+     </table>
+                  </div>
+       </div>
+</div>
+
+
 
 
 
@@ -411,6 +517,5 @@ if (is_gecko && (is_rev >= 1)) {
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
-
 </body>
 </html>
