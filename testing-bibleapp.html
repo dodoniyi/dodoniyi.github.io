@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bible Display with Interactive Modals</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        /* Grid for the books */
+        .book-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+
+        /* Style for each book in the grid */
+        .book {
+            background-color: #ff7043; /* Example color */
+            color: white;
+            padding: 20px;
+            text-align: center;
+            cursor: pointer;
+            border-radius: 10px;
+            font-weight: bold;
+            transition: transform 0.3s ease-in-out;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .book:hover {
+            transform: scale(1.05);
+        }
+
+        /* Modal styling */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 10;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.7);
+            padding-top: 60px;
+        }
+
+        .modal-content {
+            background-color: #ffffff;
+            margin: 5% auto;
+            padding: 20px;
+            border: none;
+            width: 80%;
+            max-width: 800px;
+            border-radius: 10px;
+            position: relative;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+        }
+
+        .close {
+            position: absolute;
+            top: 15px;
+            right: 25px;
+            color: #aaa;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: color 0.3s;
+        }
+
+        .close:hover {
+            color: #000;
+        }
+
+        /* Chapter and Verse styles */
+        .chapter, .remaining-chapters {
+            margin: 20px 0;
+        }
+
+        .verse {
+            margin-left: 20px;
+            margin-bottom: 10px;
+        }
+
+        .verse-number {
+            font-weight: bold;
+            margin-right: 5px;
+        }
+
+        /* Style for the remaining chapters buttons */
+        .remaining-chapters button {
+            margin: 5px;
+            padding: 10px 20px;
+            background-color: #42a5f5;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .remaining-chapters button:hover {
+            background-color: #1e88e5;
+        }
+
+        /* Modal color for chapters */
+        .modal-content.chapter-modal {
+            background-color: #aed581; /* Light green for chapter modal */
+        }
+
+        .modal-content.book-modal {
+            background-color: #81d4fa; /* Light blue for book modal */
+        }
+
+        /* Bible version selector styling */
+        .version-selector {
+            margin: 10px 0;
+            display: flex;
+            align-items: center;
+        }
+
+        .version-selector label {
+            margin-right: 10px;
+            font-weight: bold;
+        }
+
+        .version-selector select {
+            padding: 5px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        /* Read Aloud Button */
+        .read-aloud-btn {
+            position: absolute;
+            top: 15px;
+            right: 60px;
+            background-color: #66bb6a;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            cursor: pointer;
+            font-size: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background-color 0.3s;
+        }
+
+        .read-aloud-btn:hover {
+            background-color: #43a047;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 600px) {
+            .modal-content {
+                width: 95%;
+            }
+
+            .version-selector {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .read-aloud-btn {
+                top: 10px;
+                right: 50px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Bible Books</h1>
+    <div class="book-grid">
+        <!-- Book items in a grid layout -->
+        <div class="book" onclick="openModal('genesisModal')">Genesis</div>
+        <div class="book" onclick="openModal('exodusModal')">Exodus</div>
+        <!-- Add more books as needed -->
+    </div>
+
+    <!-- Genesis Modal (Book) -->
+    <div id="genesisModal" class="modal">
+        <div class="modal-content book-modal">
+            <span class="close" onclick="closeModal('genesisModal')">&times;</span>
+            <h2>Genesis</h2>
+            <p>Select a chapter to read:</p>
+
+            <!-- Chapter Buttons -->
+            <div class="chapter-buttons">
+                <button onclick="openChapterModal('genesisModal', 'genesisChapter1Modal')">Chapter 1</button>
+                <button onclick="openChapterModal('genesisModal', 'genesisChapter2Modal')">Chapter 2</button>
+                <!-- Add more chapters as needed -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Genesis Chapter 1 Modal -->
+    <div id="genesisChapter1Modal" class="modal">
+        <div class="modal-content chapter-modal">
+            <span class="close" onclick="closeModal('genesisChapter1Modal')">&times;</span>
+            <h2>Genesis Chapter 1</h2>
+
+            <!-- Read Aloud Button -->
+            <button class="read-aloud-btn" onclick="toggleReadAloud('genesisChapter1Verses')">&#128264;</button>
+
+            <!-- Bible Version Selector -->
+            <div class="version-selector">
+                <label for="version1">Select Bible Version:</label>
+                <select id="version1" onchange="changeVersion('genesisChapter1Verses', 'version1')">
+                    <option value="kjv">KJV</option>
+                    <option value="amp">AMP</option>
+                    <option value="niv">NIV</option>
+                </select>
+            </div>
+
+            <!-- Verses (Each version has its own data) -->
+            <div id="genesisChapter1Verses">
+                <!-- KJV version -->
+                <div class="verse kjv"><span class="verse-number">1.</span> In the beginning God created the heaven and the earth.</div>
+                <div class="verse kjv"><span class="verse-number">2.</span> And the earth was without form, and void; and darkness was upon the face of the deep.</div>
+                <div class="verse kjv"><span class="verse-number">3.</span> And God said, Let there be light: and there was light.</div>
+                <!-- AMP version -->
+                <div class="verse amp" style="display: none;"><span class="verse-number">1.</span> In the beginning, God (Elohim) created [by forming from nothing] the heavens and the earth.</div>
+                <div class="verse amp" style="display: none;"><span class="verse-number">2.</span> The earth was formless and void or a waste and emptiness, and darkness was upon the face of the deep.</div>
+                <div class="verse amp" style="display: none;"><span class="verse-number">3.</span> And God said, “Let there be light,” and there was light.</div>
+                <!-- NIV version -->
+                <div class="verse niv" style="display: none;"><span class="verse-number">1.</span> In the beginning God created the heavens and the earth.</div>
+                <div class="verse niv" style="display: none;"><span class="verse-number">2.</span> Now the earth was formless and empty, darkness was over the surface of the deep.</div>
+                <div class="verse niv" style="display: none;"><span class="verse-number">3.</span> And God said, “Let there be light,” and there was light.</div>
+            </div>
+
+            <!-- Display remaining chapters at the bottom -->
+            <div class="remaining-chapters">
+                <p>Remaining chapters:</p>
+                <button onclick="openChapterModal('genesisChapter1Modal', 'genesisChapter2Modal')">Chapter 2</button>
+                <!-- Add buttons for other chapters -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Genesis Chapter 2 Modal -->
+    <div id="genesisChapter2Modal" class="modal">
+        <div class="modal-content chapter-modal">
+            <span class="close" onclick="closeModal('genesisChapter2Modal')">&times;</span>
+            <h2>Genesis Chapter 2</h2>
+
+            <!-- Read Aloud Button -->
+            <button class="read-aloud-btn" onclick="toggleReadAloud('genesisChapter2Verses')">&#128264;</button>
+
+            <!-- Bible Version Selector -->
+            <div class="version-selector">
+                <label for="version2">Select Bible Version:</label>
+                <select id="version2" onchange="changeVersion('genesisChapter2Verses', 'version2')">
+                    <option value="kjv">KJV</option>
+                    <option value="amp">AMP</option>
+                    <option value="niv">NIV</option>
+                </select>
+            </div>
+
+            <!-- Verses (Each version has its own data) -->
+            <div id="genesisChapter2Verses">
+                <!-- KJV version -->
+                <div class="verse kjv"><span class="verse-number">1.</span> Thus the heavens and the earth were finished, and all the host of them.</div>
+                <div class="verse kjv"><span class="verse-number">2.</span> And on the seventh day God ended his work which he had made; and he rested on the seventh day from all his work which he had made.</div>
+                <!-- AMP version -->
+                <div class="verse amp" style="display: none;"><span class="verse-number">1.</span> So the heavens and the earth were completed, and all their hosts (inhabitants).</div>
+                <div class="verse amp" style="display: none;"><span class="verse-number">2.</span> By the seventh day God completed His work which He had done, and He rested on the seventh day from all His work which He had done.</div>
+                <!-- NIV version -->
+                <div class="verse niv" style="display: none;"><span class="verse-number">1.</span> Thus the heavens and the earth were completed in all their vast array.</div>
+                <div class="verse niv" style="display: none;"><span class="verse-number">2.</span> By the seventh day God had finished the work he had been doing; so on the seventh day he rested...</div>
+            </div>
+
+            <!-- Display remaining chapters at the bottom -->
+            <div class="remaining-chapters">
+                <p>Remaining chapters:</p>
+                <button onclick="openChapterModal('genesisChapter2Modal', 'genesisChapter1Modal')">Chapter 1</button>
+                <!-- Add buttons for other chapters -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Exodus Modal (Book) -->
+    <div id="exodusModal" class="modal">
+        <div class="modal-content book-modal">
+            <span class="close" onclick="closeModal('exodusModal')">&times;</span>
+            <h2>Exodus</h2>
+            <p>Select a chapter to read:</p>
+
+            <!-- Chapter Buttons -->
+            <div class="chapter-buttons">
+                <button onclick="openChapterModal('exodusModal', 'exodusChapter1Modal')">Chapter 1</button>
+                <button onclick="openChapterModal('exodusModal', 'exodusChapter2Modal')">Chapter 2</button>
+                <!-- Add more chapters as needed -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Exodus Chapter 1 Modal -->
+    <div id="exodusChapter1Modal" class="modal">
+        <div class="modal-content chapter-modal">
+            <span class="close" onclick="closeModal('exodusChapter1Modal')">&times;</span>
+            <h2>Exodus Chapter 1</h2>
+
+            <!-- Read Aloud Button -->
+            <button class="read-aloud-btn" onclick="toggleReadAloud('exodusChapter1Verses')">&#128264;</button>
+
+            <!-- Bible Version Selector -->
+            <div class="version-selector">
+                <label for="version3">Select Bible Version:</label>
+                <select id="version3" onchange="changeVersion('exodusChapter1Verses', 'version3')">
+                    <option value="kjv">KJV</option>
+                    <option value="amp">AMP</option>
+                    <option value="niv">NIV</option>
+                </select>
+            </div>
+
+            <!-- Verses (Each version has its own data) -->
+            <div id="exodusChapter1Verses">
+                <!-- KJV version -->
+                <div class="verse kjv"><span class="verse-number">1.</span> Now these are the names of the children of Israel, which came into Egypt; every man and his household came with Jacob.</div>
+                <div class="verse kjv"><span class="verse-number">2.</span> Reuben, Simeon, Levi, and Judah...</div>
+                <!-- AMP version -->
+                <div class="verse amp" style="display: none;"><span class="verse-number">1.</span> Now these are the names of the children of Israel, who came to Egypt with Jacob, each with his family.</div>
+                <div class="verse amp" style="display: none;"><span class="verse-number">2.</span> Reuben, Simeon, Levi and Judah...</div>
+                <!-- NIV version -->
+                <div class="verse niv" style="display: none;"><span class="verse-number">1.</span> These are the names of the sons of Israel who went to Egypt with Jacob, each with his family.</div>
+                <div class="verse niv" style="display: none;"><span class="verse-number">2.</span> Reuben, Simeon, Levi and Judah...</div>
+            </div>
+
+            <!-- Display remaining chapters at the bottom -->
+            <div class="remaining-chapters">
+                <p>Remaining chapters:</p>
+                <button onclick="openChapterModal('exodusChapter1Modal', 'exodusChapter2Modal')">Chapter 2</button>
+                <!-- Add buttons for other chapters -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Exodus Chapter 2 Modal -->
+    <div id="exodusChapter2Modal" class="modal">
+        <div class="modal-content chapter-modal">
+            <span class="close" onclick="closeModal('exodusChapter2Modal')">&times;</span>
+            <h2>Exodus Chapter 2</h2>
+
+            <!-- Read Aloud Button -->
+            <button class="read-aloud-btn" onclick="toggleReadAloud('exodusChapter2Verses')">&#128264;</button>
+
+            <!-- Bible Version Selector -->
+            <div class="version-selector">
+                <label for="version4">Select Bible Version:</label>
+                <select id="version4" onchange="changeVersion('exodusChapter2Verses', 'version4')">
+                    <option value="kjv">KJV</option>
+                    <option value="amp">AMP</option>
+                    <option value="niv">NIV</option>
+                </select>
+            </div>
+
+            <!-- Verses (Each version has its own data) -->
+            <div id="exodusChapter2Verses">
+                <!-- KJV version -->
+                <div class="verse kjv"><span class="verse-number">1.</span> And there went a man of the house of Levi, and took to wife a daughter of Levi.</div>
+                <div class="verse kjv"><span class="verse-number">2.</span> And the woman conceived, and bare a son: and when she saw him that he was a goodly child, she hid him three months.</div>
+                <!-- AMP version -->
+                <div class="verse amp" style="display: none;"><span class="verse-number">1.</span> A man of the tribe of Levi married a Levite woman.</div>
+                <div class="verse amp" style="display: none;"><span class="verse-number">2.</span> When the woman became pregnant, she gave birth to a son. Seeing that he was a beautiful child, she hid him for three months.</div>
+                <!-- NIV version -->
+                <div class="verse niv" style="display: none;"><span class="verse-number">1.</span> A man from the tribe of Levi married a Levite woman.</div>
+                <div class="verse niv" style="display: none;"><span class="verse-number">2.</span> When the woman became pregnant, she gave birth to a son. Seeing that he was a goodly child, she hid him for three months.</div>
+            </div>
+
+            <!-- Display remaining chapters at the bottom -->
+            <div class="remaining-chapters">
+                <p>Remaining chapters:</p>
+                <button onclick="openChapterModal('exodusChapter2Modal', 'exodusChapter1Modal')">Chapter 1</button>
+                <!-- Add buttons for other chapters -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Add more modals for other books and chapters as needed -->
+
+    <script>
+        // Function to open a modal
+        function openModal(modalId) {
+            document.getElementById(modalId).style.display = "block";
+        }
+
+        // Function to close a modal
+        function closeModal(modalId) {
+            document.getElementById(modalId).style.display = "none";
+            stopReadAloud(); // Stop any ongoing speech when closing modal
+        }
+
+        // Function to open a chapter modal and close the current modal
+        function openChapterModal(currentModalId, nextModalId) {
+            closeModal(currentModalId); // Close the current modal
+            openModal(nextModalId);     // Open the next chapter modal
+        }
+
+        // Function to change Bible version
+        function changeVersion(verseContainerId, selectorId) {
+            const select = document.getElementById(selectorId);
+            const selectedVersion = select.value;
+            const container = document.getElementById(verseContainerId);
+            const allVerses = container.querySelectorAll('.verse');
+
+            // Hide all versions
+            allVerses.forEach(verse => {
+                verse.style.display = 'none';
+            });
+
+            // Show only the selected version
+            const selectedVerses = container.querySelectorAll(`.${selectedVersion}`);
+            selectedVerses.forEach(verse => {
+                verse.style.display = 'block';
+            });
+        }
+
+        // Read Aloud Functionality
+        let synth = window.speechSynthesis;
+        let currentUtterance = null;
+
+        function toggleReadAloud(verseContainerId) {
+            const container = document.getElementById(verseContainerId);
+            const text = Array.from(container.querySelectorAll('.verse'))
+                              .filter(verse => verse.style.display !== 'none')
+                              .map(verse => verse.textContent)
+                              .join(' ');
+
+            const readAloudBtn = event.target;
+
+            if (synth.speaking) {
+                if (synth.paused) {
+                    synth.resume();
+                    readAloudBtn.innerHTML = '&#128264;'; // Speaker Icon
+                } else {
+                    synth.pause();
+                    readAloudBtn.innerHTML = '&#10074;&#10074;'; // Pause Icon
+                }
+            } else {
+                if (text !== '') {
+                    currentUtterance = new SpeechSynthesisUtterance(text);
+                    synth.speak(currentUtterance);
+                    readAloudBtn.innerHTML = '&#10074;&#10074;'; // Pause Icon
+
+                    currentUtterance.onend = function() {
+                        readAloudBtn.innerHTML = '&#128264;'; // Speaker Icon
+                    };
+
+                    currentUtterance.onerror = function() {
+                        readAloudBtn.innerHTML = '&#128264;'; // Speaker Icon
+                    };
+                }
+            }
+        }
+
+        function stopReadAloud() {
+            if (synth.speaking) {
+                synth.cancel();
+                // Reset all read aloud buttons to speaker icon
+                const readAloudButtons = document.querySelectorAll('.read-aloud-btn');
+                readAloudButtons.forEach(btn => {
+                    btn.innerHTML = '&#128264;'; // Speaker Icon
+                });
+            }
+        }
+
+        // Close the modal if the user clicks outside of it
+        window.onclick = function(event) {
+            if (event.target.classList.contains('modal')) {
+                event.target.style.display = "none";
+                stopReadAloud();
+            }
+        }
+    </script>
+
+</body>
+</html>
