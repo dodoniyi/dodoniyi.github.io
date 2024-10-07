@@ -1,0 +1,78 @@
+/* Style the Bible container */
+.bible-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+/* Style the book grid */
+.book-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+}
+
+/* Style the book modal */
+.book-modal {
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+}
+
+/* Style the book button */
+.book-button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+/* Style the chapter modal */
+.chapter-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+/* Style the chapter header */
+.chapter-header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+/* Style the close button */
+.close-button {
+    float: right;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+/* Style the version selector */
+.version-selector {
+    text-align: center;
+}
+
+/* Style the chapter content */
+.chapter-content {
+    padding: 20px;
+}
+
+/* Style the remaining chapters */
+.remaining-chapters {
+    text-align: center;
+    margin-top: 20px;
+}
